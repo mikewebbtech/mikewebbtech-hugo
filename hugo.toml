@@ -1,6 +1,7 @@
 baseURL = "https://example.org/"
 languageCode = "en-us" 
 title = "MikeWebb Tech"
+
 [menu]
   [[menu.main]]
     name = "Home"
@@ -33,4 +34,10 @@ title = "MikeWebb Tech"
     url = "/about/"
     weight = "60"
 
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+  series = "series"
 
+[params]
+dateFormat = "Jan 2, 2006"

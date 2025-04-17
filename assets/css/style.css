@@ -11,6 +11,9 @@ body {
   margin: auto; 
 }
 
+h1 {
+  font-size: 1.5em;
+}
 .layout {
   display: grid;
   grid-template-columns: 12rem 1fr;
@@ -53,9 +56,10 @@ body {
 
 .byline {
   text-align: center;
-  margin-top: 0.5rem;
+  margin-top: 0.1rem;
   font-weight:200; 
   color: #d8dee9;
+
 }
 
 .byline i {
@@ -64,13 +68,13 @@ body {
 
 .byline a {
   color: #d8dee9;
-  margin: 0 0.3rem;
+  padding: 0 0.3rem;
 }
 .nav {
   margin-top: 8em;
   width: 100%;
-  font-size: 1.1rem;
-  line-height: 1.2;
+  font-size: 1rem;
+  line-height: 1rem;
 }
 
 .nav ul {
@@ -130,17 +134,14 @@ body {
   grid-area: header;
   height: 4rem;
   background-color: #bf616a;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  :width: ;
   text-align: center;
   text-transform: uppercase;
 }
 
 .main {
-
-  
   grid-area: main;
   padding: 1.25rem;
   background-color: #d8dee9;
+  overflow-wrap: break-word;
 }

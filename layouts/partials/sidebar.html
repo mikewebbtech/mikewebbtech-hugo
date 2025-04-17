@@ -1,9 +1,10 @@
   <aside class="sidebar">
     <div class="logo">
-      <img src="../avatar.png" alt="avatar">
+      <img src="{{ "avatar.png"| relURL }}" alt="avatar">
       <p class="byline">
         MIKE WEBB TECH
-        <br>
+      </p>
+      <p class="byline">
         <a href="https://github.com/mikewebb-tech" target="_blank"><i class="fa-brands fa-square-github"></i></a>
         <a href="https://www.linkedin.com/in/michael-webb-1a36b8a5" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
       </p>
@@ -11,16 +12,21 @@
     {{ partial "nav.html" . }}
     <div class="nav-bottom">
       <p xmlns:cc="http://creativecommons.org/ns#">
+        
+        
         <a rel="cc:attributionURL" href="https://mikewebb.tech">
-          &copy; Mike Webb
+         Designed by Mike Webb 
         </a>
-        <br>
+        
         <a href="https://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">
-          2025 CC BY-NC 4.0
+          &copy; 2025 CC BY-NC 4.0
         </a>
       </p>
+      <p>
+      created using
+      </p> 
       <a href="https://gohugo.io" target="_blank">
-        <img src="../hugo-logo-wide.svg" alt="hugo.io" style="width: 40%">
+        <img src="{{ "hugo-logo-wide.svg" | relURL }}" alt="hugo.io" style="width: 40%">
       </a>
     </div>
   </aside>

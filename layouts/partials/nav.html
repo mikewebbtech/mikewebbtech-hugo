@@ -1,12 +1,5 @@
  <nav class="nav">
       <ul>
-      <!--
-        <li><a href="home"><i class="fa-solid fa-house-user"></i>HOME</a></li>
-        <li><a href="categories"><i class="fa-solid fa-list"></i>CATEGORIES</a></li>
-        <li><a href="series"><i class="fa-solid fa-layer-group"></i>SERIES</a></li>
-        <li><a href="tags"><i class="fa-solid fa-tags"></i>TAGS</a></li>
-        <li><a href="about"><i class="fa-solid fa-user"></i>ABOUT</a></li>
-      -->
       {{ range .Site.Menus.main }}
         {{ $icon := printf "<i class=\"fa-solid %s\"></i>" .Pre }}
         {{ $text := print $icon " " .Name | safeHTML }}
