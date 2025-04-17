@@ -1,0 +1,17 @@
+
+{{ define "main" }}
+  <article>
+    <h1>{{ .Title }}</h1>
+    <ul class="tags-list">
+      {{ range .Data.Terms.ByCount }}
+        <li class="tags-list-item">
+          <i class="fa-solid fa-tags"></i>
+          <a class="tags-list-item-title" href="{{ .Page.RelPermalink }}">
+            ({{ .Count }})
+            {{ .Page.Title }}
+          </a>
+        </li>
+      {{ end }}
+    </ul>
+  </article>
+{{ end }}

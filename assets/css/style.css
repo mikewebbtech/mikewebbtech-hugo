@@ -7,7 +7,7 @@ body {
   color: #161616;
   background-color: #4c566a;
   height: 100vh;
-  max-width: 900px;
+  max-width: 960px;
   margin: auto; 
 }
 
@@ -134,14 +134,85 @@ h1 {
   grid-area: header;
   height: 4rem;
   background-color: #bf616a;
-  :width: ;
   text-align: center;
   text-transform: uppercase;
 }
 
 .main {
   grid-area: main;
-  padding: 1.25rem;
-  background-color: #d8dee9;
+  padding: 1rem 1.25rem;
+  background-color: #dde3ea;
   overflow-wrap: break-word;
+  font-weight: 250;
+  word-break: keep-all;
 }
+
+.post-header {
+  padding: 0.1rem 0.5rem 0.5rem;
+  background-color: #bec9d7;
+  border-radius: 10px;
+  display: grid; /* Enable grid container */
+  grid-template-rows: auto auto; /* Define two rows that auto-size based on content */
+
+}
+.post-header h1 {
+  text-transform: uppercase;
+  line-height: 0.3rem;
+}
+
+.post-meta {
+  font-size: small;
+  display: flex; /* Enable flex container for meta items (optional, for spacing) */
+  gap: 1.1rem; /* Adjust spacing between meta items as needed */
+}
+
+.post-meta a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.post-meta > div {
+  display: flex; /* Align icon and text within each meta item */
+  align-items: center;
+  gap: 0.4rem; /* Adjust spacing between icon and text */
+}
+
+
+
+.tags-list {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 0px;
+  list-style: none;
+  padding: 0;
+}
+
+.tags-list-item {
+  padding: 8px 12px;
+  
+  display: flex;
+  align-items: center;
+}
+
+/* Target the first item of each "row" (odd-numbered pairs) */
+.tags-list-item:nth-child(4n + 1),
+.tags-list-item:nth-child(4n + 2) {
+  background-color: #bec9d7; /* Light gray for the first row */
+}
+
+/* Target the second item of each "row" (even-numbered pairs) */
+.tags-list-item:nth-child(4n + 3),
+.tags-list-item:nth-child(4n + 4) {
+  background-color: none; /* Slightly darker gray for the second row */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.tags-list-item i {
+  margin-right: 8px;
+}
+
+Explanation of 
+

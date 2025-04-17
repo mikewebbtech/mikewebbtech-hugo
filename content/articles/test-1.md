@@ -1,6 +1,6 @@
 +++
 title = "Test 1"
-tags = ["test"]
+tags = ["test", "test 2", "foo"]
 date = "1012-01-01"
 categories = ["cat1"]
 +++
