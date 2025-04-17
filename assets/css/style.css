@@ -150,7 +150,7 @@ h1 {
 .post-header {
   padding: 0.1rem 0.5rem 0.5rem;
   background-color: #bec9d7;
-  border-radius: 10px;
+  border-radius: 5px;
   display: grid; /* Enable grid container */
   grid-template-rows: auto auto; /* Define two rows that auto-size based on content */
 
@@ -213,6 +213,4 @@ a {
 .tags-list-item i {
   margin-right: 8px;
 }
-
-Explanation of 
 
