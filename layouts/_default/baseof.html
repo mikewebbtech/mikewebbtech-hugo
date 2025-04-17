@@ -2,13 +2,15 @@
 <html>
   {{- partial "head.html" . -}}
   <body>
-    <div class="layout">
-      {{- partial "sidebar.html" . -}}
-      {{- partial "header.html" html . -}}
-      <main class="main">
-        <h3>MAIN Section</h3>
-          {{- block "main" . -}} {{- end -}}
-      </main>
+    <div class="container">
+      <div class="layout">
+        {{- partial "sidebar.html" . -}}
+        {{- partial "header.html" html . -}}
+        <main class="main">
+          <h3>MAIN Section</h3>
+            {{- block "main" . -}} {{- end -}}
+        </main>
+      </div>
     </div>
   </body>
 </html>

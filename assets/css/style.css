@@ -1,32 +1,35 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css');
 
 body {
-  margin: 0;
+  margin: 0 auto;
   font-family: system-ui, sans-serif;
   font-size: 1.1em;
   line-height: 1.2;
   color: #161616;
   background-color: #4c566a;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
 }
 
+.container {
+  display: flex;
+  justify-content: center; 
+  max-width: 900px;
+}
 .layout {
+
   display: grid;
   grid-template-columns: 12rem 1fr;
   grid-template-areas:
     "sidebar header"
     "sidebar main";
   height: 100vh;
-  max-width: 900px;
 }
 
 .sidebar {
   grid-area: sidebar;
   display: flex;
   flex-direction: column;
-  position: fixed;
+  /* position: fixed; */
   top: 0;
   width: 12rem;
   height: 100vh;
@@ -139,43 +142,3 @@ body {
   padding: 1.25rem;
   background-color: #d8dee9;
 }
-
-/* Mobile Responsive */
-/*
-@media (max-width: 400px) {
-  .layout {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "header"
-      "sidebar"
-      "main";
-  }
-
-  .sidebar {
-    height: auto;
-    position: static;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 1rem 0;
-  }
-
-  .nav {
-    margin-top: 0;
-  }
-
-  .nav ul {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-  }
-
-  .nav li {
-    width: auto;
-  }
-
-  .nav a {
-    padding: 0.5em 1em;
-  }
-}
-*/
