@@ -1,5 +1,4 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css');
-
 body {
   font-family: system-ui, sans-serif;
   font-size: 1.1em;
@@ -110,10 +109,10 @@ h1 {
   background-color: #4c566a;
 }
 
-.nav a:hover {
-  color: #D08A91;
-}
-
+/* .nav a:hover { */
+/*   color: #D08A91; */
+/* } */
+/**/
 .nav-bottom {
   width: 100%;
   margin-top: auto;
