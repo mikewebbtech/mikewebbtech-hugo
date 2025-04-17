@@ -17,7 +17,7 @@ body {
   grid-template-areas:
     "sidebar header"
     "sidebar main";
-grid-template-rows: 4rem 1fr; 
+  grid-template-rows: 4rem 1fr; 
   min-height: 100vh; 
 }
 
@@ -94,6 +94,7 @@ grid-template-rows: 4rem 1fr;
   color: #d8dee9;
   padding: 0.60rem 1em;
   transition: all 0.2s ease-in;
+  text-transform: uppercase;
 }
 
 .nav a i {
@@ -133,6 +134,7 @@ grid-template-rows: 4rem 1fr;
   align-items: center;
   justify-content: center;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .main {
