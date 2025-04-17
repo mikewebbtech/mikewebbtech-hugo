@@ -1,5 +1,9 @@
 {{ define "main" }}
-	{{ .Content }}
-  <p>This line is from <code>layouts/_default/list.html</code>.</p>
 
+<h1>{{ .Title }}</h1>
+{{ range .Pages.ByPublishDate.Reverse }}
+<p>
+  <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+</p>
+{{ end }}	
 {{ end }}
