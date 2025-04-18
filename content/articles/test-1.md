@@ -2,7 +2,7 @@
 title = "Test 1"
 tags = ["test", "test 2", "foo"]
 date = "1012-01-01"
-categories = ["cat1"]
+categories = ["Networking", "Cloud", "Cyber Security", "Kubernetes", "Virtualisation", "Containers", "HUGO", "Servers", "Home Lab"]
 +++
 
 Test 1
