@@ -6,7 +6,7 @@ body {
   color: #161616;
   background-color: #4c566a;
   height: 100vh;
-  max-width: 960px;
+  max-width: 1024px;
   margin: auto; 
 }
 
@@ -109,10 +109,11 @@ h1 {
   background-color: #4c566a;
 }
 
-/* .nav a:hover { */
-/*   color: #D08A91; */
-/* } */
-/**/
+/* 
+* .nav a:hover { 
+*   color: #D08A91; 
+* } 
+*/
 .nav-bottom {
   width: 100%;
   margin-top: auto;
@@ -139,7 +140,7 @@ h1 {
 
 .main {
   grid-area: main;
-  padding: 1rem 1.25rem;
+  padding: 1rem 3rem 0 3rem;
   background-color: #dde3ea;
   overflow-wrap: break-word;
   font-weight: 250;
@@ -177,6 +178,11 @@ h1 {
 }
 
 
+.tags h1 {
+  text-transform: uppercase;
+  line-height: 0.3rem;
+  word-spacing: 1.2rem;
+}
 
 .tags-list {
   display: grid;
@@ -202,7 +208,7 @@ h1 {
 /* Target the second item of each "row" (even-numbered pairs) */
 .tags-list-item:nth-child(4n + 3),
 .tags-list-item:nth-child(4n + 4) {
-  background-color: none; /* Slightly darker gray for the second row */
+  background-color: initial; /* Slightly darker gray for the second row */
 }
 
 a {

@@ -1,10 +1,10 @@
-
 {{ define "main" }}
   <article class="tags">
-  <h1><i class="fa-solid fa-tags"></i> {{ .Title }}</h1>
+  <h1><i class="fa-solid fa-list"></i> {{ .Title }}</h1>
   <p>
-    This Tags list is your shortcut to exploring detailed content groups. Click on any tag to see all the posts where it’s been mentioned, 
-    and follow information threads. Content on this site use the following tags.
+      This Categories list is where you’ll find all the main topics the articles covers, neatly organized to help you explore what interests you most.
+      Click into any category to browse all the posts we’ve written on that subject and discover new content you might have missed. Articles on this 
+      site are in the following groups:
   </p>
     <ul class="tags-list">
       {{ range .Data.Terms.Alphabetical }}
@@ -22,3 +22,4 @@
     </ul>
   </article>
 {{ end }}
+
