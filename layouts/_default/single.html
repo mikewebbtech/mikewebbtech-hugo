@@ -1,9 +1,9 @@
 {{ define "main" }}
 <article class="post">
-    <header class="post-header">
+    <div class="post-header">
       <h1 class ="post-title">{{ .Title }}</h1>
       {{- if ne .Type "page" }}
-        <div class="post-meta">
+        <div class="article-meta">
           <div>
             <i class="fa-solid fa-calendar-days"></i>
             {{ .PublishDate.Format "Jan 2, 2006" }}
@@ -34,9 +34,14 @@
           {{- end }}
         </div>
         {{- end }}
-    </header>
+    </div>
     <div class="post-content">
-      {{ .Content }}
+    {{ with .RawContent }}
+      {{ $content := . }}
+      {{ $content = replaceRE "\\s*\\{#[^}]+\\}" "" $content }}
+      {{ $content = replaceRE "\\n" "<br/>" $content }}
+      {{ $content | safeHTML }}
+    {{ end }}
     </div>
     <div class="post-footer">
     </div>
