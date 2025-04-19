@@ -31,7 +31,7 @@ h1 {
   top: 0;
   width: 12rem;
   height: 100vh;
-  background-color: #3b4252;
+  background-color:  #353b43;
   color: #fff;
   z-index: 1000;
 }
@@ -142,7 +142,8 @@ h1 {
 .main {
   grid-area: main;
   padding: 1rem 3rem 0 3rem;
-  background-color: #dde3ea;
+  background-color: #3b4252;
+  color: #afbac4;
   overflow-wrap: break-word;
   font-weight: 250;
   word-break: keep-all;
@@ -150,7 +151,8 @@ h1 {
 
 .post-header {
   padding: 0.1rem 0.5rem 0.5rem;
-  background-color: #bec9d7;
+  background-color: #afbac4;
+  color: #161616;
   border-radius: 5px;
   display: grid; /* Enable grid container */
   grid-template-rows: auto auto; /* Define two rows that auto-size based on content */
@@ -204,6 +206,7 @@ h1 {
 .tags-list-item:nth-child(4n + 1),
 .tags-list-item:nth-child(4n + 2) {
   background-color: #bec9d7; /* Light gray for the first row */
+  color: #3b4252;
 }
 
 /* Target the second item of each "row" (even-numbered pairs) */
@@ -254,6 +257,7 @@ a {
   margin-top: 0;
   padding-bottom: 0.2rem;
   font-size: 1.2em;
+  color: #3b4252;
 }
 
 .article-title a {
@@ -274,6 +278,56 @@ a {
 }
 
 .article-description {
-  color: #555;
+  color: #3b4252;
   margin-top: 10px;
+}
+
+.home {
+  text-align: justify;
+  text-justify: inter-word;
+  padding: 0 2rem;
+}
+
+.home a {
+  font-weight: bolder;
+}
+
+.home a:hover {
+  color: #fff ;
+}
+
+.home .highlight {
+  padding: 1rem 2rem 1rem 2rem;
+} 
+.home .highlight pre {
+  padding: 0 1rem 1rem 1rem;
+    background-color: #bec9d7!important;
+}
+
+.danger,
+.note,
+.warning {
+  background: #bec9d7;
+  border-left-style: solid;
+  border-left-width: 0.4rem;
+  border-radius: 0.2rem;
+  margin: 0 ;
+  color: #3b4252;
+  margin: 1rem 2rem 1rem 2rem;
+}  
+.danger, .note, .warning  > p {
+      padding: 0.5rem 1rem;
+}
+
+
+.warning {
+  border-left-color: #ffbb00;
+}
+
+.note {
+  border-left-color: #0000ee;
+}
+
+.danger {
+  border-left-color: #ee0000;
 }

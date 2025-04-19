@@ -42,3 +42,7 @@ summaryLength = 30
 
 [params]
 dateFormat = "Jan 2, 2006"
+
+[markup.goldmark.parser.attribute]
+block = true
+
