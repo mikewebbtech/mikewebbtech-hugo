@@ -1,6 +1,12 @@
 {{ define "main" }}
   <article class="home">
-    <h3>{{ .Params.Subtitle }}</h3>
+  {{ with .Params.postIMG }}
+    {{ $image := . }}
+     <div class="home-image">
+       <img src="{{ . | relURL }}" alt="{{ . }}">
+     </div>
+  {{ end }}
+    <h3 class="subtitle">{{ .Params.Subtitle }}</h3>
     {{ .Content }}
   </article>
   

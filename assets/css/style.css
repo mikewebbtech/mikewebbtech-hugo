@@ -286,6 +286,30 @@ a {
   text-align: justify;
   text-justify: inter-word;
   padding: 0 2rem;
+  position: relative; /* Add this to make it a positioning context */
+  margin-bottom: 20px; /* Add spacing between articles if you like */
+}
+
+.home-image {
+  width: 100%;
+  position: relative; /* Add this to contain the overlay within the image area */
+}
+
+.home-image img {
+  display: block; /* Prevent extra space below the image */
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  z-index: 2;
+}
+
+.home .subtitle {
+  position: absolute; /* Overlay the image */
+  top: 290px; /* Adjust as needed */
+  left: 160px; /* Adjust as needed */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  color: #d8dee9; 
+  margin: 0; /* Remove default heading margins */
+  z-index: 1; /* Ensure it's above the image */
 }
 
 .home a {

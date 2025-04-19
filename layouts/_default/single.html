@@ -9,8 +9,8 @@
             {{ .PublishDate.Format "Jan 2, 2006" }}
           </div>
           <div>
-            <i class="fa-solid fa-clock"></i>
-            {{ .ReadingTime }} min read
+            <i class="fa-solid fa-file-lines"></i>
+            {{ .WordCount }} words 
           </div>
           {{- with .Params.categories}}
           <div>
