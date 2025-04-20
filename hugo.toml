@@ -1,6 +1,6 @@
-baseURL = "https://example.org/"
+baseURL = "https://mikewebbtech.github.io/mikewebb-tech/"
 languageCode = "en-us" 
-title = "MikeWebb Tech"
+title = "Mike Webb Tech"
 summaryLength = 30
 
 [menu]
