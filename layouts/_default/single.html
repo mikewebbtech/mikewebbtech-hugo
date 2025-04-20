@@ -36,12 +36,7 @@
         {{- end }}
     </div>
     <div class="post-content">
-    {{ with .RawContent }}
-      {{ $content := . }}
-      {{ $content = replaceRE "\\s*\\{#[^}]+\\}" "" $content }}
-      {{ $content = replaceRE "\\n" "<br/>" $content }}
-      {{ $content | safeHTML }}
-    {{ end }}
+      {{ .Content }}
     </div>
     <div class="post-footer">
     </div>
