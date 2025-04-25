@@ -4,10 +4,10 @@ postIMG = 'homepage.png'
 draft = false
 title = 'Architecting Intelligence'
 [params]
-  subtitle = 'Building My Ditital Future'
+  subtitle = 'Building My Digital Future'
 +++
 
-Building my digital future, one project at a time. Follow my hands-on journey through the technologies that matters me .
+Learning one project at a time. Follow my hands-on journey through the technologies that matters me .
 
 ### Landscapes I am mapping
 
