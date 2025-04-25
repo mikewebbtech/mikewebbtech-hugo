@@ -162,8 +162,8 @@ h3 {
   background-color: #afbac4;
   color: #161616;
   border-radius: 5px;
-  display: grid; /* Enable grid container */
-  grid-template-rows: auto auto; /* Define two rows that auto-size based on content */
+  display: grid;
+  grid-template-rows: auto auto;
 }
 .post-header h1 {
   text-transform: uppercase;
@@ -172,8 +172,8 @@ h3 {
 
 .post-meta {
   font-size: small;
-  display: flex; /* Enable flex container for meta items (optional, for spacing) */
-  gap: 1.1rem; /* Adjust spacing between meta items as needed */
+  display: flex;
+  gap: 1.1rem;
 }
 
 .post-meta a {
@@ -182,9 +182,9 @@ h3 {
 }
 
 .post-meta > div {
-  display: flex; /* Align icon and text within each meta item */
+  display: flex;
   align-items: center;
-  gap: 0.4rem; /* Adjust spacing between icon and text */
+  gap: 0.4rem;
 }
 
 .tags h1 {
@@ -211,14 +211,14 @@ h3 {
 /* Target the first item of each "row" (odd-numbered pairs) */
 .tags-list-item:nth-child(4n + 1),
 .tags-list-item:nth-child(4n + 2) {
-  background-color: #bec9d7; /* Light gray for the first row */
+  background-color: #bec9d7;
   color: #3b4252;
 }
 
 /* Target the second item of each "row" (even-numbered pairs) */
 .tags-list-item:nth-child(4n + 3),
 .tags-list-item:nth-child(4n + 4) {
-  background-color: #4c556a; /* Slightly darker gray for the second row */
+  background-color: #4c556a;
 }
 
 a {
@@ -291,33 +291,20 @@ a {
   text-align: justify;
   text-justify: inter-word;
   padding: 0 2rem;
-  position: relative; /* Add this to make it a positioning context */
-  margin-bottom: 20px; /* Add spacing between articles if you like */
+  position: relative;
+  margin-bottom: 20px;
 }
 
 .home-image {
   width: 100%;
-  position: relative; /* Add this to contain the overlay within the image area */
+  position: relative;
 }
 
 .home-image img {
-  display: block; /* Prevent extra space below the image */
+  display: block;
   width: 100%;
-  height: auto; /* Maintain aspect ratio */
+  height: auto;
   z-index: 2;
-}
-
-.home .subtitle {
-  position: absolute; /* Overlay the image */
-  top: 290px; /* Adjust as needed */
-  width: 70%;
-  left: 50%; /* Adjust as needed */
-  transform: translateX(-50%);
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-  color: #d8dee9;
-  text-align: center;
-  margin: 0; /* Remove default heading margins */
-  z-index: 1; /* Ensure it's above the image */
 }
 
 .home a {
@@ -336,6 +323,28 @@ a {
   background-color: #bec9d7 !important;
 }
 
+.post {
+  text-align: justify;
+  text-justify: inter-word;
+  padding: 0 2rem;
+  position: relative;
+  margin-bottom: 20px; /* Add spacing between articles if you like */
+}
+
+.subtitle {
+  position: absolute;
+  top: 10px;
+  width: 90%;
+  padding: 0.3rem 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #d8dee9;
+  text-align: center;
+  margin: 0;
+  z-index: 1;
+}
+
 blockquote {
   margin: 0;
 }
@@ -343,7 +352,8 @@ blockquote {
 /*
 .one,
 .two,
-.three .four {
+.three 
+.four {
   background: #bec9d7;
   border-left-style: solid;
   border-left-width: 2em;
@@ -382,6 +392,16 @@ em {
 
 .five div {
   background-color: white !important;
+}
+
+.cert {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.cert:last-child {
+  margin-right: 0;
 }
 
 .cert > figcaption > p {

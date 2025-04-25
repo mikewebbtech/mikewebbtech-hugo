@@ -1,5 +1,11 @@
 {{ define "main" }}
 <article class="post">
+  {{ with .Params.postIMG }} {{ $image := . }}
+  <div class="home-image">
+    <img src="{{ . }}" alt="{{ . }}" />
+  </div>
+  {{ end }}
+  <h3 class="subtitle">{{ .Params.Subtitle }}</h3>
   <div class="post-content">{{ .Content }}</div>
   <div class="post-footer"></div>
 </article>
