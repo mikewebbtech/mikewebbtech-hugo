@@ -1,48 +1,50 @@
 baseURL = "https://mikewebbtech.github.io/mikewebb-tech/"
-languageCode = "en-us" 
+languageCode = "en-us"
 title = "Mike Webb Tech"
 summaryLength = 30
 
 [menu]
-  [[menu.main]]
-    name = "Home"
-    pre = "fa-house"
-    url = "/"
-    weight = "10"
-  [[menu.main]]
-    name = "Articles"
-    pre = "fa-file-code"
-    url = "/articles"
-    weight = "20"
-  [[menu.main]]
-    name = "Categories"
-    pre = "fa-list"
-    url = "/categories/"
-    weight = "30"
-  [[menu.main]]
-    name = "Series"
-    pre = "fa-layer-group"
-    url = "/series/"
-    weight = "40"
-  [[menu.main]]
-    name = "Tags"
-    pre = "fa-tags"
-    url = "/tags/"
-    weight = "50"
-  [[menu.main]]
-    name = "About"
-    pre = "fa-circle-info"
-    url = "/about/"
-    weight = "60"
+[[menu.main]]
+name = "Home"
+pre = "fa-house"
+url = "/"
+weight = "10"
+[[menu.main]]
+name = "Articles"
+pre = "fa-file-code"
+url = "/articles"
+weight = "20"
+[[menu.main]]
+name = "Categories"
+pre = "fa-list"
+url = "/categories/"
+weight = "30"
+[[menu.main]]
+name = "Series"
+pre = "fa-layer-group"
+url = "/series/"
+weight = "40"
+[[menu.main]]
+name = "Tags"
+pre = "fa-tags"
+url = "/tags/"
+weight = "50"
+[[menu.main]]
+name = "About"
+pre = "fa-circle-info"
+url = "/about/"
+weight = "60"
 
 [taxonomies]
-  tag = "tags"
-  category = "categories"
-  series = "series"
+tag = "tags"
+category = "categories"
+series = "series"
 
 [params]
 dateFormat = "Jan 2, 2006"
 
+[markup]
+[markup.goldmark]
+[markup.goldmark.parser]
 [markup.goldmark.parser.attribute]
 block = true
-
