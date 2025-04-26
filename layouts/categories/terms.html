@@ -12,21 +12,23 @@
   <ul class="cat-list">
     {{ range .Data.Terms.Alphabetical }}
     <li class="cat-list-item">
-      <div class="cat-list-img">
-        {{ with .Page.Resources.Get "image.png" }} 
-          {{ with .Process "resize 90x CatmullRom webp photo q100" }}
-            <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="" />
+      <a class="cat-list-item-link" href="{{ .Page.RelPermalink }}">
+        <div class="cat-list-img">
+          {{ with .Page.Resources.Get "image.png" }} 
+            {{ with .Process "resize 90x CatmullRom webp photo q100" }}
+              <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="" />
+            {{ end }}
           {{ end }}
-        {{ end }}
-      </div>
-      <div class="cat-list-item-info">
-        <a class="cat-list-item-title" href="{{ .Page.RelPermalink }}">
-          {{ .Page.Title }}
-        </a>
-        (articles found: {{ .Count }})
-        <!-- if there a category description. show it -->
-        {{ with .Page.Content }} {{ . }} {{ end }}
-      </div>
+        </div>
+        <div class="cat-list-item-info">
+          <div class="cat-list-item-title">
+            {{ .Page.Title }}
+          </div>
+          (articles found: {{ .Count }})
+          <!-- if there a category description. show it -->
+          {{ with .Page.Content }} {{ . }} {{ end }}
+        </div>
+      </a>
     </li>
     {{ end }}
   </ul>
