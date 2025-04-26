@@ -1,6 +1,6 @@
 {{ define "main" }}
 <article>
-  {{ .Content }}
+  list.html _default {{ .Content }}
   <ul class="article-list">
     {{ range where .Paginator.Pages "Type" "!=" "page" }}
     <li class="article-list-item">

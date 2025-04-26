@@ -1,14 +1,32 @@
 {{ define "main" }}
 <article class="cat">
-  <h1><i class="fa-solid fa-list"></i> {{ .Title }}</h1>
+  <div class="home-image">
+  {{ with .Resources.Get "image-header.png" }}
+      {{ with .Process "resize 900x200 CatmullRom webp photo q100" }}
+      <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="" />
+      {{ end }}
+  {{ end }}
+  </div>
+  <h1 class="subtitle"><i class="fa-solid fa-list"></i> {{ .Title }}</h1>
   {{ .Content }}
   <ul class="cat-list">
     {{ range .Data.Terms.Alphabetical }}
     <li class="cat-list-item">
-      <a class="cat-list-item-title" href="{{ .Page.RelPermalink }}">
-        {{ .Page.Title }}
-      </a>
-      ({{ .Count }} articles found) {{ with .Page.Content }} {{ . }} {{ end }}
+      <div class="cat-list-img">
+        {{ with .Page.Resources.Get "image.png" }} 
+          {{ with .Process "resize 90x CatmullRom webp photo q100" }}
+            <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="" />
+          {{ end }}
+        {{ end }}
+      </div>
+      <div class="cat-list-item-info">
+        <a class="cat-list-item-title" href="{{ .Page.RelPermalink }}">
+          {{ .Page.Title }}
+        </a>
+        (articles found: {{ .Count }})
+        <!-- if there a category description. show it -->
+        {{ with .Page.Content }} {{ . }} {{ end }}
+      </div>
     </li>
     {{ end }}
   </ul>
