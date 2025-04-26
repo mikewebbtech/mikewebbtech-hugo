@@ -4,7 +4,7 @@ postIMG = 'homepage.png'
 draft = false
 title = 'Architecting Intelligence'
 [params]
-  subtitle = 'Building My Digital Future'
+  subtitle = 'Building My Digital Landscape'
 +++
 
 Learning one project at a time. Follow my hands-on journey through the technologies that matters me .
@@ -43,7 +43,7 @@ My personal playground for experimentation and running services for the home!
 Witness the evolution of my home lab as I build, break, and learn from various
 hardware and software stuff ups, I mean setups
 
-### [See the Map](/categories/)
+### [See the Map](categories)
 
 ```go {style=catppuccin-latte}
 
