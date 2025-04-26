@@ -285,6 +285,7 @@ a {
   margin-top: 10px;
 }
 
+.post,
 .cat,
 .list-page,
 .home {
@@ -326,14 +327,15 @@ a {
   background-color: #bec9d7 !important;
 }
 
+/*
 .post {
   text-align: justify;
   text-justify: inter-word;
   padding: 0 2rem;
   position: relative;
-  margin-bottom: 20px; /* Add spacing between articles if you like */
+  margin-bottom: 20px; 
 }
-
+*/
 .subtitle {
   position: absolute;
   top: 10px;
