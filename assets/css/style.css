@@ -203,7 +203,6 @@ h3 {
 
 .tags-list-item {
   padding: 8px 12px;
-
   display: flex;
   align-items: center;
 }
@@ -287,6 +286,7 @@ a {
 }
 
 .cat,
+.list-page,
 .home {
   text-align: justify;
   text-justify: inter-word;
@@ -294,6 +294,10 @@ a {
   position: relative;
 }
 
+.list-page p {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
 .home-image {
   width: 100%;
   position: relative;
@@ -333,11 +337,11 @@ a {
 .subtitle {
   position: absolute;
   top: 10px;
-  width: 90%;
+  width: 100%;
   padding: 0.3rem 0;
   left: 50%;
   transform: translateX(-50%);
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.65);
   color: #d8dee9;
   text-align: center;
   margin: 0;
@@ -419,13 +423,18 @@ em {
   word-spacing: 1.2rem;
 }
 
+.cat > p {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
 .cat-list {
   padding: 0;
   margin: 0;
 }
 
 .cat-list-item {
-  margin-top: 0.9rem;
+  margin-top: 2rem;
   display: flex;
   align-items: stretch; /* Make items stretch to fill the container's height */
   transition: transform 0.4s ease-in-out;
