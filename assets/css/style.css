@@ -3,6 +3,9 @@
 * {
   box-sizing: border-box;
 }
+html {
+  scrollbar-gutter: stable;
+}
 
 body {
   font-family: system-ui, sans-serif;
@@ -13,10 +16,12 @@ body {
   height: 100vh;
   max-width: 1124px;
   margin: auto;
+  overscroll-behavior: none;
 }
 
 h1 {
   font-size: 1.5em;
+  text-transform: uppercase;
 }
 
 h3 {
@@ -110,7 +115,6 @@ ul {
   text-decoration: none;
   color: #d8dee9;
   padding: 0.6rem 1em;
-  transition: all 0.2s ease-in;
   text-transform: uppercase;
 }
 
@@ -145,6 +149,7 @@ ul {
 
 .header {
   grid-area: header;
+padding: 0 1.5rem 0 3rem;
   height: 4rem;
   background-color: #bf616a;
   text-align: center;
@@ -170,7 +175,6 @@ ul {
   grid-template-rows: auto auto;
 }
 .post-header h1 {
-  text-transform: uppercase;
   line-height: 0.3rem;
 }
 
@@ -192,7 +196,6 @@ ul {
 }
 
 .tags h1 {
-  text-transform: uppercase;
   line-height: 0.3rem;
   word-spacing: 1.2rem;
 }
@@ -424,7 +427,6 @@ em {
 }
 
 .cat h1 {
-  text-transform: uppercase;
   line-height: 0.3rem;
   word-spacing: 1.2rem;
 }

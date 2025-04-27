@@ -1,11 +1,12 @@
 {{ define "main" }}
+<!--  This layout page is used by "about" and any future single or stand alone pages -->
 <article class="post">
   {{ with .Params.postIMG }} {{ $image := . }}
   <div class="home-image">
     <img src="{{ . }}" alt="{{ . }}" />
   </div>
   {{ end }}
-  <h3 class="subtitle">{{ .Params.Subtitle }}</h3>
+  <h1 class="subtitle">{{ .Params.Subtitle }}</h1>
   <div class="post-content">{{ .Content }}</div>
   <div class="post-footer"></div>
 </article>
