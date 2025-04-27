@@ -3,6 +3,7 @@
 * {
   box-sizing: border-box;
 }
+
 html {
   scrollbar-gutter: stable;
 }
@@ -195,6 +196,12 @@ padding: 0 1.5rem 0 3rem;
   gap: 0.4rem;
 }
 
+.post-content ul {
+  list-style-type: circle;
+  padding-left: 1rem;
+
+  
+}
 .tags h1 {
   line-height: 0.3rem;
   word-spacing: 1.2rem;
@@ -409,7 +416,7 @@ em {
 .cert {
   display: inline-block;
   vertical-align: middle;
-  margin-right: 10px;
+  margin: 0 10px 0 0;
 }
 
 .cert:last-child {
@@ -456,8 +463,8 @@ em {
   /* Inherit text color from parent */
 }
 
-.cat-list-item.title {
-  font-size: 1.4rem;
+.cat-list-item-title {
+  font-size: 1.5rem;
   margin-right: 0.8rem;
 }
 

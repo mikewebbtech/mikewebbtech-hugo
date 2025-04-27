@@ -4,9 +4,6 @@ draft: false
 title: "About"
 postIMG: "about.jpg"
 type: page
-tags: ""
-categories: ""
-series: ""
 params:
   subtitle: "Who | What | Why"
 ---
@@ -41,54 +38,60 @@ watched my first sci-fi show on TV.
 >
 > {.three}
 
-An exciting life as a qualified Chef and Horticulturist in viticulture.
+- An exciting life as a qualified Chef and Horticulturist in viticulture.
 
-Systems, Network and Database integrator and solutions provider for schools,
-local government, and local business in the region. As well as an outsourced
-Linux and Cisco systems specialist for remote and local MSP's.
+- Systems, Network and Database integrator and solutions provider for schools,
+  local government, and local business in the region. As well as an outsourced
+  Linux and Cisco systems specialist for remote and local MSP's.
 
-Then randomly pivoted on to a very successful career in the offshore, oil and
-gas and mining sector, starting out as a rope access technician, commercial
-diver and diving medical technician. I progressed to be a technical access
-specialist with a few roles in qa/qc admin. This lead to many years working in
-pre-commissioning and commissioning roles, primarily testing pipelines and
-process piping systems
+- Then randomly pivoted on to a very successful career in the offshore, oil and
+  gas and mining sector, starting out as a rope access technician, commercial
+  diver and diving medical technician. I progressed to be a technical access
+  specialist with a few roles in qa/qc admin. This lead to many years working in
+  pre-commissioning and commissioning roles, primarily testing pipelines and
+  process piping systems
 
-After a lot of training and experience in specialist equipment, proprietary
-processes and managing teams, I was deployed to projects as a subject
-matter specialist to integrate with the clients team to help them with
-compliance, procedure development, inspection test planing and test record
-creation, integrity and final acceptance as the accredited person.
+- After a lot of training and experience in specialist equipment, proprietary
+  processes and managing teams, I was deployed to projects as a subject
+  matter specialist to integrate with the clients team to help them with
+  compliance, procedure development, inspection test planing and test record
+  creation, integrity and final acceptance as the accredited person.
 
-> ### Professional Development - Then, Now, Goals
+> ### Professional Development
 >
 > {.four}
 
-_THEN_. Studied ITC and zeroed in on Unix systems working on Solaris, AIX
-and Berkeley Unix (BSD Unix) servers then installed my first Linux system,
-Yggdrasil Linux, from a borrowed cdrom. Then started offering commercial
-solutions and support based on Slackware. Moved to RedHat as the version for
-my clients when the HCE certification program was introduced.
+_THEN_
 
-Numerous vendor, industry, and government mandated certifications and
-competencies in equipment use, process and procedure application, Health,
-Safety, Environment, Culture, security and team management.
+- Studied ITC and zeroed in on Unix systems working on Solaris, AIX
+  and Berkeley Unix (BSD Unix) servers then installed my first Linux system,
+  Yggdrasil Linux, from a borrowed cdrom. Then started offering commercial
+  solutions and support based on Slackware. Moved to RedHat as the version for
+  my clients when the HCE certification program was introduced.
 
-_NOW_. Full time student studying network and infrastructure. This provides
-the skills and knowledge to design, install and manage branch
-networks, on premise and cloud infrastructure
+- Numerous vendor, industry, and government mandated certifications and
+  competencies in equipment use, process and procedure application, Health,
+  Safety, Environment, Culture, security and team management.
 
-This qualification includes core skills in policy development. programming,
-ethics and privacy, cyber risk management, critical thinking, emerging
-technology research, teamwork and client support. There is a lot of theory with
-a high standard on fundamentals and creating solutions for small and large
-businesses using equipment and vendor services such as Microsoft, VMware,
-Linux, Amazon Web services, Microsoft Azure and Fortinet.
+_NOW_
 
-_GOALS_. With my full time study, I still have time for side quests to gain
-additional vendor, leadership and industry certification and interest stream
-(that I cover in this site), Checkout my
-[current achievements]({{% ref "#current-achievements" %}}).
+- Full time student studying network and infrastructure. This provides
+  the skills and knowledge to design, install and manage branch
+  networks, on premise and cloud infrastructure
+
+- This qualification includes core skills in policy development. programming,
+  ethics and privacy, cyber risk management, critical thinking, emerging
+  technology research, teamwork and client support. There is a lot of theory with
+  a high standard on fundamentals and creating solutions for small and large
+  businesses using equipment and vendor services such as Microsoft, VMware,
+  Linux, Amazon Web services, Microsoft Azure and Fortinet.
+
+_GOALS_
+
+- With my full time study, I still have time for side quests to gain
+  additional vendor, leadership and industry certification and interest stream
+  (that I cover in this site), Checkout my
+  [current achievements]({{% ref "#current-achievements" %}}).
 
 > ### Current achievements
 >
