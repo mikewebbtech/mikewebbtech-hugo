@@ -9,7 +9,7 @@ title = 'Architecting Intelligence'
 
 Learning one project at a time. Follow my hands-on journey through the technologies that matters me .
 
-### Landscapes I am mapping
+### Landscapes I am navigating
 
 {{< link-icon href="categories/cloud" >}}Cloud Computing{{< /link-icon >}}:
 From understanding the fundamentals to deploying and managing applications in

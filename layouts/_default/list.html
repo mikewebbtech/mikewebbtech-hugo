@@ -7,7 +7,6 @@
         <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="Header Image" />
       {{ end }}
     </div>
-
   {{ end }}
  
   {{ if .Resources.Get "image-header.png"}}
@@ -19,9 +18,9 @@
     {{ range where .Paginator.Pages "Type" "!=" "page" }}
       <li class="article-list-item">
         {{ with .Params.postIMG }} {{ $image := . }}
-        <div class="article-image">
-          <img src="{{ . | relURL }}" alt="{{ . }}" />
-        </div>
+          <div class="article-image">
+            <img src="{{ . | relURL }}" alt="{{ . }}" />
+          </div>
         {{ end }}
         <div class="article-content-right">
           <div class="article-title">
@@ -37,26 +36,30 @@
               {{ .ReadingTime }} min read
             </div>
             {{- with .Params.categories}}
-            <div>
-              <i class="fa-solid fa-list"></i>
-              {{- range . -}} {{ with $.Site.GetPage (printf "/%s/%s" "categories" . ) }}
-              <a class="tag" href="{{ .RelPermalink }}">{{ .Title }}</a>, {{- end }} 
-              {{- end }}
-            </div>
-            {{- end }} {{- with .Params.tags }}
-            <div>
-              <i class="fa-solid fa-tags"></i>
-              {{- range . -}} {{ with $.Site.GetPage (printf "/%s/%s" "tags" . ) }}
-              <a class="tag" href="{{ .RelPermalink }}">{{ .Title }}</a>
-              {{- end }} 
-              {{- end }}
-            </div>
+              <div>
+                <i class="fa-solid fa-list"></i>
+                  {{- range . -}} 
+                    {{ with $.Site.GetPage (printf "/%s/%s" "categories" . ) }}
+                      <a class="tag" href="{{ .RelPermalink }}">{{ .Title }}</a> 
+                    {{- end }} 
+                {{- end }}
+              </div>
+            {{- end }} 
+            {{- with .Params.tags }}
+              <div>
+                <i class="fa-solid fa-tags"></i>
+                {{- range . -}} 
+                  {{ with $.Site.GetPage (printf "/%s/%s" "tags" . ) }}
+                    <a class="tag" href="{{ .RelPermalink }}">{{ .Title }}</a>
+                  {{- end }} 
+                {{- end }}
+              </div>
             {{- end }}
           </div>
           <div class="article-description">
-            {{ .Summary }} {{ if .Truncated }}
-            <a href="{{ .RelPermalink }}">More ...</a>
-            {{ end }}
+              {{ .Summary }} {{ if .Truncated }}
+                <a href="{{ .RelPermalink }}">More ...</a>
+              {{ end }}
           </div>
         </div>
       </li>
