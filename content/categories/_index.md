@@ -1,5 +1,7 @@
 +++
 title = 'Categories'
+[params]
+  subtitle = 'Blocks of Knowleadge'
 +++
 
 This Categories list is where you’ll find all the main topics the articles

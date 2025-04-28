@@ -1,4 +1,4 @@
-<a href="{{ .Get "href" }}">
+<a href="{{ .Get "href" | safeURL }}">
     {{ .Inner }}
 </a>
 <span style="vertical-align: super; display: inline-block; font-size: 0.7rem; font-weight: 200;" >
