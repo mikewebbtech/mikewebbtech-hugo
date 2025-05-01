@@ -301,6 +301,10 @@ a {
   margin: 0;
 }
 
+.article-description h3 {
+  color: #3b4252;
+  margin: 0;
+
 .post,
 .cat,
 .list-page,
