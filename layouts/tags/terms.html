@@ -1,24 +1,30 @@
-
 {{ define "main" }}
-  <article class="tags">
+<article class="tags">
   <h1><i class="fa-solid fa-tags"></i> {{ .Title }}</h1>
   <p>
-    This Tags list is your shortcut to exploring detailed content groups. Click on any tag to see all the posts where it’s been mentioned, 
-    and follow information threads. Content on this site use the following tags.
+    This Tags list is your shortcut to exploring detailed content collections.
+    Click on any tag to see all the posts and follow information threads.
+    Content on this site use the following tags.
   </p>
-    <ul class="tags-list">
-      {{ range .Data.Terms.Alphabetical }}
-        <li class="tags-list-item">
-          <div>
-            <a class="tags-list-item-title" href="{{ .Page.RelPermalink }}">
-              {{ .Page.Title }}
-            </a>
-            <div style="vertical-align: super; display: inline-block; font-size: smaller">
-              {{ .Count }}
-            </div>
-          </div>
-        </li>
-      {{ end }}
-    </ul>
-  </article>
+  <ul class="tags-list">
+    {{ range .Data.Terms.Alphabetical }}
+    <li class="tags-list-item">
+      <div>
+        <a class="tags-list-item-title" href="{{ .Page.RelPermalink }}">
+          {{ .Page.Title }}
+        </a>
+        <div
+          style="
+            vertical-align: super;
+            display: inline-block;
+            font-size: smaller;
+          "
+        >
+          {{ .Count }}
+        </div>
+      </div>
+    </li>
+    {{ end }}
+  </ul>
+</article>
 {{ end }}

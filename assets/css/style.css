@@ -171,7 +171,6 @@ ul {
   padding: 0.1rem 0.5rem 0.5rem;
   background-color: #afbac4;
   color: #161616;
-  border-radius: 5px;
   display: grid;
   grid-template-rows: auto auto;
 }
@@ -297,6 +296,11 @@ a {
   margin-top: 10px;
 }
 
+.article-description a {
+  color: peru;
+  margin: 0;
+}
+
 .post,
 .cat,
 .list-page,
@@ -311,6 +315,12 @@ a {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
+
+.article-description p {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
 .home-image {
   width: 100%;
   position: relative;

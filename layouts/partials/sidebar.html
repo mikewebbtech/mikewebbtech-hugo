@@ -11,22 +11,28 @@
     </div>
     {{ partial "nav.html" . }}
     <div class="nav-bottom">
-      <p xmlns:cc="http://creativecommons.org/ns#">
-        
-        
-        <a href="https://mikewebb.tech">
-         Designed by Mike Webb 
-        </a>
-        
-        <a href="https://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">
-          &copy; 2025 CC BY-NC 4.0
-        </a>
-      </p>
+      
+      
+      <a href="https://mikewebb.tech">
+        Designed by Mike Webb 
+      </a>
+      <a href="https://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">
+        &copy; 2025 CC BY-NC 4.0
+      </a>
       <p>
       created using
       </p> 
       <a href="https://gohugo.io" target="_blank">
         <img src="{{ "hugo-logo-wide.svg" | relURL }}" alt="hugo.io" style="width: 40%">
       </a>
+      <br><br>
+      Git commit 
+      {{ with .GitInfo }}
+        {{ .AbbreviatedHash }}
+      {{ end }}
+      {{ with .GitInfo }}
+      {{ .AuthorDate.Format "06-01-02" }}
+      {{ end }}
+      <br><br>
     </div>
   </aside>

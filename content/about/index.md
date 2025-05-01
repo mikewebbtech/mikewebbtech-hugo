@@ -5,7 +5,7 @@ title: "About"
 postIMG: "about.jpg"
 type: page
 params:
-  subtitle: "Who | What | Why"
+  subtitle: "Behind the Mask"
 ---
 
 > ### What am I about?

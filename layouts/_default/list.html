@@ -1,4 +1,5 @@
 {{ define "main" }}
+/layouts/_default/list.html
 <!-- this layout is used to list the articles on the site and the default used by any future list pages-->
 <article class="list-page">
   {{ with .Resources.Get "image-header.png" }}
@@ -35,7 +36,8 @@
               <i class="fa-solid fa-clock"></i>
               {{ .ReadingTime }} min read
             </div>
-            {{- with .Params.categories}}
+
+            {{- with .Params.categories -}}
               <div>
                 <i class="fa-solid fa-list"></i>
                   {{- range . -}} 
@@ -50,16 +52,27 @@
                 <i class="fa-solid fa-tags"></i>
                 {{- range . -}} 
                   {{ with $.Site.GetPage (printf "/%s/%s" "tags" . ) }}
-                    <a class="tag" href="{{ .RelPermalink }}">{{ .Title }}</a>
+                    <a class="tag" href="{{ .RelPermalink }}">{{ .Title }},</a>
                   {{- end }} 
                 {{- end }}
               </div>
             {{- end }}
+
+          {{- with .Params.series }}
+          <div>
+            <i class="fa-solid fa-layer-group"></i>
+            {{- range . -}}
+            {{ with $.Site.GetPage (printf "/%s/%s" "series" . ) }}
+            <a class="tag" href="{{ .RelPermalink }}">{{ .Title }},</a>
+            {{- end }}
+            {{- end }}
+          </div>
+          {{- end }}
+
+
           </div>
           <div class="article-description">
-              {{ .Summary }} {{ if .Truncated }}
-                <a href="{{ .RelPermalink }}">More ...</a>
-              {{ end }}
+              {{ .Summary }} 
           </div>
         </div>
       </li>

@@ -1,9 +1,9 @@
 ---
 date: "2025-04-20T12:08:01+08:00"
 draft: false
-title: "Diving into Hugo"
-summary: "Exploring the power and simplicity of Hugo, the static site generator that powers this blog. Learn about my experiences and why I chose Hugo for my journey in tech."
-tags: ["docker", "homeassitant", "maker", "firewall"]
+title: "Fluba Hugo"
+summary: "the static site generator that powers this blog. Learn about my experiences and why I chose Hugo for my journey in tech."
+tags: ["maker", "firewall"]
 categories:
   [
     "automation",
