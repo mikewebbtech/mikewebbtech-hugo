@@ -301,9 +301,7 @@ a {
   margin: 0;
 }
 
-.article-description h3 {
-  color: #3b4252;
-  margin: 0;
+
 
 .post,
 .cat,
@@ -348,6 +346,7 @@ a {
 .home .highlight {
   padding: 1rem 2rem 1rem 2rem;
 }
+
 .home .highlight pre {
   padding: 0 1rem 1rem 1rem;
   background-color: #bec9d7 !important;
@@ -395,7 +394,10 @@ blockquote {
   font-weight: bold;
 }
 */
-
+.article-description>h3 {
+  color: #3b4252;
+  margin: 0;
+}
 .one {
   border-bottom: #616abf solid 2px;
 }
