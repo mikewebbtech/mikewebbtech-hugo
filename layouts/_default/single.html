@@ -49,9 +49,7 @@
                 {{ range $index, $page := $currentSeries.Pages }}
                   {{ if eq $page.Permalink $.Permalink }}
                     {{ $articleNumber := add $index 1 }}
-                      <span class="series-info">
                         (Article {{ $articleNumber }} of {{ $total }})
-                      </span>
                     {{ end }}
                   {{ end }}
                 {{ end }}
