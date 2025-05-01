@@ -11,7 +11,10 @@
   {{ end }}
 
   {{ if .Resources.Get "image-header.png"}}
-  <h1 class="subtitle">{{ .Title }}</h1>
+  <h3 class="subtitle">{{ .Params.Subtitle }}</h3>
+  {{ end }}
+
+  {{ if .Params.description }}
   {{ end }}
 
   {{ .Content }}

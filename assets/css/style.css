@@ -159,7 +159,7 @@ ul {
 
 .main {
   grid-area: main;
-  padding: 1rem 1.5rem 0 3rem;
+  padding: 1rem 1rem 0 3rem;
   background-color: #3b4252;
   color: #d7dce1;
   overflow-wrap: break-word;
@@ -363,7 +363,7 @@ a {
 */
 .subtitle {
   position: absolute;
-  top: 10px;
+  top: 20px;
   width: 100%;
   padding: 0.3rem 0;
   left: 50%;

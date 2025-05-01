@@ -65,5 +65,10 @@
     </div>
     <div class="post-footer">
     </div>
+    {{- if .Params.series -}}
+    <div class="post-series-bottom">
+      {{ partial "series.html" . }}
+    </div>
+    {{- end -}}
   </article>
 {{ end }}

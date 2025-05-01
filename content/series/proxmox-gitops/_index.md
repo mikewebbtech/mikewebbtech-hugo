@@ -1,5 +1,7 @@
 +++
 title = "Proxmox as Code"
+[params]
+  subtitle = "GitOps for Proxmox"
 +++
 
-Spining up dev labs and other Virtualised infrastructure on Proxmox using automation and infrastructure As Code.
+Spinning up dev labs and other Virtualised infrastructure on Proxmox using automation and infrastructure As Code.
