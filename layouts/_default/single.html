@@ -60,15 +60,25 @@
         </div>
         {{- end }}
     </div>
+
+    {{- if .Params.series -}}
+    <div class="post-series-list">
+      {{ partial "series-list.html" . }}
+    </div>
+    {{- end -}}
+
     <div class="post-content">
       {{ .Content }}
     </div>
+
     <div class="post-footer">
     </div>
+
     {{- if .Params.series -}}
     <div class="post-series-bottom">
-      {{ partial "series.html" . }}
+      {{ partial "series-buttons.html" . }}
     </div>
     {{- end -}}
+  
   </article>
 {{ end }}
