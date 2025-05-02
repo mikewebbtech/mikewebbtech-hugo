@@ -1,7 +1,8 @@
 +++
-date = '2025-04-27T16:37:08+08:00'
+date = '2024-04-27T16:37:08+08:00'
 draft = false 
-title = 'bar'
+title = 'bar (art 1)'
+
 tags = ''
 categories = ['iot', 'home-lab']
 series = ['proxmox-gitops']

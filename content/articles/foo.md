@@ -1,7 +1,7 @@
 +++
-date = '2025-04-19T16:37:08+08:00'
+date = '2025-01-19T16:37:08+08:00'
 draft = false 
-title = 'Foo'
+title = 'Foo (art 2)'
 tags = ''
 categories = ['kubernetes', 'automation']
 series = ['proxmox-gitops']
@@ -16,4 +16,3 @@ If you're looking for a fast, flexible, and powerful way to build a website,
 especially a blog focused on technical content, I highly recommend giving Hugo a
 try. It's been an invaluable tool in documenting and sharing my own path of
 learning and discovery.
-

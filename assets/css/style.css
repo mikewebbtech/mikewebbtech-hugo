@@ -570,3 +570,67 @@ em {
 .cat-list-item:hover {
   transform: scale(1.02);
 }
+
+.pagination-buttons {
+  display: flex;
+  gap: 1rem;
+  /* Space between the previous and next buttons */
+  justify-content: center;
+  /* Center the buttons if they don't take full width */
+  width: 100%;
+  /* Ensure it takes the full width of its container */
+}
+
+.button {
+  display: inline-flex;
+  /* Align icon and text horizontally */
+  align-items: center;
+  /* Vertically align icon and text */
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  /* Slightly rounded corners */
+  text-decoration: none;
+  color: #d7dce1;
+  /* Default text color */
+  background-color: #4c556a;
+  /* A background color from your theme */
+  transition: background-color 0.3s ease;
+  /* Smooth hover transition */
+}
+
+.button:hover {
+  background-color: #bec9d7;
+  /* Lighter background on hover */
+  color: #3b4252;
+  /* Darker text on hover */
+}
+
+.previous {
+  /* No specific styling needed beyond .button unless you want something unique */
+}
+
+.next {
+  /* No specific styling needed beyond .button unless you want something unique */
+}
+
+.button-icon {
+  font-size: 1.2rem;
+  /* Adjust icon size */
+  margin: 0 0.5rem;
+  /* Space between icon and text */
+}
+
+.previous .button-icon {
+  margin-left: 0;
+  /* No left margin for previous button's icon */
+}
+
+.next .button-icon {
+  margin-right: 0;
+  /* No right margin for next button's icon */
+}
+
+.button-text {
+  font-size: 1rem;
+  /* Adjust text size */
+}

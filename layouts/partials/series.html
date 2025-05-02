@@ -11,20 +11,20 @@
 {{- $prevPageIndex := sub $curPageIndex 1 -}}
 {{- $nextPageIndex := add $curPageIndex 1 -}}
 
-<div class="pagination__buttons" style="margin-top: 50px">
+<div class="pagination-buttons" style="margin-top: 50px">
     {{- with (index .Pages.ByDate $prevPageIndex) -}}
     <span class="button previous">
         <a href="{{ .Permalink }}" title="{{ .Title }}">
-            <span class="button__icon">←</span>
-            <span class="button__text">{{ .Title }}</span>
+            <span class="button-icon">←</span>
+            <span class="button-ext">{{ .Title }}</span>
         </a>
     </span>
     {{- end -}}
     {{- with (index .Pages.ByDate $nextPageIndex) -}}
     <span class="button next">
         <a href="{{ .Permalink }}" title="{{ .Title }}">
-            <span class="button__text">{{ .Title }}</span>
-            <span class="button__icon">→</span>
+            <span class="button-text">{{ .Title }}</span>
+            <span class="button-icon">→</span>
         </a>
     </span>
     {{- end -}}

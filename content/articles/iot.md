@@ -1,7 +1,7 @@
 +++
-date = '2025-04-19T16:37:08+08:00'
+date = '2025-02-19T16:37:08+08:00'
 draft = false 
-title = 'Iot'
+title = 'Iot (art 3)'
 tags = ''
 categories = ['iot', 'automation']
 series = ['proxmox-gitops']
