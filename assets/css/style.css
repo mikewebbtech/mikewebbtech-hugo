@@ -236,7 +236,7 @@ a {
   color: inherit;
 }
 
-a:hover {
+.tags-list-item-title:hover {
   font-weight: bold;
 }
 
