@@ -235,6 +235,11 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+a:hover {
+  font-weight: bold;
+}
+
 .tags-list-item i {
   margin-right: 8px;
 }
@@ -268,20 +273,30 @@ a {
 }
 
 .article-title {
+  display: block;
   margin-top: 0;
   padding-bottom: 0.2rem;
   font-size: 1.2em;
   color: #3b4252;
+  border-bottom: 3px solid #bec9d7;
 }
 
 .article-title a {
   text-decoration: none;
 }
 
-/* .article-title a:hover { */
-/*   color: #D08A91;  */
-/* } */
+.article-title h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 1.2em;
+  color: #3b4252; 
+}
 
+
+.article-title:hover {
+  cursor: pointer;
+  background-color: #d7dce1 ;
+}
 .article-meta {
   display: flex;
   flex-wrap: wrap;
@@ -289,6 +304,11 @@ a {
   margin-bottom: 10px;
   font-size: 0.8em;
   color: #3b4252;
+}
+
+.article-meta > div > a.tag:hover {
+    background-color: #d7dce1; !important;
+    font-weight: normal;
 }
 
 .article-description {
