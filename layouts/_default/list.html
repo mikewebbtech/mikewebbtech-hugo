@@ -1,5 +1,5 @@
 {{ define "main" }}
-/layouts/_default/list.html
+/layouts/_default/list.html {{ .Data.Term }} {{ .Kind }} {{ .Section }} {{ .Type }}
 <!-- this layout is used to list the articles on the site and the default used by any future list pages-->
 <article class="list-page">
   {{ with .Resources.Get "image-header.png" }}
@@ -19,7 +19,14 @@
 
   {{ .Content }}
   <ul class="article-list">
-    {{ range where .Paginator.Pages "Type" "!=" "page" }}
+    {{ $pages := .Pages }}
+    {{ if and (eq .Kind "term") (eq .Data.Plural "series") }}
+    {{ $pages = sort $pages "Date" }}
+    {{ end }}
+    
+    {{ $paginator := .Paginate (where $pages "Type" "!=" "page") }}
+    {{ range $paginator.Pages }}
+
     <li class="article-list-item">
       {{ with .Params.postIMG }} {{ $image := . }}
       <div class="article-image">
