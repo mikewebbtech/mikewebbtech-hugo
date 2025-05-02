@@ -5,4 +5,8 @@
   <title>{{ .Title }}</title>
   {{- $style := resources.Get "css/style.css" | minify | fingerprint -}}
   <link rel="stylesheet" href="{{ $style.Permalink }}" />
+  <link rel="icon" type="image/x-icon"  href="{{ "img/favicon.ico" | relURL }}" />
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ "img/apple-touch-icon.png" | relURL }}" />
+ 
+  <link rel="manifest" href="{{ "img/site.webmanifest" | relURL }}" />
 </head>

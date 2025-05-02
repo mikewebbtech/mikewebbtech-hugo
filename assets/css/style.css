@@ -307,7 +307,7 @@ a {
 }
 
 .article-meta > div > a.tag:hover {
-    background-color: #d7dce1; !important;
+    background-color: #d7dce1 !important;
     font-weight: normal;
 }
 
@@ -603,14 +603,6 @@ em {
   /* Lighter background on hover */
   color: #3b4252;
   /* Darker text on hover */
-}
-
-.previous {
-  /* No specific styling needed beyond .button unless you want something unique */
-}
-
-.next {
-  /* No specific styling needed beyond .button unless you want something unique */
 }
 
 .button-icon {

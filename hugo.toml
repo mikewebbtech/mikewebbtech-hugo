@@ -41,6 +41,7 @@ category = "categories"
 series = "series"
 
 [params]
+favicon = "/img/favicon.ico" 
 dateFormat = "Jan 2, 2006"
 
 [markup]
