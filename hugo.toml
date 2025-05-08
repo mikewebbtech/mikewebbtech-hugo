@@ -3,33 +3,33 @@ languageCode = "en-us"
 title = "Mike Webb Tech"
 summaryLength = 30
 
-[menu]
-[[menu.main]]
+[menus]
+[[menus.main]]
 name = "Home"
 pre = "fa-house"
 url = "/"
 weight = "10"
-[[menu.main]]
+[[menus.main]]
 name = "Articles"
 pre = "fa-file-code"
 url = "/articles"
 weight = "20"
-[[menu.main]]
+[[menus.main]]
 name = "Categories"
 pre = "fa-list"
 url = "/categories/"
 weight = "30"
-[[menu.main]]
+[[menus.main]]
 name = "Series"
 pre = "fa-layer-group"
 url = "/series/"
 weight = "40"
-[[menu.main]]
+[[menus.main]]
 name = "Tags"
 pre = "fa-tags"
 url = "/tags/"
 weight = "50"
-[[menu.main]]
+[[menus.main]]
 name = "About"
 pre = "fa-circle-info"
 url = "/about/"
@@ -41,7 +41,7 @@ category = "categories"
 series = "series"
 
 [params]
-favicon = "/img/favicon.ico" 
+favicon = "/img/favicon.ico"
 dateFormat = "Jan 2, 2006"
 
 [markup]

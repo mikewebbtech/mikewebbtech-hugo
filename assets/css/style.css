@@ -128,6 +128,11 @@ ul {
   background-color: #4c566a;
 }
 
+.nav ul li.active {
+  transform: translateX(0);
+  background-color: #4c566a;
+}
+
 /* 
 * .nav a:hover { 
 *   color: #D08A91; 
