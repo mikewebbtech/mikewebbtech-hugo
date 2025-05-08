@@ -3,6 +3,7 @@ languageCode = "en-us"
 title = "Mike Webb Tech"
 summaryLength = 30
 
+
 [menus]
 [[menus.main]]
 name = "Home"
@@ -43,6 +44,9 @@ series = "series"
 [params]
 favicon = "/img/favicon.ico"
 dateFormat = "Jan 2, 2006"
+github = "https://github.com/mikewebbtech"
+linkedin = "https://www.linkedin.com/in/michael-webb-1a36b8a5/"
+
 
 [markup]
 [markup.goldmark]
