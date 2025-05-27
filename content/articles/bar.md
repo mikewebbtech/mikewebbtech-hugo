@@ -2,7 +2,6 @@
 date = '2024-04-27T16:37:08+08:00'
 draft = false 
 title = 'bar (art 1)'
-
 tags = ''
 categories = ['iot', 'home-lab']
 series = ['proxmox-gitops']
@@ -17,4 +16,3 @@ If you're looking for a fast, flexible, and powerful way to build a website,
 especially a blog focused on technical content, I highly recommend giving Hugo a
 try. It's been an invaluable tool in documenting and sharing my own path of
 learning and discovery.
-
