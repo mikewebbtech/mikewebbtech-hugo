@@ -13,7 +13,7 @@ weight = "10"
 [[menus.main]]
 name = "Articles"
 pre = "fa-file-code"
-url = "/articles"
+url = "/articles/"
 weight = "20"
 [[menus.main]]
 name = "Categories"
@@ -47,6 +47,9 @@ dateFormat = "Jan 2, 2006"
 github = "https://github.com/mikewebbtech"
 linkedin = "https://www.linkedin.com/in/michael-webb-1a36b8a5/"
 
+[pagination]
+disableAliases = false
+pagerSize = 100
 
 [markup]
 [markup.goldmark]
