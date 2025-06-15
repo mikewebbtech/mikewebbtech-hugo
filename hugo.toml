@@ -3,7 +3,6 @@ languageCode = "en-us"
 title = "Mike Webb Tech"
 summaryLength = 30
 
-
 [menus]
 [[menus.main]]
 name = "Home"

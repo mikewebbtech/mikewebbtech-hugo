@@ -20,6 +20,19 @@ body {
   overscroll-behavior: none;
 }
 
+.highlight pre {
+  background-color: #353b43 !important;
+  padding: 15px;
+  overflow: auto !important;
+  white-space: pre;
+  max-width: 880px;
+}
+
+.highlight pre code {
+  display: block;
+  min-width: min-content; /* Forces the code block to be at least as wide as its content */
+}
+
 h1 {
   font-size: 1.5em;
   text-transform: uppercase;
@@ -174,8 +187,8 @@ ul {
 
 .post-header {
   padding: 0.1rem 0.5rem 0.5rem;
-  background-color: #afbac4;
-  color: #161616;
+  background-color: #353b43;
+  color: #bec9d7;
   display: grid;
   grid-template-rows: auto auto;
 }
@@ -272,7 +285,8 @@ a {
 }
 
 .article-content-right {
-  background-color: #bec9d7;
+  background-color: #4c556a;
+  color: #bec9d7;
   padding: 15px;
   flex-grow: 1;
 }
@@ -282,8 +296,8 @@ a {
   margin-top: 0;
   padding-bottom: 0.2rem;
   font-size: 1.2em;
-  color: #3b4252;
-  border-bottom: 3px solid #bec9d7;
+  color: #bec9d7;
+  border-bottom: 1px solid #bec9d7;
 }
 
 .article-title a {
@@ -294,39 +308,45 @@ a {
   margin: 0;
   padding: 0;
   font-size: 1.2em;
-  color: #3b4252; 
 }
-
 
 .article-title:hover {
   cursor: pointer;
-  background-color: #d7dce1 ;
+  background: linear-gradient(to right, #d8dee9, #4c566a);
 }
+
+.article-title h3:hover {
+  color: #4c566a;
+}
+
 .article-meta {
   display: flex;
   flex-wrap: wrap;
   gap: 0.3rem;
   margin-bottom: 10px;
   font-size: 0.8em;
-  color: #3b4252;
 }
 
 .article-meta > div > a.tag:hover {
-    background-color: #d7dce1 !important;
-    font-weight: normal;
+  background-color: #d7dce1 !important;
+  color: #4c566a;
+  font-weight: normal;
 }
 
 .article-description {
-  color: #3b4252;
+  color: #d8dee9;
   margin-top: 10px;
+  font-size: 1rem;
+}
+
+.article-description > h3 {
+  color: #d7dce1 !important;
 }
 
 .article-description a {
   color: peru;
   margin: 0;
 }
-
-
 
 .post,
 .cat,
@@ -419,7 +439,7 @@ blockquote {
   font-weight: bold;
 }
 */
-.article-description>h3 {
+.article-description > h3 {
   color: #3b4252;
   margin: 0;
 }

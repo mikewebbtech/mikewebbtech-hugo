@@ -1,7 +1,7 @@
 ---
 title: "macports, the tools I'm used to"
 date: 2015-07-09T20:02:07
-summary: "YAY! Awesome, a HUGE amount of tools and libraries that I've gotten used to having at my fingertips can be had on my Mac's thanks to the efforts of the..."
+summary: "YAY! Awesome, a HUGE amount of tools and libraries that I've gotten used to having at my fingertips can be had on my Mac's thanks to macports"
 ---
 
 YAY! Awesome, a HUGE amount of tools and libraries that I've gotten used to having at my fingertips can be had on my Mac's thanks to the efforts of the macports community.  More details and downloads can be found on the [macports website](https://www.macports.org).
@@ -13,3 +13,4 @@ For the Xwindows optional dependancy (reductive term) I use the XQuartz open sou
 Some of the ports apps perform better then the equivalent native app.  One of my regular tools is rsync and the macports is a later version then stock mac os version and subsequently copies faster over the network.
 
 There are a fist full of open source ported apps available that can perform a range of tasks that do the same or better job then a paid for app on Mac,  they just require some command line knowledge or a willingness to read a help file.
+
