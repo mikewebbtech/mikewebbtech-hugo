@@ -1,24 +1,20 @@
-{{- with (.GetTerms "series") -}}
-    {{- range . -}}
+{{- with (.GetTerms "series") -}} {{- range . -}} {{- $series := .Pages.ByDate
+-}}
+<details>
+  <summary>
+    <span> All articles in the <strong>"{{ .Title }}"</strong> series </span>
+  </summary>
+  <ol>
+    {{- range $series -}} {{- if eq .File.UniqueID $.File.UniqueID -}}
+    <li class="active">
+      <b>{{ .Title }}</b>
+    </li>
+    {{- else -}}
+    <li>
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+    </li>
+    {{- end -}} {{- end -}}
+  </ol>
+</details>
+{{- end -}} {{- end -}}
 
-        {{- $series := .Pages.ByDate -}}
-        <details>
-        <summary>
-            <span>
-                All articles in the <strong>"{{ .Title }}"</strong> series
-            </span>
-        </summary>
-        <ol>
-        {{- range $series -}}
-            <li>
-                {{- if eq .File.UniqueID $.File.UniqueID -}}
-                    <b>{{ .Title }}</b>
-                {{- else -}}
-                    <a href="{{ .Permalink }}">{{ .Title }}</a>
-                {{- end -}}
-            </li>
-        {{- end -}}
-        </ol>
-        </details>
-    {{- end -}}
-{{- end -}}

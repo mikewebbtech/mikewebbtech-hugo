@@ -84,7 +84,7 @@
                   {{ $articleNumber := 0 }}
                   {{ range $index, $page := $currentSeries.Pages }}
                     {{ if eq $page.RelPermalink $article.RelPermalink }}
-                      {{ $articleNumber = add $index 1 }}
+                      {{ $articleNumber = sub $total $index }}
                     {{ end }}
                   {{ end }}
                     (Article {{ $articleNumber }} of {{ $total }})

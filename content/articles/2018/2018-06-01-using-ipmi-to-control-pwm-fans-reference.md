@@ -4,10 +4,10 @@ date: 2018-06-01T10:02:55
 summary: "1 - [What is the Intelligent Platform Management Interface](https://en.wikipedia.org/wiki/Intelligent_Platform_Management_Interface) 2 - Whats the difference between a [PWM vs DC (i.e. normal) fan](http://www.tomshardware.com/answers/id-3151794/confused-pwm-mode-fans-asus-bios.html) 3 - IPMI control over PWM (Supermicro style)..."
 ---
 
-1 - [What is the Intelligent Platform Management Interface](https://en.wikipedia.org/wiki/Intelligent_Platform_Management_Interface)
-2 - Whats the difference between a [PWM vs DC (i.e. normal) fan](http://www.tomshardware.com/answers/id-3151794/confused-pwm-mode-fans-asus-bios.html)
-3 - IPMI control over PWM (Supermicro style)
-4 - This is on a linux server
+1. [What is the Intelligent Platform Management Interface](https://en.wikipedia.org/wiki/Intelligent_Platform_Management_Interface)
+2. Whats the difference between a [PWM vs DC (i.e. normal) fan](http://www.tomshardware.com/answers/id-3151794/confused-pwm-mode-fans-asus-bios.html)
+3. IPMI control over PWM (Supermicro style)
+4. This is on a linux server
 
 **WHY?**:
 In a bid to help quite down a server I just built, I replaced all the cheap fans that came with my cheap server chassis, as well as the CPU cooler fan, with Noctua PWM fans.
@@ -29,13 +29,19 @@ Download and install ipmitool, either on the server or on a linux machine that h
 
 On this Supermicro board (X11SPH-nCT) there are 4 configurable fan control modes. fan control using ipmitool only works when the control mode is 'FULL'.
 
- `# what mode is fan cotrol in?
+# what mode is fan cotrol in?
+
 root@pve:~# ipmitool raw 0x30 0x45 0x00
 02
+
 # 00 = standard
+
 # 01 = full
+
 # 02 = optimal
+
 # 04 = heavy IO
+
 # We need the mode to be full (01)`
 
 If I set my "Zone 1" values too low (120mm fans on the disks) and the speed drops below the threshold, all my good work is undone and IPMI takes over and everything is running at full speed. To overcome this I lowered the IPMI threshold values for the individual fans and now I can sit next to my server peacefully. I would like to say in silence but now I can hear my 8 SAS drives.
@@ -48,3 +54,4 @@ Setting sensor "FANA" Lower Non-Recoverable threshold to 100.000
 Setting sensor "FANA" Lower Critical threshold to 225.000
 Setting sensor "FANA" Lower Non-Critical threshold to 300.000
 root@pve:~# ipmitool sensor thresh FANB lower 100 225 300`
+
