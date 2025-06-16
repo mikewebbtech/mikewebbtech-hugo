@@ -2,6 +2,11 @@ baseURL = "https://mikewebbtech.github.io/mikewebb-tech/"
 languageCode = "en-us"
 title = "Mike Webb Tech"
 summaryLength = 30
+enableEmoji = true
+
+[module]
+[[module.imports]]
+path = "github.com/KKKZOZ/hugo-admonitions"
 
 [menus]
 [[menus.main]]
@@ -55,3 +60,4 @@ pagerSize = 100
 [markup.goldmark.parser]
 [markup.goldmark.parser.attribute]
 block = true
+title = true

@@ -1,0 +1,37 @@
+// --- Theme Colors ---
+// Define the colors used for admonition elements in both light and dark modes.
+
+// Light Mode Colors
+$admonition-light-bg: #ffffff; // Content background
+$admonition-light-text: #000000; // Content text
+$admonition-light-code-bg: #f5f5f5; // Inline code & code block background
+$admonition-light-code-text: #24292e; // Inline code & code block text
+$admonition-light-blockquote-border: #e0e0e0; // Blockquote left border
+
+// Dark Mode Colors
+$admonition-dark-bg: #4c556a; // Content background
+$admonition-dark-text: #bec9d7; // Content text
+$admonition-dark-code-bg: #3b4252; // Inline code & code block background
+$admonition-dark-code-text: #cdd6f4; // Inline code & code block text
+$admonition-dark-blockquote-border: #45475a; // Blockquote left border
+
+// --- Header Background Opacity ---
+// Controls the opacity of the background color tint applied to the whole admonition block.
+// Value should be between 0 (transparent) and 1 (opaque).
+$admonition-light-header-bg-opacity: 0.1; // Opacity for light mode background tint
+$admonition-dark-header-bg-opacity: 0.2; // Opacity for dark mode background tint
+
+// Example: assets/sass/vendors/_admonitions-user-settings.scss
+// --- Admonition Colors ---
+$admonition-colors-overrides: (
+  note: #007bff,
+  // Make 'note' admonitions blue
+  tip: #28a745,
+  // Make 'tip' admonitions green
+  warning: #ffc107,
+  // Make 'warning' admonitions yellow
+  danger: #dc3545,
+  //Make 'notify' admonitions blue
+  notify: #007bff,
+  important: #7f40e8,
+);

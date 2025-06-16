@@ -12,11 +12,11 @@ One thing that drove me nuts was the lake of connecting to my cal in the cloud w
 
 I've followed a few convoluted solutions that I have found on the net that have worked for both the calendar and also tasks;
 
-One way if you do have a Mac is to dive into your ~/Library/Calendars directory.  Depending on how many accounts you have linked to, this folder can be crowded, but what you are looking for as the <longs-tring-of-numbers-and-letters>.caldav directory  with a bunch of *.calendar directories, an Inbox and Attachments directory.  There you will find the pot of gold, the Info.plist.  Now let us begin:
+One way if you do have a Mac is to dive into your ~/Library/Calendars directory.  Depending on how many accounts you have linked to, this folder can be crowded, but what you are looking for as the longs-tring-of-numbers-and-letters.caldav directory  with a bunch of *.calendar directories, an Inbox and Attachments directory.  There you will find the pot of gold, the Info.plist.  Now let us begin:
 
 Open the Info.plist and search for uuid, the number string (e.g. 298471256) is your **user\_id.** Now search for the key DefaultCalenderPath, the associated string should resemble /**user\_id**/calendars/**calendar\_name** (e.g. /298471256/calendars/home)
 
-Now we need the server address, search for the PrincipalURL key, the associated string should resemble <string>https://p**NN**-caldav.icloud.com/**user\_id**/principal/</string>. E.g. (https://p**11**-caldav.icloud.com/298471256/principal/).  There you go, you now have enough pieces of the puzzle to start connecting to and syncing third party apps with Apples CalDAV (calendar and tasks) services.
+Now we need the server address, search for the PrincipalURL key, the associated string should resemble https://p**NN**-caldav.icloud.com/**user\_id**/principal/. E.g. (https://p**11**-caldav.icloud.com/298471256/principal/).  There you go, you now have enough pieces of the puzzle to start connecting to and syncing third party apps with Apples CalDAV (calendar and tasks) services.
 
 So to put it all together.  In your calender application (evolution, thunderbird, iceweazle etc) create a new calender with:
 * Username: your email address you use to log into apple services (e.g. mail, itunes etc)

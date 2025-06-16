@@ -8,7 +8,7 @@ Though, every now and then I hit a snag when installing a new package, especiall
 
 Every so often this gets out of whack.  Keys expire, maintainers change or wrong phase of the moon and you end up with something resembling:
 
-```
+```text
 mike@obsidian:/etc/network$ sudo apt update
 Get:14 http://ppa.launchpad.net/gns3/ppa/ubuntu yakkety InRelease [17.5 kB] 
 Err:14 http://ppa.launchpad.net/gns3/ppa/ubuntu yakkety InRelease 
@@ -21,7 +21,7 @@ N: See apt-secure(8) manpage for repository creation and user configuration deta
 
 Or better know as "splat".  Like in any self respecting system, there are many ways to skin a cat depending on circumstances and personal preferences.  The easiest way I usually find to resolve PPA key issues with the most succes is to use the apt-key command.
 
-```
+```text
 mike@obsidian:~/$ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 9A2FD067A2E3EF7B
 Executing: /tmp/tmp.DSAfPm9NVu/gpg.1.sh --keyserver
 keyserver.ubuntu.com
@@ -33,8 +33,12 @@ gpg: Total number processed: 1
 
 Of course a developer doesn't have to use the Canonical key server.  They maybe using one of a myriad of trusted and secure key servers already to host their public key as shown in this example for an alternative way to import a key used for package signing.
 
-:~/$sudo gpg --keyserver keyserver.pgp.com --recv-key <PUBKEY>
-:~/$sudo gpg -a --export <PUBKEY> | sudo apt-key add -
-:~/$sudo apt-get update
+```text
+mike@obsidian:~/$ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 9A2FD067A2E3EF7B
+$sudo gpg --keyserver keyserver.pgp.com --recv-key <PUBKEY>
+$sudo gpg -a --export <PUBKEY> | sudo apt-key add -
+$sudo apt-get update
+```
 
+mike@obsidian:~/$ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 9A2FD067A2E3EF7B
 P.S.  We all should be using some sort of PKI for the transmission of data over the internet

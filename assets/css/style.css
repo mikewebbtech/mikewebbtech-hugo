@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  font-family: system-ui, sans-serif;
+  font-family: system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", NotoColorEmoji, "Segoe UI Symbol", "Android Emoji", EmojiSymbols;
   font-size: 1.1em;
   line-height: 1.2;
   color: #161616;
@@ -650,4 +650,28 @@ em {
 .button-text {
   font-size: 1rem;
   /* Adjust text size */
+}
+
+blockquote > .danger,
+blockquote > .note,
+blockquote > .warning {
+  background: #4c566a;
+  border-left-style: solid;
+  border-left-width: 1.4rem;
+  border-radius: 0.2rem;
+  margin-left: 1rem;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+.warning {
+  border-left-color: #bfb661;
+}
+
+.note {
+  border-left-color: #616abf;
+}
+
+.danger {
+  border-left-color: #bf616a;
 }
