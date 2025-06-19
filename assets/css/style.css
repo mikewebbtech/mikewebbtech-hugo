@@ -322,15 +322,22 @@ a {
 .article-meta {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.3rem;
-  margin-bottom: 10px;
+  gap: 0.8rem;
+  margin: 10px 0 10px 0;
   font-size: 0.9em;
+}
+
+.article-meta > div {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
 }
 
 .article-meta > div > a.tag:hover {
   background-color: #d7dce1 !important;
   color: #4c566a;
   font-weight: normal;
+  border-radius: 0.2rem;
 }
 
 .article-description {

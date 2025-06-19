@@ -55,3 +55,6 @@ series = ''
 
 > This is dangerous.
 > {.danger}
+
+To format link to pages:
+[link text]({{< relref "bar.md" >}})

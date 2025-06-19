@@ -2,32 +2,42 @@
 <!-- this layout is used by the categories branch page to list out the categories -->
 <article class="cat">
   <div class="home-image">
-  {{ with .Resources.Get "image-header.png" }}
-      {{ with .Process "resize 900x200 CatmullRom webp photo q100" }}
-      <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="" />
-      {{ end }}
-  {{ end }}
+    {{- with .Resources.Get "image-header.png" }} 
+      {{- with .Process "resize 900x200 CatmullRom webp photo q100" }}
+        <img
+          src="{{ .RelPermalink }}"
+          width="{{ .Width }}"
+          height="{{ .Height }}"
+          alt=""
+        />
+      {{ end -}} 
+    {{ end -}}
   </div>
-  <h3 class="subtitle"><i class="fa-solid fa-list"></i> {{ .Params.Subtitle}}</h3>
+  <h2 class="subtitle">
+    <i class="fa-solid fa-list"></i> {{ .Params.Subtitle}}
+  </h2>
   {{ .Content }}
   <ul class="cat-list">
     {{ range .Data.Terms.Alphabetical }}
     <li class="cat-list-item">
       <a class="cat-list-item-link" href="{{ .Page.RelPermalink }}">
         <div class="cat-list-img">
-          {{ with .Page.Resources.Get "image.png" }} 
-            {{ with .Process "resize 90x CatmullRom webp photo q100" }}
-              <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="" />
-            {{ end }}
-          {{ end }}
+          {{- with .Page.Resources.Get "image.png" }} 
+            {{- with .Process "resize 90x CatmullRom webp photo q100" }}
+              <img
+                src="{{ .RelPermalink }}"
+                width="{{ .Width }}"
+                height="{{ .Height }}"
+                alt=""
+              />
+            {{ end -}} 
+          {{ end -}}
         </div>
         <div class="cat-list-item-info">
-          <div class="cat-list-item-title">
-            {{ .Page.Title }}
-          </div>
+          <div class="cat-list-item-title">{{ .Page.Title }}</div>
           (articles found: {{ .Count }})
           <!-- if there a category description. show it -->
-          {{ with .Page.Content }} {{ . }} {{ end }}
+          {{- with .Page.Content }} {{ . }} {{ end -}}
         </div>
       </a>
     </li>
