@@ -2,7 +2,7 @@
 date = '2024-04-27T16:37:08+08:00'
 draft = false 
 title = 'bar (art 1)'
-tags = ''
+tags = ['test1', 'test2', 'test3']
 categories = ['iot', 'home-lab']
 series = ['proxmox-gitops']
 +++

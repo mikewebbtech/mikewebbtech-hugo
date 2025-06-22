@@ -11,7 +11,7 @@
 {{- $prevPageIndex := sub $curPageIndex 1 -}}
 {{- $nextPageIndex := add $curPageIndex 1 -}}
 
-<div class="pagination-buttons" style="margin-top: 50px">
+<div class="pagination-buttons">
     {{- with (index .Pages.ByDate $prevPageIndex) -}}
     <span class="button previous">
         <a href="{{ .Permalink }}" title="PREVIOUS ARTICLE">

@@ -1,29 +1,31 @@
 {{ define "main" }}
 <article class="tags">
-  <h1><i class="fa-solid fa-tags"></i> {{ .Title }}</h1>
-  <p>
-    This Tags list is your shortcut to exploring detailed content collections.
-    Click on any tag to see all the posts and follow information threads.
-    Content on this site use the following tags.
-  </p>
+  <div class="home-image">
+    {{ with .Resources.Get "image-header.png" }}
+      {{ with .Process "resize 900x200 CatmullRom webp photo q99" }}
+        <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="" />
+      {{ end }}
+    {{ end }}
+  </div>
+  <h2 class="subtitle">
+    <i class="fa-solid fa-tags"></i> {{ .Params.Subtitle}}
+  </h2>
+  {{ .Content }}
   <ul class="tags-list">
     {{ range .Data.Terms.Alphabetical }}
-    <li class="tags-list-item">
-      <div>
-        <a class="tags-list-item-title" href="{{ .Page.RelPermalink }}">
-          {{ .Page.Title }}
-        </a>
-        <div
-          style="
-            vertical-align: super;
-            display: inline-block;
-            font-size: smaller;
-          "
-        >
-          {{ .Count }}
+      <li class="tags-list-item">
+        <div>
+          <a class="tags-list-item-title" href="{{ .Page.RelPermalink }}">
+            {{ .Page.Title }}
+          </a>
+          <div style="
+              vertical-align: super;
+              display: inline-block;
+              font-size: smaller; ">
+            {{ .Count }}
+          </div>
         </div>
-      </div>
-    </li>
+      </li>
     {{ end }}
   </ul>
 </article>

@@ -23,15 +23,12 @@ body {
 .highlight pre {
   background-color: #353b43 !important;
   padding: 15px;
-  overflow: auto !important;
+  overflow: auto;
   white-space: pre;
-  max-width: 880px;
 }
 
-.highlight pre code {
-  display: block;
-  min-width: min-content; /* Forces the code block to be at least as wide as its content */
-}
+
+
 
 h1 {
   font-size: 1.5em;
@@ -45,6 +42,7 @@ h3 {
 ul {
   list-style-type: none;
 }
+
 
 .layout {
   display: grid;
@@ -224,7 +222,7 @@ ul {
 
 .tags-list {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: repeat(3, 1fr); 
   gap: 0px;
   list-style: none;
   padding: 0;
@@ -236,17 +234,22 @@ ul {
   align-items: center;
 }
 
-/* Target the first item of each "row" (odd-numbered pairs) */
-.tags-list-item:nth-child(4n + 1),
-.tags-list-item:nth-child(4n + 2) {
-  background-color: #bec9d7;
+/* Target the items in the first row of each alternating pair (Row 1, Row 3, Row 5, etc.) */
+/* This covers items 1, 2, 3, 7, 8, 9, etc. */
+.tags-list-item:nth-child(6n + 1),
+.tags-list-item:nth-child(6n + 2),
+.tags-list-item:nth-child(6n + 3) {
+  background-color: #bec9d7; /* Color for the "odd" rows */
   color: #3b4252;
 }
 
-/* Target the second item of each "row" (even-numbered pairs) */
-.tags-list-item:nth-child(4n + 3),
-.tags-list-item:nth-child(4n + 4) {
-  background-color: #4c556a;
+/* Target the items in the second row of each alternating pair (Row 2, Row 4, Row 6, etc.) */
+/* This covers items 4, 5, 6, 10, 11, 12, etc. */
+.tags-list-item:nth-child(6n + 4),
+.tags-list-item:nth-child(6n + 5),
+.tags-list-item:nth-child(6n + 6) {
+  background-color: #4c556a; /* Color for the "even" rows */
+  color: #e0e0e0; /* Added a contrasting color for dark background */
 }
 
 a {
@@ -272,6 +275,7 @@ a {
 .article-list-item {
   display: flex;
   margin-top: 1.25rem;
+  border: #353b35 solid 1px;
 }
 
 .article-image {
@@ -293,11 +297,10 @@ a {
 
 .article-title {
   display: block;
-  margin-top: 0;
-  padding-bottom: 0.2rem;
+  padding: 0.2rem 0 0.3rem 0.1rem;
   font-size: 1.2em;
   color: #bec9d7;
-  border-bottom: 1px solid #bec9d7;
+  border-bottom: 1px solid #353b43;
 }
 
 .article-title a {
@@ -312,11 +315,6 @@ a {
 
 .article-title:hover {
   cursor: pointer;
-  background: linear-gradient(to right, #d8dee9, #4c566a);
-}
-
-.article-title h3:hover {
-  color: #4c566a;
 }
 
 .article-meta {
@@ -351,6 +349,7 @@ a {
 
 .post,
 .cat,
+.tags,
 .list-page,
 .home {
   text-align: justify;
@@ -381,12 +380,23 @@ a {
   z-index: 2;
 }
 
+/*
 .home a {
   font-weight: bolder;
 }
 
 .home a:hover {
   color: #fff;
+}
+*/
+
+.home a {
+  color: peru;
+  font-weight: bolder;
+}
+
+.home a :hover {
+  color: #d08a91;
 }
 
 .home .highlight {
@@ -600,28 +610,21 @@ em {
 .pagination-buttons {
   display: flex;
   gap: 1rem;
-  /* Space between the previous and next buttons */
   justify-content: center;
-  /* Center the buttons if they don't take full width */
   width: 100%;
-  /* Ensure it takes the full width of its container */
+  margin-top: 3rem;
 }
 
 .button {
   display: inline-flex;
-  /* Align icon and text horizontally */
   align-items: center;
-  /* Vertically align icon and text */
   padding: 0.6rem 1rem;
-  border-radius: 0.5rem;
-  /* Slightly rounded corners */
+  border-radius: 0.2rem;
   text-decoration: none;
   color: #d7dce1;
-  /* Default text color */
   background-color: #4c556a;
-  /* A background color from your theme */
   transition: background-color 0.3s ease;
-  /* Smooth hover transition */
+
 }
 
 .button:hover {
@@ -675,4 +678,39 @@ blockquote > .warning {
 
 .danger {
   border-left-color: #bf616a;
+}
+
+.series-list {
+  list-style: none;
+  background-color: #4c556a;
+  padding: 0.5rem;
+  margin: 0;
+}
+
+summary::before {
+  content: "▶";
+  /* Right-pointing arrow for closed state */
+  display: inline-block;
+  margin-right: 10px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.series-list summary {
+  display: block;
+  cursor: pointer;
+  color: #d7dce1;
+}
+
+.series-list[open] ol {
+  padding-bottom: 0.5rem !important;
+  padding-top: 1rem;
+  margin: 0;
+}
+
+.series-list[open] summary::before {
+  transform: rotate(90deg); /* No rotation needed if content is '▼' */
+}
+
+.series-list .active {
+  font-weight: bolder;
 }

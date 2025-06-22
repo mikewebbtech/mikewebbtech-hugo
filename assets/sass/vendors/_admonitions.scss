@@ -301,12 +301,13 @@ $admonition-colors: map-merge(
     position: relative; // Ensures it can stack if needed
     z-index: 2; // Position above content background if overlapping occurs
 
-    &::after {
-      content: ">"; /* Use a simple chevron character */
+    &::before {
+      content: "▶";
+  /* Right-pointing arrow for closed state */
       display: inline-block; /* Allows transforms and margins */
       font-weight: bold;
       // Use margin-left to add space BEFORE the indicator (after the text)
-      margin-left: 0.6em; /* Adjust spacing as needed */
+      margin-right: 0.6em; /* Adjust spacing as needed */
       transition: transform 0.2s ease-in-out; /* Smooth rotation */
       transform-origin: center; /* Rotate around the center */
       // Inherit the color from the summary text (which gets set by header color rule)
@@ -320,7 +321,7 @@ $admonition-colors: map-merge(
     // & > span { flex-grow: 0; } // Re-add if marker gets pushed
   }
 
-  &[open] > summary::after {
+  &[open] > summary::before {
     transform: rotate(90deg); /* Rotate the chevron down */
   }
 }
