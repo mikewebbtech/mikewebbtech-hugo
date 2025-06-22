@@ -324,13 +324,7 @@ a {
   flex-wrap: wrap;
   gap: 0.8rem;
   margin: 10px 0 10px 0;
-  font-size: 0.9em;
-}
-
-.article-meta > div {
-  display: flex;
-  align-items: center;
-  gap: 0.2rem;
+  font-size: 0.8em;
 }
 
 .article-meta > div > a.tag:hover {
