@@ -213,7 +213,7 @@ ul {
 
 .tags-list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); 
+  grid-template-columns: repeat(3, 1fr);
   gap: 0px;
   list-style: none;
   padding: 0;
@@ -291,15 +291,15 @@ a {
   padding: 0.2rem 0 0.3rem 0.1rem;
   font-size: 1.2em;
   color: #bec9d7;
-    background-image: linear-gradient(currentColor, currentColor);
-    background-position: 0% 100%;
-    background-repeat: no-repeat;
-    background-size: 0% 2px;
-    transition: background-size .3s;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 50% 1px;
+  transition: background-size 0.3s;
 }
 
 .article-title:hover {
-  background-size: 100% 2px;
+  background-size: 100% 1px;
   color: peru;
 }
 
@@ -590,7 +590,6 @@ em {
   color: #d7dce1;
   background-color: #4c556a;
   transition: background-color 0.3s ease;
-
 }
 
 .button:hover {

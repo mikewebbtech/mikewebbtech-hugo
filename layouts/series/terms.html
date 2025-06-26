@@ -3,18 +3,17 @@
 <article class="cat">
   <div class="home-image">
     {{ with .Resources.Get "image-header.png" }} 
-      {{ with .Process "resize 900x200 CatmullRom webp photo q99" }}
-        <img
-        src="{{ .RelPermalink }}"
-        width="{{ .Width }}"
-        height="{{ .Height }}"
-        alt=""
-        />
-      {{ end }} 
-    {{ end }}
+    {{ with .Process "resize 900x200 CatmullRom webp photo q99" }}
+    <img
+      src="{{ .RelPermalink }}"
+      width="{{ .Width }}"
+      height="{{ .Height }}"
+      alt=""
+    />
+    {{ end }} {{ end }}
   </div>
   <h2 class="subtitle">
-    <i class="fa-solid fa-list"></i> {{ .Params.Subtitle}}
+    <i class="fa-solid fa-layer-group"></i> {{ .Params.Subtitle}}
   </h2>
   {{ .Content }}
   <ul class="cat-list">
@@ -22,7 +21,8 @@
     <li class="cat-list-item">
       <a class="cat-list-item-link" href="{{ .Page.RelPermalink }}">
         <div class="cat-list-img">
-          {{ with .Page.Resources.Get "image.png" }} {{ with .Process "resize 90x CatmullRom webp photo q99" }}
+          {{ with .Page.Resources.Get "image.png" }} 
+          {{ with .Process "resize 90x CatmullRom webp photo q99" }}
           <img
             src="{{ .RelPermalink }}"
             width="{{ .Width }}"
