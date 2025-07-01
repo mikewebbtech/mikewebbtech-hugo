@@ -54,10 +54,3 @@ linkedin = "https://www.linkedin.com/in/michael-webb-1a36b8a5/"
 [pagination]
 disableAliases = false
 pagerSize = 100
-
-[markup]
-[markup.goldmark]
-[markup.goldmark.parser]
-[markup.goldmark.parser.attribute]
-block = true
-title = true

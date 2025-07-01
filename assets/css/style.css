@@ -9,7 +9,9 @@ html {
 }
 
 body {
-  font-family: system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", NotoColorEmoji, "Segoe UI Symbol", "Android Emoji", EmojiSymbols;
+  font-family:
+    system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    NotoColorEmoji, "Segoe UI Symbol", "Android Emoji", EmojiSymbols;
   font-size: 1.1em;
   line-height: 1.2;
   color: #161616;
@@ -23,8 +25,12 @@ body {
 .highlight pre {
   background-color: #353b43 !important;
   padding: 15px;
+}
+code,
+kbd,
+pre,
+samp {
   overflow: auto;
-  white-space: pre;
 }
 
 h1 {
