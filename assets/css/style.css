@@ -22,6 +22,19 @@ body {
   overscroll-behavior: none;
 }
 
+<<<<<<< HEAD
+=======
+/*
+.highlight pre {
+  background-color: #353b43 !important;
+  padding: 15px;
+  white-space: pre;
+  max-width: 880px;
+  overflow-x: auto;
+}
+*/
+
+>>>>>>> 2690eba (added style and overflow to codeblock render)
 h1 {
   font-size: 1.5em;
   text-transform: uppercase;
@@ -310,6 +323,15 @@ a {
 
 .article-title:hover {
   cursor: pointer;
+<<<<<<< HEAD
+=======
+  /* background: linear-gradient(to right, #d8dee9, #4c566a); */
+  background-color: #d8dee9;
+}
+
+.article-title h3:hover {
+  color: #4c566a;
+>>>>>>> 2690eba (added style and overflow to codeblock render)
 }
 
 .article-meta {
@@ -328,6 +350,7 @@ a {
 }
 
 .article-description {
+  display: inline-block !important;
   color: #d8dee9;
   margin-top: 10px;
   font-size: 1rem;
@@ -674,13 +697,13 @@ summary::before {
 .series-list .active {
   font-weight: bolder;
 }
-/* All of this is that codeblocks will adapt browser width and overflow corrctly */
+
 /* Allow parent containers to grow and show scroll */
+/* All of this is that codeblocks will adapt browser width and overflow corrctly */
 main.main,
 .post,
 .post-content {
   overflow-x: auto !important;
-  display: block;
   box-sizing: border-box;
 }
 
@@ -690,16 +713,17 @@ main.main,
   display: block !important;
   width: 100% !important;
   box-sizing: border-box;
+  width: 100% !important;
+  max-width: 100% !important;
 }
 
 /* Force pre to allow scroll */
 .highlight pre {
   overflow-x: auto !important;
   background-color: #353b43 !important;
-  padding: 1rem;
+  padding: 1rem !important;
   display: block !important;
   width: max-content !important;
   min-width: 100% !important;
   white-space: pre !important;
-  box-sizing: border-box;
 }
