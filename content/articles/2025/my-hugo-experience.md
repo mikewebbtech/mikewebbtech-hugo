@@ -4,7 +4,7 @@ draft: false
 title: "Diving into Hugo"
 summary: "Exploring the power and simplicity of Hugo, the static site generator that powers this blog. Learn about my experiences and why I chose Hugo for my journey in tech."
 tags: ["docker", "homeassitant", "maker", "firewall"]
-categories: ["automation", "kubernetes", "hugo", "cloud", "security"]
+categories: ["automation", "hugo", "virtualisation", "security"]
 series: ["my-hugo-site"]
 ---
 

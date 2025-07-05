@@ -7,7 +7,10 @@ tags = ['testing', 'testing4']
 categories = ['hugo']
 series = ''
 +++
+
 ## Error Test
+
+<<<<<<< HEAD
 
 > [!NOSUPPORT]
 > Helpful advice for doing things better or more easily.
@@ -42,7 +45,7 @@ series = ''
 >
 > ```javascript
 > function fetchData() {
->     return axios.get('/api/data');
+>   return axios.get("/api/data");
 > }
 > ```
 
@@ -177,10 +180,16 @@ You can choose to only to show the header!
 ## Nested Admonitions
 
 > [!question] Can admonitions be nested?
+>
 > > [!todo] Yes!, they can.
-> > > [!example]  You can even use multiple layers of nesting.
-> [!NOTE]
-> Useful information that users should know, even when skimming content.
+> >
+> > > # [!example] You can even use multiple layers of nesting.
+
+### Some of the callout styles available for use and examples of thier rendering
+
+> > > > > > > 98cb3b2 (added style and overflow to codeblock render)
+> > > > > > > [!NOTE]
+> > > > > > > Useful information that users should know, even when skimming content.
 
 > [!TIP]
 > Helpful advice for doing things better or more easily.

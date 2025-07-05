@@ -7,19 +7,10 @@ tags: ["maker", "firewall"]
 categories:
   [
     "automation",
-    "iot",
-    "home-lab",
-    "kubernetes",
-    "networking",
-    "cloud",
-    "hugo",
-    "cloud",
-    "virtualisation",
     "security",
   ]
 series: ["my-hugo-site"]
 ---
-
 ### Embracing the Speed and Simplicity of Hugo
 
 As I navigate the ever-evolving landscape of technology, I'm always on the

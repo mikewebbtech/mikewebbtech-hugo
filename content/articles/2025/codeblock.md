@@ -8,7 +8,7 @@ categories = ''
 series = ''
 +++
 
-```plain
+```text
 some code
 ```
 
@@ -18,7 +18,6 @@ echo "Hello world"
 ```
 
 ```go
-<!-- image -->
 <figure {{ if isset .Params "class" }}class="{{ index .Params "class" }}"{{ end }}>
     {{ if isset .Params "link"}}<a href="{{ index .Params "link"}}">{{ end }}
         <img src="{{ index .Params "src" }}" {{ if or (isset .Params "alt") (isset .Params "caption") }}alt="{{ if isset .Params "alt"}}{{ index .Params "alt"}}{{else}}{{ index .Params "caption" }}{{ end }}"{{ end }} />
@@ -34,6 +33,4 @@ echo "Hello world"
         </p> {{ end }}
     </figcaption>
     {{ end }}
-</figure>
-<!-- image -->
 ```
