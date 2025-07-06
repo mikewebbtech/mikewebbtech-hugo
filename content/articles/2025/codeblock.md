@@ -2,10 +2,10 @@
 date = '2025-07-01T06:06:51+08:00'
 draft = false 
 title = 'Codeblock'
-summary = 'Testing Hugo codeblocks using custom layout/\_default/\_markup/render-codeblock.html'
-tags = ['']
-categories = ['']
-series = ['']
+summary = 'Testing Hugo codeblocks not using custom layout/\_default/\_markup/render-codeblock.html but using css to render style and overflow-x'
+tags = ''
+categories = ''
+series = ''
 +++
 
 ```plain
