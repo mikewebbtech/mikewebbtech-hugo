@@ -15,7 +15,7 @@ body {
   font-size: 1.1em;
   line-height: 1.2;
   color: #161616;
-  background-color: #4c566a;
+  background-color: black;
   height: 100vh;
   max-width: 1124px;
   margin: auto;
@@ -692,6 +692,7 @@ main.main,
 
 /* Force pre to allow scroll */
 .highlight pre {
+  padding: 1rem !important;
   overflow-x: auto !important;
   background-color: #353b43 !important;
   overflow-x: auto !important;
