@@ -38,7 +38,7 @@ weight = "50"
 name = "About"
 pre = "fa-circle-info"
 url = "/about/"
-weight = "60"
+weight = "15"
 
 [taxonomies]
 tag = "tags"
@@ -54,3 +54,13 @@ linkedin = "https://www.linkedin.com/in/michael-webb-1a36b8a5/"
 [pagination]
 disableAliases = false
 pagerSize = 100
+
+[markup]
+
+
+[markup.goldmark]
+[markup.goldmark.renderer]
+unsafe = true
+[markup.goldmark.parser]
+[markup.goldmark.parser.attribute]
+block = true

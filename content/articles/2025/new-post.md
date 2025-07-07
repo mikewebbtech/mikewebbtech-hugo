@@ -10,8 +10,6 @@ series = ''
 
 ## Error Test
 
-<<<<<<< HEAD
-
 > [!NOSUPPORT]
 > Helpful advice for doing things better or more easily.
 

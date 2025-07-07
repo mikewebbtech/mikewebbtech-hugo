@@ -334,11 +334,6 @@ a {
   color: #d7dce1 !important;
 }
 
-.article-description a {
-  color: peru;
-  margin: 0;
-}
-
 .post,
 .cat,
 .tags,
@@ -412,23 +407,24 @@ blockquote {
   color: #3b4252;
   margin: 0;
 }
-.one {
+
+blockquote > .one {
   border-bottom: #616abf solid 2px;
 }
 
-.two {
+blockquote > .two {
   border-bottom: #bf6199 solid 2px;
 }
 
-.three {
+blockquote > .three {
   border-bottom: #bfb661 solid 2px;
 }
 
-.four {
+blockquote > .four {
   border-bottom: #61bf87 solid 2px;
 }
 
-.five {
+blockquote > .five {
   border-bottom: #bf616a solid 2px;
 }
 
