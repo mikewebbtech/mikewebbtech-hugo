@@ -8,8 +8,8 @@ params:
   subtitle: "Behind the Mask"
 ---
 
-> ### What am I about?
 >
+> ### What am I about?
 > {.one}
 
 In short my main goal in life is contentment.
@@ -21,21 +21,21 @@ my life richer and more meaningful. It's not done until "I am happy with that".
 I like to dig into the tech that boost my quality of life and help
 me find more contentment along the way.
 
-> ### Where do I come from?
 >
+> ### Where do I come from?
 > {.two}
 
 From a time of dialup and the BBS, flipping dip switches on a modem to set the
-IRQ, tweaking Hayes commands and running IPX over serialto play Doom. The
+IRQ, tweaking Hayes commands and running IPX over serial to play Doom. The
 world of the i386 in a beige box and a monitor that x-rayed your eyeballs.
-I could go on, butvto be honest it was before that, and I find that just a
+I could go on, but to be honest it was before that, and I find that just a
 little bit daunting.
 
 I have been fascinated with the potential of technology as a child since I
 watched my first sci-fi show on TV.
 
-> ### Professional History
 >
+> ### Professional History
 > {.three}
 
 - An exciting life as a qualified Chef and Horticulturist in viticulture.
@@ -57,8 +57,8 @@ watched my first sci-fi show on TV.
   compliance, procedure development, inspection test planing and test record
   creation, integrity and final acceptance as the accredited person.
 
-> ### Professional Development
 >
+> ### Professional Development
 > {.four}
 
 _THEN_
@@ -93,8 +93,8 @@ _GOALS_
   (that I cover in this site), Checkout my
   [current achievements]({{% ref "#current-achievements" %}}).
 
+> 
 > ### Current achievements
->
 > {.five}
 
 #### Cloud

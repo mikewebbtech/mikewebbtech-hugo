@@ -92,12 +92,11 @@
               {{ end }}
           </div>
           {{ end }}
-
-
-
-          <div class="article-description">
-            {{ .Summary }}
-          </div>
+          <a href="{{ .RelPermalink }}">
+            <div class="article-description">
+              {{ .Summary }}
+            </div>
+          </a>
         </div>
     </li>
     {{ end }}
