@@ -1,7 +1,11 @@
 ---
-title: "Thank god that's over with"
+title: Thank god that's over with
 date: 2008-02-09T11:45:44
-summary: "Hot hot hot hot hot humid sticky dirty sweaty hot humid Well that last trip out was the longest couple of weeks I've had in a while. Good location, good..."
+summary: Hot hot hot hot hot humid sticky dirty sweaty hot humid. Good location, good crew, good accommodation and the meals were first class.  But geez, oil and sand, what a shit of a mixture and chuck some old drillers mud and you have goop from hell
+categories:
+  - archive
+tags:
+  - before
 ---
 
 Hot hot hot hot hot humid sticky dirty sweaty hot humid
