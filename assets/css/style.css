@@ -12,7 +12,7 @@ body {
   font-family:
     system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     NotoColorEmoji, "Segoe UI Symbol", "Android Emoji", EmojiSymbols;
-  font-size: 1.1em;
+  font-size: 1em;
   line-height: 1.2;
   color: #161616;
   background-color: black;
@@ -70,7 +70,7 @@ ul {
 }
 
 .logo img {
-  margin-top: 11em;
+  margin-top: 13em;
   width: 100%;
   height: auto;
 }
@@ -199,7 +199,7 @@ ul {
 
 .post-content ul {
   list-style-type: circle;
-  padding-left: 1rem;
+  margin-left: 0.25rem;
 }
 .tags h1 {
   line-height: 0.3rem;
@@ -588,7 +588,7 @@ em {
 }
 
 .button-icon {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   /* Adjust icon size */
   margin: 0 0.5rem;
   /* Space between icon and text */

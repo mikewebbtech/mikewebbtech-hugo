@@ -95,7 +95,6 @@ $admonition-colors: map-merge(
 // =============================================================================
 
 .admonition {
-  margin: 1rem 0 0 1rem;
   border-radius: 4px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
   transition: box-shadow 0.3s ease;
@@ -303,7 +302,7 @@ $admonition-colors: map-merge(
 
     &::before {
       content: "▶";
-  /* Right-pointing arrow for closed state */
+      /* Right-pointing arrow for closed state */
       display: inline-block; /* Allows transforms and margins */
       font-weight: bold;
       // Use margin-left to add space BEFORE the indicator (after the text)
