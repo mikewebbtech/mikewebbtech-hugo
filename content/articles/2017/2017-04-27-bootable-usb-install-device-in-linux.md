@@ -1,7 +1,14 @@
 ---
-title: "Bootable USB install device in Linux"
+title: Bootable USB install device in Linux
 date: 2017-04-27T10:31:03
-summary: "These instructions will create a bootable install medium for the installation of a operating system using a .iso file downloaded from the network, the dd command and a standard USB..."
+summary: These instructions will create a bootable install medium for the installation of a operating system using a .iso file downloaded from the network, the dd command and a standard USB...
+draft:
+categories:
+  - home-lab
+tags:
+  - linux
+  - opensource
+  - mac
 ---
 
 These instructions will create a bootable install medium for the installation of a operating system using a .iso file downloaded from the network, the dd command and a standard USB stick.  You need root level access (to run the sudo command). This covers Linux [for MacOS see [Bootable USB install device in MacOS](https://mikewebblive.wordpress.com/2017/04/27/bootable-usb-install-device-in-macos/)]

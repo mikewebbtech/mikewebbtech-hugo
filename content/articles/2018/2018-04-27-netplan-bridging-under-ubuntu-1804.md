@@ -1,7 +1,16 @@
 ---
-title: "Netplan bridging under Ubuntu 18.04"
+title: Netplan bridging under Ubuntu 18.04
 date: 2018-04-27T16:40:42
-summary: "I just completed a fresh (minimal) install of Ubuntu 18.04 Desktop. I used the new LTS release as an excuse to redo my workstation to simplify and unify since my..."
+summary: The new trend in linux is the shift to netplan as a network manager that uses either NetworkManager  or  systemd-networkd to manage interfaces is pretty much the default now for Ubuntu Desktops.  This breaks OVS and linux bridging, but there is a way
+draft:
+categories:
+  - virtualisation
+  - home-lab
+tags:
+  - linux
+  - ubuntu
+  - networking
+  - lxc
 ---
 
 I just completed a fresh (minimal) install of Ubuntu 18.04 Desktop. I used the new LTS release as an excuse to redo my workstation to simplify and unify since my use case flipped from more KVM virtual machines to more LXD containers. In fact I've gone from over provisioning 8 KVM VM's to a much higher density of 20 containers when really getting into things (on a 4 core XEON 64GB).
@@ -64,18 +73,11 @@ network:
 ```
 
 * Don't copy and pass the above, WP striped the proper yaml formatting so it won't work. I have a properly formatted example in my gist over at github [If you are interested](https://gist.github.com/mikewebb70/c46be8216e8f1594b1077f3d5220c22b)
-
-
 ---
 
-
-
-Found a great resource on more properties you could declare in this file specific to your network (static IP, VLANS, bonds, routes etc). [Check it out](https://cloudinit.readthedocs.io/en/latest/topics/network-config-format-v2.html#examples)
-
+I found a great resource on more properties you could declare in this file specific to your network (static IP, VLANS, bonds, routes etc). [Check it out](https://cloudinit.readthedocs.io/en/latest/topics/network-config-format-v2.html#examples)
 
 ---
-
-
 
 Generate the required configuration for the renderers.
 

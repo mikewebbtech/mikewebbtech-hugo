@@ -1,7 +1,14 @@
 ---
-title: "Powering On/Off Juniper SRX320	."
+title: Powering On/Off Juniper SRX320.
 date: 2018-09-07T09:48:15
-summary: "Graceful method with physical access to device with no console: Press and immediately release the Power button. The device begins gracefully shutting down the operating system and then powers itself..."
+summary: Always use the graceful method unless absolutely necessary.  i.e don't just yank the power cord out. There is console less method and a CLI method over the network
+categories:
+  - home-lab
+tags:
+  - networking
+  - hardware
+  - juniper
+series:
 ---
 Always use the graceful method unless absolutely necessary.  i.e don't just yank the power cord out
 

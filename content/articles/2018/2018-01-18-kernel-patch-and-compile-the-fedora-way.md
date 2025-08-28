@@ -1,7 +1,16 @@
 ---
-title: "Kernel patch and compile the Fedora way"
+title: Kernel patch and compile the Fedora way
 date: 2018-01-18T21:15:04
-summary: "Each distribution has a preferred way which tends to result in a nice reusable packaged compatible to specific package management system. For this scenario I'll focus on Fedora 27 (I..."
+summary: Each distribution has a preferred way which tends to result in a nice reusable packaged compatible to specific package management system. For this scenario I'll focus on Fedora 27
+draft:
+categories:
+  - home-lab
+tags:
+  - linux
+  - fedora
+  - kernel
+  - opensource
+series:
 ---
 
 Each distribution has a preferred way which tends to result in a nice reusable packaged compatible to specific package management system.  For this scenario I'll focus on Fedora 27 (I don't know elements of this will work with Centos 7, I'll confirm next time I run up a Centos VM) and:
@@ -21,8 +30,11 @@ $ sudo dnf groupinstall "Development Tools"
 $ sudo dnf build-dep kernel
 ```
 
-*NOTE: To see what packages get installed with a "groupinstall" command, just do:
-$ sudo dnf group info "Development Tools"
+> [!NOTE]
+>  To see what packages get installed with a ***"groupinstall"*** command, just do:
+> ```
+> $ sudo dnf group info "Development Tools"
+> ```
 
 Now create the RPM build environment witrh
 
@@ -43,7 +55,7 @@ do a `$ ls ~/rpmbuild/SOURCES` and the output will show a multitude of new files
 
 **STEP TWO (optional): Patch the kernel.**
 
-If applying a patch to your kernel, copy the patch file to ~/rpmbuild/SOURCE (giving it a suffex of .patch is not mandatory, just a good practice for easy identification). In this case I will copy over the add-acs-overrides.patch downloaded from [github](https://github.com/f4bio/linux-c0mbine/blob/master/add-acs-overrides.patch) ** and move the kernel.spec file from ~/rpmbuildd/SOURCES to ~/rpmbuild/SPECS in preperation for editing.
+If applying a patch to your kernel, copy the patch file to ~/rpmbuild/SOURCE (giving it a suffex of .patch is not mandatory, just a good practice for easy identification). In this case I will copy over the add-acs-overrides.patch downloaded from [github](https://github.com/f4bio/linux-c0mbine/blob/master/add-acs-overrides.patch) and move the <u>kernel.spec</u> file from **~/rpmbuildd/SOURCES** to **~/rpmbuild/SPECS** in preperation for editing.
 
 ** (This patch is reported to no longer work with newer versions i.e. fedora 29 up. use [THIS ONE](https://aur.archlinux.org/cgit/aur.git/plain/add-acs-overrides.patch?h=linux-vfio) instead)
 
@@ -61,14 +73,17 @@ change
 to
 `%define buildid ACS.local`
 
-If patching, declare the patch in the same kernel.spec file. Search for # END OF PATCH DEFINIIONS
-and just above that line, add:
-`PATCH900: add-acs-overrides.patch`
+If patching, declare the patch in the same kernel.spec file. Search for 
+\# END OF PATCH DEFINITIONS
+and just above that line, add: `PATCH900: add-acs-overrides.patch`
+
 **STEP THREE: Build and install time.**
 
 Use rpmbuild command to compile the kernel using the edited kernel.spec file and then build the .rpm packages.  This will take some considerable time to complete with an equal considerable amount of output.
 
-`$ rpmbuild -ba ~/rpmbuild/SPECS/kernel.spec`
+```
+$ rpmbuild -ba ~/rpmbuild/SPECS/kernel.spec`
+```
 
 If you don't require specialty kernels (e.g.pae) or debug symbols, you can save considerable compile time with
 

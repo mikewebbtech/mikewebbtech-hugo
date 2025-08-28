@@ -1,8 +1,19 @@
 ---
-title: "Apple CalDAV address...without .plist"
+title: Apple CalDAV address...without .plist
 date: 2017-04-24T00:25:18
-summary: "You will need three ingredients for to string together your CalDAV address: a. your calendar's server address especially, the number xx in pxx-caldav.icloud.com b. your user ID dsid c. the..."
+summary: Alternate method to get non apple devices to acces iCal. Using three ingredients.  Your calendar's server address . Your user ID dsid.  The calendar name (cal_name).
+draft:
+categories:
+  - home-lab
+tags:
+  - mac
+  - solution
+series:
 ---
+# iCal on non iDevices. Alternate Method.
+
+> Note:
+>  This is historic information only.  Thunderbird has a plugin and Outlook can access Apple account calendar, address book, notes, todo lists and email 
 
 You will need three ingredients for to string together your CalDAV address:
 

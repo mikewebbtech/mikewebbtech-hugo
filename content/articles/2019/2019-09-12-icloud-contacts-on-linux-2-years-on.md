@@ -1,7 +1,15 @@
 ---
-title: "iCloud contacts on Linux. 2 years on"
+title: iCloud contacts on Linux. 2 years on
 date: 2019-09-12T08:42:26
-summary: "Two years ago I began migrating away from the Appleverse to Linux and opensource. The biggest issue I faced was my calendars and contacts. I still use my iPhone and..."
+summary: Two years ago I began migrating looking at ways to use the Appleverse without Apple and extending collaborative features to Linux and open source. The solutions where technical and so "kludgy".  Time and need of the masses has now made this now near native and easy to implement.
+draft:
+categories:
+  - home-lab
+tags:
+  - mac
+  - linux
+  - opensource
+series:
 ---
 
 Two years ago I began migrating away from the Appleverse to Linux and opensource. The biggest issue I faced was my calendars and contacts. I still use my iPhone and needed to have access and synchronisation between my phone and desktop. I overcame this issue and wrote a blog (<https://webby.land/2017/08/11/using-your-icloud-address-book-in-linux/> ) 

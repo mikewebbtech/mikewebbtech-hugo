@@ -1,7 +1,15 @@
 ---
-title: "Storage Clustering....a living project"
+title: Storage Clustering....a living project
 date: 2017-06-06T18:46:10
-summary: "This is really just a place holder that I'll be updating while I examine the various was to skin the cat called storage clustering. My main focus will be for..."
+summary: Exploring various storage clustering solutions as high available backend for virtual machine clusters.  What is out there, what fits the needs, is it open source and how hard will it be to implement it.
+categories:
+  - home-lab
+  - virtualisation
+draft:
+tags:
+  - linux
+  - storage
+  - opensource
 ---
 
 This is really just a place holder that I'll be updating while I examine the various was to skin the cat called storage clustering.  My main focus will be for High Availability and as a shared storage back end for virtual machine clusters.  Also the ability to roll as much myself for a minimal price point.

@@ -1,7 +1,15 @@
 ---
-title: "Improve FFmpeg x264/AAC quality"
+title: Improve FFmpeg x264/AAC quality
 date: 2017-05-24T11:30:43
-summary: "I use FFmpeg a lot. It is open source and free. It is the driving back end used by many commercial and shareware applications. Why pay for a front end..."
+summary: Install and use the open source FFmpeg utility on macOS for high quality audio and video encoding and transcoding with support for x two AAC-LC encoders (aac & libfdk_aac) and one HE-AAC(v1/2) encoder (libfdk_aac).
+draft:
+categories:
+  - home-lab
+tags:
+  - mac
+  - macports
+  - opensource
+  - ffmpeg
 ---
 
 I use FFmpeg "a lot".  It is open source and free.  It is the driving back end used by many commercial and shareware applications.  Why pay for a front end when the back end is free and very well documented.  Stop paying a lazy tax and gain further power by simply taking some time to learn how to use the command line based application (this logic can be applied to so many open source nongraphical applications)

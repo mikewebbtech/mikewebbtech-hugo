@@ -1,12 +1,15 @@
-+++
-date = '2025-07-01T06:06:51+08:00'
-draft = false 
-title = 'Codeblock'
-summary = 'Testing Hugo codeblocks withou using custom layout/\_default/\_markup/render-codeblock.html. Restyling using CSS and overiding for overflow-x'
-tags = ''
-categories = ''
-series = ''
-+++
+---
+date: 2025-02-01T06:06:51+08:00
+draft: false
+title: Hugo Codeblock Testing
+summary: Testing Hugo codeblocks without using custom layout _default _markup render-codeblock.html. Restyling using CSS and overiding for overflow-x
+tags:
+  - testing
+  - blog
+categories:
+  - hugo
+series:
+---
 
 ```text
 some code

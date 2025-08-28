@@ -1,7 +1,13 @@
 ---
-title: "Thank god that's over with"
+title: Thank god that's over with
 date: 2008-02-09T11:45:44
-summary: "Hot hot hot hot hot humid sticky dirty sweaty hot humid Well that last trip out was the longest couple of weeks I've had in a while. Good location, good..."
+summary: The last offshore trip was a mix of challenges—oil, sand, and mud, plus a malfunctioning pig. But Veranus Island was a paradise with its stunning beaches, clear waters, and turtle breeding season. Despite the intense heat and humidity, it’s great to be home and plan for more dive work ahead.
+categories:
+tags:
+  - before
+  - archive
+draft:
+series:
 ---
 
 Hot hot hot hot hot humid sticky dirty sweaty hot humid

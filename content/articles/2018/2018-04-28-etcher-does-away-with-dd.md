@@ -1,10 +1,18 @@
 ---
-title: "Etcher does away with dd*"
+title: Etcher does away with dd*
 date: 2018-04-28T15:53:25
-summary: "dd has being my go to tool for everything-imges-and-iso, especially ever since the usb stick became ubiquitous and norm for installing new a OS. For the past month I've been..."
+summary: dd has being my go to tool for "everything-imges-and-iso", especially ever since the usb stick became ubiquitous and norm for installing new a OS.  There is a new kid on the block now...but it needs a GUI.
+draft:
+categories:
+  - home-lab
+  - virtualisation
+tags:
+  - linux
+  - mac
+  - opensource
 ---
 
-dd has being my go to tool for everything-imges-and-iso, especially ever since the usb stick became ubiquitous and norm for installing new a OS.
+*dd* has being my go to tool for everything-imges-and-iso, especially ever since the usb stick became ubiquitous and norm for installing new a OS.
 
 For the past month I've been trying out a new way/tool on both linux and MacOS called etcher.  It's light weight and easy to use.  Have a look on github
 

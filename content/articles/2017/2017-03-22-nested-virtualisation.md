@@ -1,10 +1,20 @@
 ---
-title: "Nested Virtualisation"
+title: Nested Virtualisation
 date: 2017-03-22T17:16:48
-summary: "Hosting a virtual machine inside a virtual machine KVM trickery for conceptualisation and testing. If your server/host supports VT-x, it goes to say so should the guests. When trying..."
+summary: Hosting a virtual machine inside a virtual machine KVM trickery for conceptualisation and testing. If your server/host supports VT-x, it goes to say so should the guests.
+draft:
+categories:
+  - virtualisation
+  - home-lab
+tags:
+  - linux
+  - hardware
+  - libvirt
+  - kvm
+series:
 ---
 
-#### Hosting a virtual machine inside a virtual machine
+# Hosting a virtual machine inside a virtual machine
 
 KVM trickery for conceptualisation  and testing.
 

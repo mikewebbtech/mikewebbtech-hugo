@@ -1,8 +1,19 @@
 ---
-title: "Your Apple secret CalDAV address"
+title: Your Apple secret CalDAV address
 date: 2017-04-23T23:56:21
-summary: "Having a small collection idevices in our household, we tend use the icloud calendar app and iCal on the mac's to coordinate our appointments and reminders. It just works and..."
+summary: "Having a small collection idevices in our household, we tend use the icloud calendar app and iCal coordinate our lives. With some work, non apple devices can share the same calendar "
+draft:
+categories:
+  - home-lab
+tags:
+  - mac
+  - solution
+series:
 ---
+# iCal on non iDevices...yay
+
+> Note:
+>  This is historic information only.  Thunderbird has a plugin and Outlook can access Apple account calendar, address book, notes, todo lists and email 
 
 Having a small collection idevices in our household, we tend use the icloud calendar app (and iCal on the mac's) to coordinate our appointments and reminders.  It just works and works well throughout the iVerse.
 

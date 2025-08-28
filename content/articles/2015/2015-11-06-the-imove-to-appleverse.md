@@ -1,7 +1,13 @@
 ---
-title: "The iMove to Appleverse"
+title: The iMove to Appleverse
 date: 2015-11-06T10:01:42
-summary: "Mac and their OS's have always been spouted as being a pinnacle of consumer grade IT design and user interface experience. Pfft, what ever. I've been using Mac ever since..."
+summary: Mac and their OS's have always been spouted as being a pinnacle of consumer grade IT design and user interface experience. Pfft, what ever. I've been using Mac ever since...
+categories:
+  - home-lab
+tags:
+  - mac
+  - fanboy
+draft:
 ---
 
 Mac and their OS's have always been spouted as being a pinnacle of consumer grade IT design and user interface experience.  Pfft, what ever.  I've been using Mac ever since the Macs OS X came on the scene, not because of the hype and fan fair of a new revolution in home computing but simple because I was was migrating over from a Linux system.

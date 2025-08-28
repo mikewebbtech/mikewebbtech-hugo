@@ -1,7 +1,16 @@
 ---
 title: "A more elegant: Quick and dirty kernel"
 date: 2018-01-19T09:28:51
-summary: "As we have seen, the original/traditional/generic way to install new kernels or patch existing kernels is a relatively straight forward affair but requires manual management in regards to downloading the..."
+summary: As we have seen, the original/traditional/generic way to install new kernels or patch existing kernels is a relatively straight forward affair but requires manual management.  Let's use git to help
+categories:
+  - home-lab
+draft:
+tags:
+  - linux
+  - kernel
+  - git
+  - opensource
+series:
 ---
 
 As we have seen, the original/traditional/generic way to install new kernels or patch existing kernels is a relatively straight forward affair but requires manual management in regards to downloading the latest source (ftp from the nearest mirror) or stepping through the successive patch versions to get to the lastest kernel release.

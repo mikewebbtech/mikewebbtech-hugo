@@ -1,7 +1,16 @@
 ---
-title: "Debian 8 installed on UEFI systems"
+title: Debian 8 installed on UEFI systems
 date: 2017-01-27T20:27:41
-summary: "Absolute pain getting Debian installed on my UEFI only sytem. When working through the installation process until the boot loader tries to install and this message occurs. ``` An installation..."
+summary: Absolute pain getting Debian installed on my UEFI only sytem. When working through the installation process until the boot loader tries to install and this message occurs.
+draft:
+categories:
+  - home-lab
+tags:
+  - linux
+  - solution
+  - debian
+  - server
+series:
 ---
 
 Absolute pain getting Debian installed on my UEFI only sytem.  When working through the installation process until the boot loader tries to install and this message occurs.
@@ -42,8 +51,13 @@ Once the installation completes, boot into the system. Add "nvme" to /etc/initra
 
 Edit /etc/default/grub and add this line
 
+```
 GRUB\_CMDLINE\_LINUX="intel\_pstate=no\_hwp"
+```
 and add "nomodeset" to the GRUB\_CMDLINE\_LINUX\_DEFAULT so it looks like this:
+```
 GRUB\_CMDLINE\_LINUX\_DEFAULT="quiet nomodeset"
+```
 Run update-grub.
+
 The last few commands (initramfs onward) are necessary to prevent disk not found errors the second time you try to boot into the new system.

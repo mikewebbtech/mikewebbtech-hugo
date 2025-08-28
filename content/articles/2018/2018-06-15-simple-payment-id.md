@@ -1,10 +1,16 @@
 ---
-title: "eBay Score of the Century ]"
+title: eBay Score of the Century
 date: 2018-06-15T03:09:38
-summary: "smoking network I'm redoing my home and lab network with the goal..."
+summary: smoking network I'm redoing my home and lab network with the goal to go 10Gb/s.  Let's up that and go 40Gb/s and while were are at it let's take it even further with 56Gb/s....with a twist.  found Infiniband hardware cheaper then ethernet and it can do both
+draft:
+categories:
+  - home-lab
+tags:
+  - networking
+  - storage
+  - server
+series:
 ---
-
-2018-09-05 11:38:30 eBay Score of the Century Continuing on from [Storage Clustering….a living research project](http://webby.land/2017/06/06/storage-clustering-a-living-research-project/)
 
 TL;DR: Saved US$16000, smoking network
 
@@ -20,10 +26,10 @@ I've put it through its paces and it all works, does 56G infiniband, 40G etherne
 
 I was impressed with 10Gb/s transfers but I new the network was constraining my storage speed.  The cluster has SSD ZFS raid10, optane mirrors (storage, ZOL and L2ARC) and NVMe ZFS raid10 and SAS3 10K rust RAIDz2.  Very nice seeing this investment being able to stretch its legs without being limited by the network....and for such a cheap price.
 
-*WHY NOT IPoIB.
+**WHY NOT IPoIB**.
 InfiniBand adapters ("HCAs") provide a couple of advanced features that can be used via the native "verbs" programming interface:
 * Data transfers can be initiated directly from userspace to the hardware, bypassing the kernel and avoiding the overhead of a system call.
-The adapter can handle all of the network protocol of breaking a large message (even many megabytes) into packets, generating/handling ACKs, retransmitting lost packets, etc. without using any CPU on either the sender or receiver.
+* The adapter can handle all of the network protocol of breaking a large message (even many megabytes) into packets, generating/handling ACKs, retransmitting lost packets, etc. without using any CPU on either the sender or receiver.
 * IPoIB (IP-over-InfiniBand) is a protocol that defines how to send IP packets over IB; and for example Linux has an "ib\_ipoib" driver that implements this protocol. This driver creates a network interface for each InfiniBand port on the system, which makes an HCA act like an ordinary NIC.
 
 
@@ -33,4 +39,6 @@ Since IPoIB provides a normal IP NIC interface, it can run TCP (or UDP which is 
 
 The real difference is between using IPoIB with a normal sockets application versus using native InfiniBand with an application that has been coded directly to the native IB verbs interface. The native application will almost certainly get much higher throughput and lower latency, while spending less CPU on networking.
 
-RDMA can provide network connectivity to normal sockets (TCP/IP) applications (e.g. NFS, ISCSI, SMB) without any special versions or recoding and bypassing the standard network application stack, minimising the hit on the system and CPU, just like IB does. WIN WIN....beer and profit.
+RDMA can provide network connectivity to normal sockets (TCP/IP) applications (e.g. NFS, ISCSI, SMB) without any special versions or recoding and bypassing the standard network application stack, minimising the hit on the system and CPU, just like IB does. 
+
+WIN WIN....beer and profit.

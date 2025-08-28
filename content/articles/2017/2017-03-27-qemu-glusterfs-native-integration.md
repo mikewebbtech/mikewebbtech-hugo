@@ -1,8 +1,21 @@
 ---
-title: "QEMU-GlusterFS native integration"
+title: QEMU-GlusterFS native integration
 date: 2017-03-27T10:13:52
-summary: "I was never a fan of FUSE performance (looking at you QNAP), the performance boost in block device access for Qemu/KVM based hosts using POSIX vs FUSE is impressive. Gluster..."
+summary: GlusterFS Software Defined Storage cluster provides a robusts solution for oVirt self hosted engine yields positive results using native integration
+draft:
+categories:
+  - virtualisation
+  - home-lab
+tags:
+  - linux
+  - libvirt
+  - storage
+  - GlusterFS
+  - oVirt
+  - cluster
+series:
 ---
+# GlusterFS Native Access
 
 I was never a fan of FUSE performance (looking at you QNAP),  the performance boost in block device access for Qemu/KVM based hosts using POSIX vs FUSE is impressive.  Gluster as a SDS solution for oVirt self hosted engine is worth investigating for a multitude of use cases.
 

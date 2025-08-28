@@ -1,12 +1,21 @@
 ---
-title: "FreeIPA Centos 8 lxc Replica Server"
+title: FreeIPA Centos 8 lxc Replica Server
 date: 2022-08-15T11:13:50
-summary: "If you haven't followed through the steps in my previous post on setting up FreeIPA in a lxc container, I strongly recommend you give it once over as this will..."
+summary: FreeIPA is to linux as Active Directory is to Windows.  Like AD for Windows, FreeIPA should have a replica for high availability. This is a walk though on how I got it setup and running in CentOS 8 LXC container on Proxmox VE server.  Low resource demands compared to a dedicated vurtual machine.
+draft:
+categories:
+  - home-lab
+  - virtualisation
+tags:
+  - linux
+  - lxc
+  - redhat
+  - server
+  - FreeIPA
+series:
 ---
 
 If you haven't followed through the steps in my previous post on setting up FreeIPA in a lxc container, I strongly recommend you give it once over as this will follow on from that:
-
-Stage 1:
 
 ## Let us begin
 
@@ -71,9 +80,12 @@ Now is a good time to take a snaphot and reboot. SSH into your container as cono
 
 There are few "gotcha's" that still apply to setting up a replica just as outlined previously with installing a primary. Also there are few ways set up replication as stated in RedHat and FreeIPA documentation. The method I chose to implement is "upgrade from a client" simply because if I can install a FreeIPA client then the bones required to migrate up to a replica must be working. Also, it is how I've done it in the past on Centos 7 (<https://gist.github.com/mikewebb70/c9722d443ac38e553490ee12d5386748> <- a good read but outdated for CentOS 8)
 
-This is a 3 part process 1. install Freeipa client and requirements on ipa02 container: 2. deal with some dns and host group stuff on ipa02 container: 3. Back on ipa02 container to migrate it up to a replica server.
+This is a 3 part process 
+1. install Freeipa client and requirements on ipa02 container: 
+2. deal with some dns and host group stuff on ipa02 container: 
+3. Back on ipa02 container to migrate it up to a replica server.
 
-## 1:
+### Part 1:
 
 Add the -x fix for chronyd and restart the service, setup the firewall policy, install the AppStream module and install the client.
 
@@ -95,7 +107,7 @@ Add the -x fix for chronyd and restart the service, setup the firewall policy, i
 
 ```
 
-## 2:
+### Part 2:
 
 On ipa01, the first (and only) FreeIPA server we will double check that that it "knows" about ipa02, add ipa02 to the "ipaservers" host group and then fix up
 
@@ -118,7 +130,7 @@ On ipa01, the first (and only) FreeIPA server we will double check that that it 
   Member hosts: ipa01.hugel.lan, ipa02.hugel.lan
 ```
 
-## 3:
+### Part 3:
 
 Now back onto ipa02 again for the throw down finishing move. Install the idm server module stream, run replica install command, do some verifications and reboot...ah, the reboot.
 

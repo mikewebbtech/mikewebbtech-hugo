@@ -1,18 +1,28 @@
 ---
-title: "Generate new host keys after sysprep"
+title: Generate new host keys after sysprep
 date: 2017-10-02T12:58:14
-summary: "[libvirt work flow explained](http://webby.land/2017/09/14/my-libvirt-work-flow-explained/) The host ssh keys will be wiped from the guest image (this is a good thing) meaning that you will no longer be able to ssh..."
+summary: Sysprep wipes the host ssh keys from the guest image (this is a good thing) meaning that you will no longer be able to ssh in to the guest VM (This is a bad think).  Let's fix that.
+categories:
+  - virtualisation
+  - home-lab
+tags:
+  - linux
+  - solution
+  - libvirt
+  - shell
 ---
+This builds on the previous article explaining my LibVirt work flow.
 
-[libvirt work flow explained](http://webby.land/2017/09/14/my-libvirt-work-flow-explained/)
+[libvirt work flow explained](2017-09-14-my-libvirt-clonesysprep-work-flow)
 
-The host ssh keys will be wiped from the guest image (this is a good thing) meaning that you will no longer be able to ssh into that guest VM (this is a bad thing).
+When syspreping a linux virtual machine, the host ssh keys will be wiped from the guest image (this is a good thing) meaning that you will no longer be able to ssh into that guest VM (this is a bad thing).
 
 Fortunately this easy fix.
 
 On Ubuntu, to regenerate new ssh host keys with this simple command
-`$ sudo dpkg-reconfigure openssh-server`
-
+```
+$ sudo dpkg-reconfigure openssh-server`
+```
 if successful yoou will get something like
 
 ```
@@ -27,4 +37,7 @@ Creating SSH2 ED25519 key; this may take some time ...
 ```
 
 Restart your ssh server
-`$ sudo systemctl restart sshd.service`
+```
+$ sudo systemctl restart sshd.service
+```
+ssh into the VM.  Enjoy terminal goodness

@@ -1,13 +1,21 @@
 ---
-title: "Kernel patch and compile the Debian/Ubuntu way"
+title: Kernel patch and compile the Debian/Ubuntu way
 date: 2018-01-20T23:31:53
-summary: "Continuing on with my theme of compiling and patching linux kernels a la: [Kernel patch and compile the Fedora way](http://webby.land/2018/01/18/kernel-patch-and-compile-the-fedora-way/) [A more elegant: Quick and dirty kernel patch and build](http://webby.land/2018/01/19/a-more-elegant-quick-and-dirty-kernel-patch-and-build/)..."
+summary: Continuing on with my theme of compiling and patching linux kernels.  Let's look at the Ubuntu way that creates a .deb file for use with  apt package manager.  Git work flow thrown in for free.
+draft:
+categories:
+  - home-lab
+tags:
+  - linux
+  - kernel
+  - ubuntu
+  - opensource
 ---
 
+This article continues on from  [Kernel patching and compile the fedora way](2018-01-19-a-more-elegant-quick-and-dirty-kernel)
+Here is how I patch and compile new kernels for **Ubuntu/Debian** distributions. More specifically, create .deb files to be used by the Advanced Packaging Tool (apt)
 
-Here is how I patch and compile new kernels for Ubuntu/Debian distributions. More specifically, create .deb files to be used by the Advanced Packaging Tool (apt)
-
-**Prerequisites**
+### Prerequisites
 
 make sure your system is updated and you have the required applications and libraries to compile a kernel.
 
@@ -50,8 +58,7 @@ You can download a tarball every time or keep that kernel and patch it to new ve
 
 As mentioned in other posts, use git, clone the official kernel tree and create a local branch every time you want to try a patch. This way I find best for me.
 
-I'll quickly go the first steps, for a more descriptive walk through see: [A more elegant: Quick and dirty kernel patch and build](http://webby.land/2018/01/19/a-more-elegant-quick-and-dirty-kernel-patch-and-build/) .
-
+I'll quickly go the first steps, for a more descriptive walk through see: [A more elegant way to build a kernel](2018-01-19-a-more-elegant-quick-and-dirty-kernel.md)
 ```
 $ cd
 $ git clone git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git
@@ -63,7 +70,7 @@ $ cd ~/linux
 
 *replace v4.10 with what ever the latest versions is or the kernel version that you are after.
 
-**Applying a patch**
+### Applying a patch
 
 If applying a  (I am applying the add-acs-overrides patch in mail format here).  Use  *git am* patch-name.eml if your patch is in email format (as in you got it from a mailing list, use *git apply patch-name.patch* if a standard patch file
 
@@ -71,9 +78,7 @@ If applying a  (I am applying the add-acs-overrides patch in mail format here).
 [~/linux]$ git am ~/Downloads/add-acs-overrides.eml
 ```
 
- 
-
-**Prep for Compile**
+### Prep for Compile
 
 You need  a .config, it is quick and easy to copy an existing one over from your /boot directory that you are happy with or your latest one with
 
@@ -87,17 +92,16 @@ If you do this, be sure to run
 [~/linux]$ yes '' | make oldconfig
 ```
 
-Omit the yes ' ' | part and this will run you through the new options, prompting you for the usual y/n/m responses. You can now edit the .config file to customise/optimise your kernel or go straight to compiling and creating the deb files. While editing the .config file, I highly recommend setting CONFIG\_DEBUG\_INFO=n to stop the *dbg* package being generated (unless you have a use case for it) and CONFIG\_MODULES=y
+Omit the yes ' ' | part and this will run you through the new options, prompting you for the usual y/n/m responses. You can now edit the .config file to customise/optimise your kernel or go straight to compiling and creating the deb files. While editing the .config file, I highly recommend setting **CONFIG\_DEBUG\_INFO=n** to stop the *dbg* package being generated (unless you have a use case for it) and **CONFIG\_MODULES=y**
 
-*an easy and interactive method for editing the .config file. but requires ncurses is to type:
-
+For an easy and interactive method for editing the .config file. but requires ncurses is to type:
 ```
 [~/linux]$ make menuconfig
 ```
 
 and go through the trees and select away
 
-**STEP TWO: Compile and make packages.**
+### Compile and make packages.
 
 Compiling and creating the .deb packages is a relatively straight forward one liner. But there are some important options and alternatives as well as caveats and work arounds. I will go through some here that fall within my workflow that I'm explaining here.
 
@@ -131,7 +135,7 @@ The ***binary-arch***target is one of the faster build targets, it creates two .
 [~/linux]$ touch .scmversion
 ```
 
-**STEP THREE: Install the files**
+### Install the files
 
 The created .deb files can found in your $HOMEe directory and installed an example of installing them would be
 
@@ -139,7 +143,7 @@ The created .deb files can found in your $HOMEe directory and installed an examp
 [~/linux]$ sudo dpkg -i $HOME/linux-*.deb
 ```
 
-**Clean up**
+### Clean up
 
 If you want to keep your git branch called custom with the changes that you made but dont want to merge the changes back to the master (I recommend this, keep master pristine) , just stash it with
 
@@ -156,7 +160,7 @@ $ git branch -D custom
 
 '-D' as the branched hasn't been merged.
 
-Now reboot, select the kernel and test
+### Now reboot, select the kernel and test
 
 Beer and profit.
 

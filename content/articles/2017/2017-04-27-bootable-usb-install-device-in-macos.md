@@ -1,7 +1,14 @@
 ---
-title: "Bootable USB install device in MacOS"
+title: Bootable USB install device in MacOS
 date: 2017-04-27T10:48:52
-summary: "These instructions will create a bootable install medium for the installation of a operating system using a .iso file downloaded from the network, the dd command and a standard USB..."
+summary: These instructions will create a bootable install medium for the installation of a operating system using a .iso file downloaded from the network, the dd command and a standard USB...
+draft:
+categories:
+  - home-lab
+tags:
+  - mac
+  - opensource
+  - linux
 ---
 
 These instructions will create a bootable install medium for the installation of a operating system using a .iso file downloaded from the network, the dd command and a standard USB stick.  You need admin level access (to run the sudo command). This covers MacOS [for Linux see [Bootable USB install device in Linux](https://mikewebblive.wordpress.com/2017/04/27/bootable-usb-install-device-in-linux/)]

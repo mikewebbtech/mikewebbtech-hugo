@@ -1,7 +1,14 @@
 ---
-title: "Bluetooth USB dongle firmware error in Ubuntu"
+title: Bluetooth USB dongle firmware error in Ubuntu
 date: 2017-02-13T10:44:09
-summary: "After having a running battle with my, what turns out, cheap Chinese CSR clone bluetooth USB adaptor (maybe more on that in another post). I purchased a more expensive adaptor..."
+summary: After having a running battle with my, what turns out, cheap Chinese CSR clone bluetooth USB adaptor (maybe more on that in another post). I purchased a more expensive adaptor...
+draft:
+categories:
+  - home-lab
+tags:
+  - linux
+  - solution
+  - hardware
 ---
 
 After having a running battle with my, what turns out, cheap Chinese CSR clone bluetooth USB adaptor (maybe more on that in another post).  I purchased a more expensive adaptor to trouble shoot some issues.  The time round I picked up a Targus brand from the local office supply store that based on the  Broadcom BCM20702a1 chip.
@@ -34,4 +41,4 @@ Then copy to the firmware directory with the correct name:
 $> sudo cp ./BCM20702A1\_001.002.014.1483.1669.hcd /lib/firmware/brcm/BCM20702A1-0a5c-21e6.hcd
 ```
 
-Reboot and all should be one with the universe.
+Reboot and all should be at one with the universe. ZEN!

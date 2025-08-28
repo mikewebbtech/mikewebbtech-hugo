@@ -1,7 +1,18 @@
 ---
-title: "FreeIPA in CentOS 8 LXC container"
+title: FreeIPA in CentOS 8 LXC container
 date: 2021-04-01T10:57:39
-summary: "FreeIPA setup and running in CentOS 8 LXC container on Proxmox VE server"
+summary: FreeIPA is to linux as Active Directory is to Windows.  This is a walk though on how I got it setup and running in CentOS 8 LXC container on Proxmox VE server.  Low resource demands compared to a dedicated vurtual machine.
+draft: false
+categories:
+  - home-lab
+  - virtualisation
+tags:
+  - linux
+  - lxc
+  - redhat
+  - FreeIPA
+  - server
+series:
 ---
 
 - What is FreeIPA - [www.freeipa.org](http://www.freeipa.org)

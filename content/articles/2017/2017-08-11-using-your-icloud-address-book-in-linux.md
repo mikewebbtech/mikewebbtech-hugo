@@ -1,11 +1,22 @@
 ---
-title: "Using your iCloud address book in Linux"
+title: Using your iCloud address book in Linux
 date: 2017-08-11T13:11:32
-summary: "##### Not just linux but any application that supports WebDAV or CardDAV. Following on from previous posts about using Apples iCloud services on non Apple devices or operating systems. See...."
+summary: Notes on how to get any application that supports WebDAV or CardDAV to access apple iCloud resources. Following on from previous posts about using Apples iCloud services on non Apple devices or operating systems.
+draft:
+categories:
+  - home-lab
+tags:
+  - mac
+  - opensource
+  - linux
+  - solution
+  - icloud
 ---
 
-##### Not just linux but any application that supports WebDAV or CardDAV.
+### Not just linux but any application that supports WebDAV or CardDAV.
 
+> [!NOTE]
+>  This is now redundant.  Thunderbird has plugins and Outlook can handle this natively
 
 Following on from previous posts about using Apples iCloud services on non Apple devices or operating systems.  See.
 - [Apple CalDAV address…without .plist](https://mikewebblive.wordpress.com/2017/04/24/apple-caldav-address-without-plist/)
@@ -13,7 +24,7 @@ Following on from previous posts about using Apples iCloud services on non Apple
 
 Once you have found the dsid for your iCloud account you will also need to setup two factor authentication for the computer/device you are setting up your address book on.
 
-. Log into you apple accoun management page via icloud.com to setup TFA
+Log into you apple accoun management page via icloud.com to setup TFA
 
 For the next step, I'm using Evolution Mail, but you can use any application that supports CardDAV or WebDAV
 

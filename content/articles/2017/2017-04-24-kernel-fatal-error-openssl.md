@@ -1,7 +1,16 @@
 ---
 title: "Kernel fatal error: openssl/aes.h"
 date: 2017-04-24T23:23:28
-summary: "So, I've walked into this one a few times when compiling a new kernel for the first time after a new distro install. Each time I shake my head and..."
+summary: Missing OpenSSL blows up kernel compile..Oh Why? So, I've walked into this one a few times when compiling a new kernel for the first time after a new distro install. Each time I shake my head.
+draft:
+categories:
+  - home-lab
+tags:
+  - linux
+  - solution
+  - ubuntu
+  - redhat
+  - kernel
 ---
 
 So, I've walked into this one a few times when compiling a new kernel for the first time after a new distro install.  Each time I shake my head and can't believe I did again.

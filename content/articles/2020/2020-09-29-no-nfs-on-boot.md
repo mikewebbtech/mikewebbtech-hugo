@@ -1,7 +1,15 @@
 ---
-title: "No NFS on boot"
+title: No NFS on boot
 date: 2020-09-29T10:27:11
-summary: "Issue: NFS mounts in fstab not mounting on boot but working with mount -a command works as expected.. I upgraded to Ubuntu 20.04 an noticed that my NFS (v3 and..."
+summary: Upgrade my workstation and now NFS mounts in fstab not mounting on boot but working with mount -a command works as expected. in short, systemd is worth learning and I cant believe ubuntu was released with such a basic bug.
+draft:
+categories:
+  - home-lab
+tags:
+  - ubuntu
+  - linux
+  - networking
+series:
 ---
 
 Issue: NFS mounts in fstab not mounting on boot but working with mount -a command works as expected.. 

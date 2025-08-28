@@ -1,7 +1,14 @@
 ---
-title: "PPA Public Key Error"
+title: PPA Public Key Error
 date: 2017-03-30T12:35:52
-summary: "Though, every now and then I hit a snag when installing a new package, especially from a PPA. The most common of these relate to security/verification using PKI. to varify..."
+summary: Though, every now and then I hit a snag when installing a new package, especially from a PPA. The most common of these relate to security/verification using PKI.
+draft:
+categories:
+  - home-lab
+tags:
+  - ubuntu
+  - linux
+  - solution
 ---
 
 Though, every now and then I hit a snag when installing a new package, especially from a PPA.  The most common of these relate to security/verification using PKI.  to varify the authenticity of a package, usually you check the md5 hash and compare it with what the developer has published.  [Canonical](https://www.canonical.com/) goes one step further and uses GPG (PGP) signing on packages in their repositories and those found in launchpad PPA repositories as well as hosting a key server ([keyserver.ubuntu.com](http://keyserver.ubuntu.com)).
@@ -38,7 +45,8 @@ mike@obsidian:~/$ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 
 $sudo gpg --keyserver keyserver.pgp.com --recv-key <PUBKEY>
 $sudo gpg -a --export <PUBKEY> | sudo apt-key add -
 $sudo apt-get update
-```
 
 mike@obsidian:~/$ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 9A2FD067A2E3EF7B
+```
+
 P.S.  We all should be using some sort of PKI for the transmission of data over the internet
