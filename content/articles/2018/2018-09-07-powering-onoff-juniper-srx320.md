@@ -2,7 +2,10 @@
 title: Powering On/Off Juniper SRX320.
 date: 2018-09-07T09:48:15
 summary: Always use the graceful method unless absolutely necessary.  i.e don't just yank the power cord out. There is console less method and a CLI method over the network
+<<<<<<< HEAD
 draft: false
+=======
+>>>>>>> 7b0bc1a (rebase fix)
 categories:
   - home-lab
 tags:

@@ -2,7 +2,11 @@
 title: Beatport Pro working on MacOS Mojave
 date: 2018-10-24T16:59:13
 summary: Upgrading MacOS from High Sierra to Mojave introduces some new security requirements that cause issues with some applications. The fix for apps created in electron is simple onse you know how.
+<<<<<<< HEAD
 draft: false
+=======
+draft:
+>>>>>>> 7b0bc1a (rebase fix)
 categories:
   - home-lab
 tags:

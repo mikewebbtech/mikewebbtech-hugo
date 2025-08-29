@@ -2,7 +2,11 @@
 title: Bootable USB install device in MacOS
 date: 2017-04-27T10:48:52
 summary: These instructions will create a bootable install medium for the installation of a operating system using a .iso file downloaded from the network, the dd command and a standard USB...
+<<<<<<< HEAD
 draft: false
+=======
+draft:
+>>>>>>> 7b0bc1a (rebase fix)
 categories:
   - home-lab
 tags:

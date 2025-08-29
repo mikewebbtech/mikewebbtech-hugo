@@ -2,7 +2,11 @@
 title: Arch Linux UEFI install on NVMe drives
 date: 2017-02-10T15:45:36
 summary: A guide  created from memory and some notes on how I installed Arch Linux (BTW) using UEFI settings, NVMe storage. and LVM filesystem.  Grub now supports NVMe but not "exotic" filesystems like LVM or LUKS encryption as the root (/) filesystem
+<<<<<<< HEAD
 draft: false
+=======
+draft:
+>>>>>>> 7b0bc1a (rebase fix)
 categories:
   - home-lab
 tags:

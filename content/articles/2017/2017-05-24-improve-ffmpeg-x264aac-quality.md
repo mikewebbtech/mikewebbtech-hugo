@@ -2,7 +2,11 @@
 title: Improve FFmpeg x264/AAC quality
 date: 2017-05-24T11:30:43
 summary: Install and use the open source FFmpeg utility on macOS for high quality audio and video encoding and transcoding with support for x two AAC-LC encoders (aac & libfdk_aac) and one HE-AAC(v1/2) encoder (libfdk_aac).
+<<<<<<< HEAD
 draft: false
+=======
+draft:
+>>>>>>> 7b0bc1a (rebase fix)
 categories:
   - home-lab
 tags:

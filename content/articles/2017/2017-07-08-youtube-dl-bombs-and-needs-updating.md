@@ -2,7 +2,11 @@
 title: youtube-dl bombs and needs updating
 date: 2017-07-08T16:59:01
 summary: youtuble-dl bombs when trying to extract from html5 player sites and updating it solves this but the native update command has stopped working and package managers are inconsistant
+<<<<<<< HEAD
 draft: false
+=======
+draft:
+>>>>>>> 7b0bc1a (rebase fix)
 categories:
   - home-lab
 tags:

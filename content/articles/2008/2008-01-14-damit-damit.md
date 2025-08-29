@@ -6,6 +6,11 @@ summary: In the diving industry, it's frustrating when companies rush to secure 
 tags:
   - archive
   - before
+<<<<<<< HEAD
+=======
+categories:
+series:
+>>>>>>> 7b0bc1a (rebase fix)
 ---
 
 Don't you hate it when a company calls you up and says they need you **URGENT** for a job, for days they go on about it, you get your gear all sorted mobilise to the deployment point only to find out that the jobs been canned.  **BUGGER!**

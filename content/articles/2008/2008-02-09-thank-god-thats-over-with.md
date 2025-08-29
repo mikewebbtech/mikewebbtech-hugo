@@ -1,11 +1,29 @@
 ---
 title: Thank god that's over with
 date: 2008-02-09T11:45:44
+<<<<<<< HEAD
 summary: The last offshore trip was a mix of challenges—oil, sand, and mud, plus a malfunctioning pig. But Veranus Island was a paradise with its stunning beaches, clear waters, and turtle breeding season. Despite the intense heat and humidity, it’s great to be home and plan for more dive work ahead.
 tags:
   - before
   - archive
 draft: false
+=======
+<<<<<<< HEAD
+summary: Hot hot hot hot hot humid sticky dirty sweaty hot humid. Good location, good crew, good accommodation and the meals were first class.  But geez, oil and sand, what a shit of a mixture and chuck some old drillers mud and you have goop from hell
+categories:
+  - archive
+tags:
+  - before
+=======
+summary: The last offshore trip was a mix of challenges—oil, sand, and mud, plus a malfunctioning pig. But Veranus Island was a paradise with its stunning beaches, clear waters, and turtle breeding season. Despite the intense heat and humidity, it’s great to be home and plan for more dive work ahead.
+categories:
+tags:
+  - before
+  - archive
+draft:
+series:
+>>>>>>> 71e012b (fixed article frontmatter and tidied up content)
+>>>>>>> 7b0bc1a (rebase fix)
 ---
 
 Hot hot hot hot hot humid sticky dirty sweaty hot humid

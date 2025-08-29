@@ -2,7 +2,11 @@
 title: Debian 8 installed on UEFI systems
 date: 2017-01-27T20:27:41
 summary: Absolute pain getting Debian installed on my UEFI only sytem. When working through the installation process until the boot loader tries to install and this message occurs.
+<<<<<<< HEAD
 draft: false
+=======
+draft:
+>>>>>>> 7b0bc1a (rebase fix)
 categories:
   - home-lab
 tags:

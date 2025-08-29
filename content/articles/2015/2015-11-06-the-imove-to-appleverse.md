@@ -7,7 +7,11 @@ categories:
 tags:
   - mac
   - fanboy
+<<<<<<< HEAD
 draft: false
+=======
+draft:
+>>>>>>> 7b0bc1a (rebase fix)
 ---
 
 Mac and their OS's have always been spouted as being a pinnacle of consumer grade IT design and user interface experience.  Pfft, what ever.  I've been using Mac ever since the Macs OS X came on the scene, not because of the hype and fan fair of a new revolution in home computing but simple because I was was migrating over from a Linux system.

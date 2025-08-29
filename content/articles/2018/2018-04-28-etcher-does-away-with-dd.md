@@ -2,7 +2,11 @@
 title: Etcher does away with dd*
 date: 2018-04-28T15:53:25
 summary: dd has being my go to tool for "everything-imges-and-iso", especially ever since the usb stick became ubiquitous and norm for installing new a OS.  There is a new kid on the block now...but it needs a GUI.
+<<<<<<< HEAD
 draft: false
+=======
+draft:
+>>>>>>> 7b0bc1a (rebase fix)
 categories:
   - home-lab
   - virtualisation

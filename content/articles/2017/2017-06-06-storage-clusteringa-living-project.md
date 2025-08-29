@@ -5,7 +5,11 @@ summary: Exploring various storage clustering solutions as high available backen
 categories:
   - home-lab
   - virtualisation
+<<<<<<< HEAD
 draft: false
+=======
+draft:
+>>>>>>> 7b0bc1a (rebase fix)
 tags:
   - linux
   - storage

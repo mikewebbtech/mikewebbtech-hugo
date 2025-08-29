@@ -2,13 +2,21 @@
 title: macports, the tools I'm used to
 date: 2015-07-09T20:02:07
 summary: YAY! Awesome, a HUGE amount of tools and libraries that I've gotten used to having at my fingertips can be had on my Mac's thanks to macports
+<<<<<<< HEAD
 draft: false
+=======
+draft:
+>>>>>>> 7b0bc1a (rebase fix)
 categories:
   - home-lab
 tags:
   - mac
   - macports
   - opensource
+<<<<<<< HEAD
+=======
+series:
+>>>>>>> 7b0bc1a (rebase fix)
 ---
 
 YAY! Awesome, a HUGE amount of tools and libraries that I've gotten used to having at my fingertips can be had on my Mac's thanks to the efforts of the macports community.  More details and downloads can be found on the [macports website](https://www.macports.org).

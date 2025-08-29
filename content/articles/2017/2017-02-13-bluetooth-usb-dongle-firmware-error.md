@@ -2,7 +2,11 @@
 title: Bluetooth USB dongle firmware error in Ubuntu
 date: 2017-02-13T10:44:09
 summary: After having a running battle with my, what turns out, cheap Chinese CSR clone bluetooth USB adaptor (maybe more on that in another post). I purchased a more expensive adaptor...
+<<<<<<< HEAD
 draft: false
+=======
+draft:
+>>>>>>> 7b0bc1a (rebase fix)
 categories:
   - home-lab
 tags:

@@ -2,7 +2,11 @@
 title: Kernel patch and compile the Fedora way
 date: 2018-01-18T21:15:04
 summary: Each distribution has a preferred way which tends to result in a nice reusable packaged compatible to specific package management system. For this scenario I'll focus on Fedora 27
+<<<<<<< HEAD
 draft: false
+=======
+draft:
+>>>>>>> 7b0bc1a (rebase fix)
 categories:
   - home-lab
 tags:

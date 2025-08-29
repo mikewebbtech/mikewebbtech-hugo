@@ -2,7 +2,11 @@
 title: "Kernel fatal error: openssl/aes.h"
 date: 2017-04-24T23:23:28
 summary: Missing OpenSSL blows up kernel compile..Oh Why? So, I've walked into this one a few times when compiling a new kernel for the first time after a new distro install. Each time I shake my head.
+<<<<<<< HEAD
 draft: false
+=======
+draft:
+>>>>>>> 7b0bc1a (rebase fix)
 categories:
   - home-lab
 tags:

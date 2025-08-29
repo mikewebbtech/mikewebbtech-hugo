@@ -6,7 +6,11 @@ categories:
   - automation
   - home-lab
   - iot
+<<<<<<< HEAD
 draft: false
+=======
+draft:
+>>>>>>> 7b0bc1a (rebase fix)
 tags:
   - homeassitant
   - hardware

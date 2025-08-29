@@ -2,7 +2,11 @@
 title: Your Apple secret CalDAV address
 date: 2017-04-23T23:56:21
 summary: "Having a small collection idevices in our household, we tend use the icloud calendar app and iCal coordinate our lives. With some work, non apple devices can share the same calendar "
+<<<<<<< HEAD
 draft: false
+=======
+draft:
+>>>>>>> 7b0bc1a (rebase fix)
 categories:
   - home-lab
 tags:

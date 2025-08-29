@@ -2,7 +2,11 @@
 title: My libVirt clone/sysprep work flow
 date: 2017-09-14T09:21:42
 summary: An insight in to my workflow for creating KVM, LibVirt virtual machines on my Linux Workstation. Using KVM for my virtual environment makes sense, it is kernel level native, very powerful, flexible, well documented and community supported.
+<<<<<<< HEAD
 draft: false
+=======
+draft:
+>>>>>>> 7b0bc1a (rebase fix)
 categories:
   - virtualisation
   - home-lab

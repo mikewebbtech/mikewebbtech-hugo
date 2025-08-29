@@ -1,12 +1,32 @@
 ---
 title: Seems to be the order of the month
 date: 2008-01-25T19:51:51
+<<<<<<< HEAD
+draft: false
+summary: Getting shafted by companies canning a job last minute is the name of the game I guess. First they rang me up, booked me in and gave me the onboarding headache then go to ground ghosting or dangle the carrot or worst, the next week, next week...then no go.  while turning down other opportunities.
+=======
+<<<<<<< HEAD:content/articles/2008/2008-01-25-seems-to-be-the-order-of-the-month.md
+summary: Getting shafted by companies canning a jab last minute is the name of the game I guess. First they rang me up, booked me in and gave me the onboarding headachs then go to ground ghosting or dangle the carrot or worst, the next week, next week...then no go.  while turning down other oppertunities.
+categories:
+  - archive
+>>>>>>> 7b0bc1a (rebase fix)
+tags:
+  - archive
+  - before
+<<<<<<< HEAD
+
+=======
+=======
 draft: false
 summary: Getting shafted by companies canning a job last minute is the name of the game I guess. First they rang me up, booked me in and gave me the onboarding headache then go to ground ghosting or dangle the carrot or worst, the next week, next week...then no go.  while turning down other opportunities.
 tags:
   - archive
   - before
+categories:
+series:
 
+>>>>>>> 71e012b (fixed article frontmatter and tidied up content):content/articles/2008/seems-to-be-the-order-of-the-month.md
+>>>>>>> 7b0bc1a (rebase fix)
 ---
 
 Shafted by another company (a different one this time) that had already canned a job on me.

@@ -2,10 +2,19 @@
 title: Been a while..Been busy
 date: 2008-05-01T15:19:31
 summary: After a busy stretch offshore, I’ve been focused on sending out CVs and chasing dive opportunities with larger, reputable companies. I’m steering clear of small civils outfits, sticking with offshore work for now. It’s been easier jobs lately, but I’m planning ahead with training courses to stay sharp.
+<<<<<<< HEAD
 draft: false
 tags:
   - archive
   - before
+=======
+draft:
+categories:
+tags:
+  - archive
+  - before
+series:
+>>>>>>> 7b0bc1a (rebase fix)
 ---
 
 Been ages since I have done anything here.  I have been real busy.  Not much in the way of  diving work but plenty of offshore work going on at the moment.  Heaps of CV's sent out and lots of follow up, I think I'm starting to get on the radar now with a few dive companies. 
