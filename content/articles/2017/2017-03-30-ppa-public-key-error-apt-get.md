@@ -2,7 +2,7 @@
 title: PPA Public Key Error
 date: 2017-03-30T12:35:52
 summary: Though, every now and then I hit a snag when installing a new package, especially from a PPA. The most common of these relate to security/verification using PKI.
-draft:
+draft: false
 categories:
   - home-lab
 tags:

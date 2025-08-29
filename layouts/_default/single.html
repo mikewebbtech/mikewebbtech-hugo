@@ -16,8 +16,7 @@
       {{- with .Params.categories}}
       <div>
         <i class="fa-solid fa-list"></i>
-        {{- range . -}} {{ with $.Site.GetPage (printf "/%s/%s" "categories" .
-        )}}
+        {{- range . -}} {{ with $.Site.GetPage (printf "/%s/%s" "categories" . ) }}
         <a class="tag" href="{{ .RelPermalink }}">{{ .Title }}</a>
         {{- end }} {{- end }}
       </div>
@@ -31,15 +30,20 @@
       {{- end }} {{- with .Params.series }}
       <div>
         <i class="fa-solid fa-layer-group"></i>
-        Series: {{- range $seriesName := . -}} {{ with $.Site.GetPage (printf
-        "/%s/%s" "series" $seriesName ) }}
+        Series: {{- range $seriesName := . -}} {{ with $.Site.GetPage (printf "/%s/%s" "series" $seriesName ) }}
         <a class="tag" href="{{ .RelPermalink }}">{{ .Title }}</a>
-        {{- end }} {{ $currentSeries := index $.Site.Taxonomies.series
-        ($seriesName | urlize) }} {{ if $currentSeries }} {{ $total := len
-        $currentSeries.Pages }} {{ range $index, $page := $currentSeries.Pages
-        }} {{ if eq $page.Permalink $.Permalink }} {{ $articleNumber := add
-        $index 1 }} (Article {{ $articleNumber }} of {{ $total }}) {{ end }}
-        {{end }} {{ end }} {{- end }}
+        {{- end }} 
+        {{ $currentSeries := index $.Site.Taxonomies.series ($seriesName | urlize) }}
+        {{ if $currentSeries }} 
+          {{ $total := len $currentSeries.Pages }} 
+          {{ range $index, $page := $currentSeries.Pages }} 
+            {{ if eq $page.Permalink $.Permalink }}
+             {{ $articleNumber := add $index 1 }} 
+             (Article {{ $articleNumber }} of {{ $total }}) 
+            {{ end }}
+          {{end }} 
+        {{ end }} 
+        {{- end }}
       </div>
       {{- end }}
     </div>

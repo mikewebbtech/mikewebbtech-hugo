@@ -13,32 +13,32 @@ path = "github.com/KKKZOZ/hugo-admonitions"
 name = "Home"
 pre = "fa-house"
 url = "/"
-weight = "10"
+weight = 10
 [[menus.main]]
 name = "Articles"
 pre = "fa-file-code"
 url = "/articles/"
-weight = "20"
+weight = 20
 [[menus.main]]
 name = "Categories"
 pre = "fa-list"
 url = "/categories/"
-weight = "30"
+weight = 30
 [[menus.main]]
 name = "Series"
 pre = "fa-layer-group"
 url = "/series/"
-weight = "40"
+weight = 40
 [[menus.main]]
 name = "Tags"
 pre = "fa-tags"
 url = "/tags/"
-weight = "50"
+weight = 50
 [[menus.main]]
 name = "About"
 pre = "fa-circle-info"
 url = "/about/"
-weight = "15"
+weight = 15
 
 [taxonomies]
 tag = "tags"
@@ -53,7 +53,7 @@ linkedin = "https://www.linkedin.com/in/michael-webb-1a36b8a5/"
 
 [pagination]
 disableAliases = false
-pagerSize = 100
+pagerSize = 500
 
 [markup]
 

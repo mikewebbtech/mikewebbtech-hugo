@@ -2,7 +2,7 @@
 title: SAS disk power mode control
 date: 2018-10-08T15:54:58
 summary: My hard drives were spinning at 7600 RPM 24/7, this is fine for aa actual server for the masses or in DC, but total overkill for my intermittent needs. Why do I want power control over my spinning rust...spin down to save noise and heat = save energy.
-draft:
+draft: false
 categories:
   - home-lab
 tags:

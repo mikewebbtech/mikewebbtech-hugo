@@ -5,7 +5,7 @@ summary: Exploring various storage clustering solutions as high available backen
 categories:
   - home-lab
   - virtualisation
-draft:
+draft: false
 tags:
   - linux
   - storage

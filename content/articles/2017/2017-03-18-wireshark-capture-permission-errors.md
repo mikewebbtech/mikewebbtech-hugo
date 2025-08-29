@@ -2,7 +2,7 @@
 title: Wireshark capture permission errors
 date: 2017-03-18T14:30:06
 summary: I installed Wireshark the other day on Ubuntu 16.10 so I could analyse what is going over the wire in GNS3 and later on physical network topologies. Unfortunately, Wireshark has implemented Privilege Separation which means that the Wireshark GUI (or the tshark CLI) can run as a normal user while the dumpcap capture utility runs as root
-draft:
+draft: false
 categories:
   - home-lab
   - security

@@ -2,12 +2,10 @@
 title: DB30 done and dusted
 date: 2008-05-12T22:56:44
 summary: Got the official end of contract in the mail the other day, so thayts all folks for the topside work on the barge. McD's were making noises that sounded like
-draft:
-categories:
+draft: false
 tags:
   - archive
   - before
-series:
 ---
 
 Got the official end of contract in the mail the other day, so thayts all folks for the topside work on the barge. McD's were making noises that sounded like there was sat support comming up for air divers, but thats all it turned out to be..just noise. Oh well funn was had and money made by all.

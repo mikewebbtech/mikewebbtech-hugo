@@ -2,7 +2,7 @@
 title: QEMU-GlusterFS native integration
 date: 2017-03-27T10:13:52
 summary: GlusterFS Software Defined Storage cluster provides a robusts solution for oVirt self hosted engine yields positive results using native integration
-draft:
+draft: false
 categories:
   - virtualisation
   - home-lab

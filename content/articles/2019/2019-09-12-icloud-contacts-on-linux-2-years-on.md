@@ -2,7 +2,7 @@
 title: iCloud contacts on Linux. 2 years on
 date: 2019-09-12T08:42:26
 summary: Two years ago I began migrating looking at ways to use the Appleverse without Apple and extending collaborative features to Linux and open source. The solutions where technical and so "kludgy".  Time and need of the masses has now made this now near native and easy to implement.
-draft:
+draft: false
 categories:
   - home-lab
 tags:

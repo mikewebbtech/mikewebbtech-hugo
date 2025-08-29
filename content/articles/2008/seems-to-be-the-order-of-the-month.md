@@ -6,8 +6,6 @@ summary: Getting shafted by companies canning a job last minute is the name of t
 tags:
   - archive
   - before
-categories:
-series:
 
 ---
 

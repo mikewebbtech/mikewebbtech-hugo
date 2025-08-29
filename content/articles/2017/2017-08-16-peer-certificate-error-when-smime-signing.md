@@ -2,7 +2,7 @@
 title: Peer certificate error when S/MIME signing email
 date: 2017-08-16T10:41:21
 summary: Notes on overcoming certificate trusted peer certificate errors when importing and using s/mime for email signing on systems that use NSS instead of OpenSSL libraries
-draft:
+draft: false
 categories:
   - home-lab
 tags:

@@ -6,7 +6,7 @@ categories:
   - automation
   - home-lab
   - iot
-draft:
+draft: false
 tags:
   - homeassitant
   - hardware

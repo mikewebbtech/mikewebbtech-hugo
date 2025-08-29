@@ -2,6 +2,7 @@
 title: Generate new host keys after sysprep
 date: 2017-10-02T12:58:14
 summary: Sysprep wipes the host ssh keys from the guest image (this is a good thing) meaning that you will no longer be able to ssh in to the guest VM (This is a bad think).  Let's fix that.
+draft: false
 categories:
   - virtualisation
   - home-lab

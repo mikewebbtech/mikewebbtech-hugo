@@ -2,7 +2,7 @@
 title: Netplan bridging under Ubuntu 18.04
 date: 2018-04-27T16:40:42
 summary: The new trend in linux is the shift to netplan as a network manager that uses either NetworkManager  or  systemd-networkd to manage interfaces is pretty much the default now for Ubuntu Desktops.  This breaks OVS and linux bridging, but there is a way
-draft:
+draft: false
 categories:
   - virtualisation
   - home-lab

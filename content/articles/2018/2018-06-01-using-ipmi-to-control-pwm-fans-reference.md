@@ -2,7 +2,7 @@
 title: "Using IPMI to control PWM fans\tReferences:"
 date: 2018-06-01T10:02:55
 summary: IPMI is more then a way to access servers over the network without them powered up (lights out, out of band etc).  It is an Intelligent Platform Management Interface,  it can be used to interface with the hardware layer in ways the OS can't.  Let's use it  to control some fans.
-draft:
+draft: false
 categories:
   - home-lab
   - automation

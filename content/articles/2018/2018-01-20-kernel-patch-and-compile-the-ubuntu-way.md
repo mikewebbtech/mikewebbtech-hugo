@@ -2,7 +2,7 @@
 title: Kernel patch and compile the Debian/Ubuntu way
 date: 2018-01-20T23:31:53
 summary: Continuing on with my theme of compiling and patching linux kernels.  Let's look at the Ubuntu way that creates a .deb file for use with  apt package manager.  Git work flow thrown in for free.
-draft:
+draft: false
 categories:
   - home-lab
 tags:
