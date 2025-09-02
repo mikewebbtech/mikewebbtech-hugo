@@ -2,7 +2,7 @@
 date = '2025-01-30T03:36:57-08:00'
 postIMG = 'homepage.png'
 draft = false
-title = 'Architecting Intelligence'
+title = 'Architecting Infrastructure'
 [params]
   subtitle = 'Building My Digital Landscape'
 +++
