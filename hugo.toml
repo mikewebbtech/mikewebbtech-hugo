@@ -7,6 +7,9 @@ enableEmoji = true
 [module]
 [[module.imports]]
 path = "github.com/KKKZOZ/hugo-admonitions"
+[[module.mounts]]
+source = "content/articles"
+target = "content/articles"
 
 [menus]
 [[menus.main]]
