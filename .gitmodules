@@ -1,3 +1,7 @@
 [submodule "content/articles"]
 	path = content/articles
 	url = https://github.com/mikewebbtech/mikewebbtech-blog.git
+<<<<<<< HEAD
+=======
+  branch = main
+>>>>>>> development
