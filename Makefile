@@ -34,6 +34,8 @@
 # Paths to local repos
 BLOG_DIR := ../mikewebbtech-blog
 SITE_DIR := .
+## relative to $(SITE_DIR)
+SUB_MOD_DIR := content/articles
 
 # Detect current branch in Hugo site repo
 BRANCH := $(shell git -C $(SITE_DIR) rev-parse --abbrev-ref HEAD)
@@ -49,7 +51,7 @@ blogpush:
 	cd $(BLOG_DIR) && git add . && git commit -m "$(MSG)" || echo "No changes to commit in blog repo"
 	cd $(BLOG_DIR) && git push origin main
 	@echo ">>> Updating Hugo site pointer on branch $(BRANCH)..."
-	cd $(SITE_DIR) && git add content/articles
+	cd $(SITE_DIR) && git add $(SUB_MOD_DIR) 
 	cd $(SITE_DIR) && git commit -m "Update articles pointer" || echo "No changes to commit in Hugo repo"
 	cd $(SITE_DIR) && git push origin $(BRANCH)
 
@@ -69,7 +71,7 @@ sync:
 	@echo ">>> Updating submodule pointer in Hugo site..."
 	cd $(SITE_DIR) && git submodule update --init --recursive
 
-## draft: Create a new blog draft
+## draft: Create a new blog article draft
 draft:
 	@if [ -z "$(TITLE)" ]; then \
 		echo "❌ Error: Please provide a TITLE. Usage: make draft TITLE=\"My New Post\" [DATE=YYYY-MM-DD]"; \
@@ -78,7 +80,7 @@ draft:
 	DATE=$${DATE:-$$(date +"%Y-%m-%d")}; \
 	SLUG=$$(echo "$(TITLE)" | tr '[:upper:]' '[:lower:]' | tr -cs 'a-z0-9' '-'); \
 	YEAR=$$(echo $$DATE | cut -d'-' -f1); \
-	FILE="$(BLOG_DIR)/content/articles/$$YEAR/$$DATE-$$SLUG.md"; \
+	FILE="$(BLOG_DIR)/$$YEAR/$$DATE-$$SLUG.md"; \
 	if [ -f "$$FILE" ]; then \
 		echo "❌ Error: Draft already exists: $$FILE"; \
 		exit 1; \
