@@ -53,8 +53,7 @@
   <div class="post-content">{{ .Content }}</div>
 
   <div class="post-footer"></div>
-  "{{ .Title }}" was last updated on {{ .Lastmod.Format "January 2, 2006" }}: {{
-  .GitInfo.Subject }} ({{ .GitInfo.AbbreviatedHash }}) {{- if .Params.series -}}
+  {{- if .Params.series -}}
   <div class="post-series-bottom">{{ partial "series-buttons.html" . }}</div>
   {{- end -}}
 </article>

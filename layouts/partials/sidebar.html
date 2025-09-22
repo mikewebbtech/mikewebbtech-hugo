@@ -24,13 +24,6 @@
         <img src="{{ "hugo-logo-wide.svg" | relURL }}" alt="hugo.io" style="width: 40%">
       </a>
       <br><br>
-      Git commit 
-      {{ with .GitInfo }}
-        {{ .AbbreviatedHash }}
-      {{ end }}
-      {{ with .GitInfo }}
-      {{ .AuthorDate.Format "06-01-02" }}
-      {{ end }}
       <br><br>
     </div>
   </aside>

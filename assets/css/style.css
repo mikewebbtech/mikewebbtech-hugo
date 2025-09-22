@@ -201,6 +201,15 @@ ul {
   list-style-type: circle;
   margin-left: 0.25rem;
 }
+
+.post-content li {
+  padding-bottom: 0.5rem;
+}
+.post-content a {
+  color: peru;
+  font-weight: bolder;
+}
+
 .tags h1 {
   line-height: 0.3rem;
   word-spacing: 1.2rem;
@@ -429,7 +438,7 @@ blockquote > .five {
 }
 
 em {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: white;
 }
 
@@ -696,4 +705,24 @@ main.main,
   width: max-content !important;
   min-width: 100% !important;
   white-space: pre !important;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse; /* Removes spacing between borders */
+  margin-bottom: 1em; /* Adds space below the table */
+}
+
+th,
+td {
+  border: 1px solid #d7dce1;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #353b43;
+  font-weight: bold;
+  text-align: center;
 }
