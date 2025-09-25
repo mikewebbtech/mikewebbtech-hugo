@@ -1,0 +1,22 @@
+<div class="latest-articles-cards">
+  {{- range first 4 (sort .Site.RegularPages "Date" "desc") }}
+  <a href="{{ .Permalink }}" class="post-card-link">
+    <div class="post-card">
+      <div class="post-title">
+        <h3>{{ .Title }}</h3>
+      </div>
+      <p>{{ .Summary }}</p>
+      <div class="card-meta">
+        <div>
+          <i class="fa-solid fa-calendar-days"></i>
+          {{ .Date.Format "January 2, 2006" }}
+        </div>
+        <div>
+          <i class="fa-solid fa-clock"></i>
+          {{ .ReadingTime }} min read
+        </div>
+      </div>
+    </div>
+  </a>
+  {{- end }}
+</div>

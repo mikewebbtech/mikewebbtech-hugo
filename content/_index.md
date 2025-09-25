@@ -7,7 +7,11 @@ title = 'Architecting Infrastructure'
   subtitle = 'Building My Digital Landscape'
 +++
 
-Learning one project at a time. Follow my hands-on journey through the technologies that matters me .
+Learning one project at a time. Follow my journey through the technologies that matters me .
+
+> 👋 Hi, Welcome.</br>
+> I am in process of migrating data out of an old WordPress database for the webby.land blog and moving over to a new site a new static site using the HUGO framework. This shift should give me greater site security, better hosting flexibility, and less management overhead.
+> {.note}
 
 ### Landscapes I am navigating
 
@@ -33,7 +37,7 @@ web experience for the creator and the consumer. Follow along as I experiment
 with the framework to build this site.
 
 {{< link-icon href="categories/iot" >}}IoT{{< /link-icon >}} and
-[{{< link-icon href="categories/automation" >}}Home Automation
+{{< link-icon href="categories/automation" >}}Home Automation
 {{< /link-icon >}}: Bringing the digital and physical worlds together within
 the home, exploring the potential of interconnected devices and creating smart,
 automated environments.
@@ -43,7 +47,9 @@ My personal playground for experimentation and running services for the home!
 Witness the evolution of my home lab as I build, break, and learn from various
 hardware and software stuff ups, I mean setups
 
-### [See the Map](categories)
+### Latest Articles:
+
+{{<recent_post_cards>}}
 
 ```go {style=catppuccin-latte}
 
@@ -56,5 +62,3 @@ FUNCTION decode_digtial_realm(encoded_intelligence):
 END
 
 ```
-
-Latest Explorations:

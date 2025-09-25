@@ -381,10 +381,6 @@ a {
   font-weight: bolder;
 }
 
-.home a :hover {
-  color: #d08a91;
-}
-
 .home .highlight {
   padding: 1rem 2rem 1rem 2rem;
 }
@@ -625,7 +621,7 @@ blockquote > .warning {
   border-left-style: solid;
   border-left-width: 1.4rem;
   border-radius: 0.2rem;
-  margin-left: 1rem;
+  /*  margin-left: 1rem; */
   font-size: 1.2rem;
   padding: 0.5rem 1rem 0.5rem 1rem;
 }
@@ -725,4 +721,57 @@ th {
   background-color: #353b43;
   font-weight: bold;
   text-align: center;
+}
+
+/* recent article cards */
+
+.latest-articles-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.post-card-link {
+  text-decoration: none;
+  font-weight: normal !important;
+  color: #d8dee9 !important;
+}
+
+.post-card {
+  background-color: #4c566a;
+  padding: 10px;
+  border: 1px solid #4c566a;
+  border-radius: 2px;
+  height: 100%; /* Ensures all cards are the same height */
+  display: flex;
+  flex-direction: column;
+}
+
+.post-card:hover {
+  color: #d8dee9 !important;
+  border: 1px solid peru;
+}
+
+.post-title {
+  margin-top: 0;
+  /* Or use a more specific selector for your title container */
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px; /* Adds a little space below the line */
+  margin-bottom: 5px; /* Adds space between the line and the content */
+}
+
+.post-card p {
+  flex-grow: 1; /* Pushes the date to the bottom */
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px; /* Adds a little space below the line */
+  margin-bottom: 5px; /* Adds space between the line and the content */
+}
+
+.card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  font-size: 0.8em;
+  gap: 0.8rem;
 }
