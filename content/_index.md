@@ -49,7 +49,7 @@ hardware and software stuff ups, I mean setups
 
 ### Latest Articles:
 
-{{<recent_post_cards>}}
+{{< recent_articles_cards >}}
 
 ```go {style=catppuccin-latte}
 
