@@ -1,0 +1,17 @@
+<nav aria-label="breadcrumb" class="breadcrumb">
+  <ol>
+    {{- $currentPage := . -}}
+    <li>
+      <a href="{{ .Site.BaseURL }}">Home</a>
+    </li>
+    {{- range .Ancestors -}} {{- if ne .IsHome true -}}
+    <li>
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+    </li>
+    {{- end -}} {{- end -}} {{- if not .IsHome -}}
+    <li class="active">
+      <a aria-current="page" href="{{ .Permalink }}">{{ .Title }}</a>
+    </li>
+    {{- end -}}
+  </ol>
+</nav>

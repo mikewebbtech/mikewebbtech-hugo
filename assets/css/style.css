@@ -152,6 +152,7 @@ ul {
 
 .header {
   grid-area: header;
+  position: relative;
   padding: 0 1.5rem 0 3rem;
   height: 4rem;
   background-color: #bf616a;
@@ -774,4 +775,47 @@ th {
   margin-top: 10px;
   font-size: 0.8em;
   gap: 0.8rem;
+}
+
+/* breadrumbs */
+
+.breadcrumb {
+  position: absolute; /* <-- ADD THIS LINE */
+  bottom: 0; /* Places the breadcrumb at the bottom edge of the header */
+  left: 3rem;
+  font-size: 0.8em;
+}
+
+.breadcrumb ol {
+  list-style: none; /* Remove default list bullets */
+  margin: 0;
+  padding: 0;
+  display: flex; /* Arrange list items horizontally */
+  flex-wrap: wrap; /* Allow breadcrumbs to wrap on small screens */
+}
+
+.breadcrumb ol li {
+  display: flex;
+  align-items: center; /* Center content vertically */
+}
+
+.breadcrumb ol li a {
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.breadcrumb ol li a:hover {
+  text-decoration: underline; /* Underline on hover for better user experience */
+}
+
+/* This is the key rule that creates the separator */
+.breadcrumb ol li:not(:last-child)::after {
+  content: ">"; /* The separator character */
+  margin: 0 8px; /* Space before and after the separator */
+}
+
+/* Style for the current, active breadcrumb item */
+.breadcrumb ol li.active a {
+  pointer-events: none; /* Make it unclickable */
+  text-decoration: none;
 }

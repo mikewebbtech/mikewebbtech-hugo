@@ -1,9 +1,6 @@
-  <header class="header">
-    <h1>
-      {{- with .Title -}}
-        {{- . -}}
-      {{- else -}}
-        {{- .Site.Title -}}
-      {{- end -}}
-    </h1>
-  </header>
+<header class="header">
+  <h1>
+    {{- with .Title -}} {{- . -}} {{- else -}} {{- .Site.Title -}} {{- end -}}
+  </h1>
+  {{ partial "breadcrumbs.html" . }}
+</header>
