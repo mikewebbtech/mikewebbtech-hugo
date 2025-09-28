@@ -1,0 +1,23 @@
+{{- with (.GetTerms "series") -}} {{- range . -}} {{- $curPageIndex := 0 -}} {{-
+range $idx, $page := .Pages.ByDate -}} {{- if eq $page $ -}} {{ $curPageIndex =
+$idx }} {{- end -}} {{- end -}} {{- $prevPageIndex := sub $curPageIndex 1 -}}
+{{- $nextPageIndex := add $curPageIndex 1 -}}
+<div class="pagination-buttons">
+  {{- with (index .Pages.ByDate $prevPageIndex) -}}
+  <span class="button previous">
+    <a href="{{ .Permalink }}" title="PREVIOUS ARTICLE">
+      <span class="button-icon">←</span>
+      <span class="button-ext">{{ add $prevPageIndex 1 }}. {{ .Title }}</span>
+    </a>
+  </span>
+  {{- end -}} {{- with (index .Pages.ByDate $nextPageIndex) -}}
+  <span class="button next">
+    <a href="{{ .Permalink }}" title="NEXT ARTICLE">
+      <span class="button-text">{{add $nextPageIndex 1 }}. {{ .Title }}</span>
+      <span class="button-icon">→</span>
+    </a>
+  </span>
+  {{- end -}}
+</div>
+{{- end -}} {{- end -}}
+
