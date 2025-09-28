@@ -383,7 +383,7 @@ a {
 }
 
 .home .highlight {
-  padding: 1rem 2rem 1rem 2rem;
+  padding: 1rem 0rem 1rem 0rem;
 }
 
 .home .highlight pre {
@@ -725,7 +725,6 @@ th {
 }
 
 /* recent article cards */
-
 .latest-articles-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -755,17 +754,18 @@ th {
 }
 
 .post-title {
-  margin-top: 0;
   /* Or use a more specific selector for your title container */
   border-bottom: 1px solid #ccc;
-  padding-bottom: 5px; /* Adds a little space below the line */
-  margin-bottom: 5px; /* Adds space between the line and the content */
+}
+
+.post-title H3 {
+  margin: 0 0 0.5rem 0;
 }
 
 .post-card p {
   flex-grow: 1; /* Pushes the date to the bottom */
   border-bottom: 1px solid #ccc;
-  padding-bottom: 5px; /* Adds a little space below the line */
+  padding-bottom: 15px; /* Adds a little space below the line */
   margin-bottom: 5px; /* Adds space between the line and the content */
 }
 
@@ -778,10 +778,9 @@ th {
 }
 
 /* breadrumbs */
-
 .breadcrumb {
   position: absolute; /* <-- ADD THIS LINE */
-  bottom: 0; /* Places the breadcrumb at the bottom edge of the header */
+  bottom: 0.2rem; /* Places the breadcrumb at the bottom edge of the header */
   left: 3rem;
   font-size: 0.8em;
 }
