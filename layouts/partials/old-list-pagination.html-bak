@@ -1,0 +1,19 @@
+{{ if gt .Paginator.TotalPages 1 }}
+<div class="pagination-buttons">
+  {{ with .Paginator.Prev }}
+  <span class="button previous">
+    <a href="{{ .URL }}" title="PREVIOUS PAGE">
+      <span class="button-icon">←</span>
+      <span class="button-text">Previous</span>
+    </a>
+  </span>
+  {{ end }} {{ with .Paginator.Next }}
+  <span class="button next">
+    <a href="{{ .URL }}" title="NEXT PAGE">
+      <span class="button-text">Next</span>
+      <span class="button-icon">→</span>
+    </a>
+  </span>
+  {{ end }}
+</div>
+{{ end }}

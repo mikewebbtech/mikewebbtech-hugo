@@ -7,7 +7,7 @@ $idx }} {{- end -}} {{- end -}} {{- $prevPageIndex := sub $curPageIndex 1 -}}
   <span class="button previous">
     <a href="{{ .Permalink }}" title="PREVIOUS ARTICLE">
       <span class="button-icon">←</span>
-      <span class="button-ext">{{ add $prevPageIndex 1 }}. {{ .Title }}</span>
+      <span class="button-text">{{ add $prevPageIndex 1 }}. {{ .Title }}</span>
     </a>
   </span>
   {{- end -}} {{- with (index .Pages.ByDate $nextPageIndex) -}}
@@ -20,4 +20,3 @@ $idx }} {{- end -}} {{- end -}} {{- $prevPageIndex := sub $curPageIndex 1 -}}
   {{- end -}}
 </div>
 {{- end -}} {{- end -}}
-

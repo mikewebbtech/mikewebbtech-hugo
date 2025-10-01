@@ -818,3 +818,76 @@ th {
   pointer-events: none; /* Make it unclickable */
   text-decoration: none;
 }
+
+/* Apply Styling to Hugo pagination text-justifymplate */
+.pagination-default {
+  list-style: none; /* Ensure no bullets */
+  margin: 3rem auto 0 auto; /* Margin-top and center the list */
+  padding: 0;
+  display: flex;
+  gap: 1rem; /* Space between buttons */
+  justify-content: center;
+}
+
+.page-item {
+  display: inline-flex; /* Use inline-flex on the li container */
+  /* Remove default list styling */
+  margin: 0;
+  padding: 0;
+}
+
+.page-item a.page-link,
+.page-item.active a.page-link,
+.page-item.disabled a.page-link {
+  /* Apply core button styles to the link element (a.page-link) */
+  display: inline-flex;
+  align-items: center;
+  padding: 0.6rem 1rem;
+  border-radius: 0.2rem;
+  text-decoration: none;
+
+  /* Color theme */
+  color: #d7dce1; /* Light color for normal state */
+  background-color: #4c556a; /* Dark background */
+  transition: background-color 0.3s ease;
+
+  /* Resetting default styles */
+  border: none;
+  box-shadow: none;
+}
+
+/* HOVER: Replaces .button:hover */
+.page-item a.page-link:hover:not([aria-disabled="true"]) {
+  background-color: #bec9d7; /* Lighter background on hover */
+  color: #3b4252; /* Darker text on hover */
+}
+
+/* ACTIVE PAGE: Style for the current page number */
+.page-item.active a.page-link {
+  background-color: #bec9d7;
+  color: #3b4252;
+}
+
+/* DISABLED BUTTONS: Style for 'First'/'Previous' when on page 1 */
+.page-item.disabled a.page-link {
+  opacity: 0.3;
+  cursor: default;
+  /* Re-apply the initial background/color but with opacity */
+  background-color: #4c556a;
+  color: #d7dce1;
+}
+
+/* ICONS/TEXT: Handle the internal span elements for the arrows */
+.page-item a.page-link span[aria-hidden="true"] {
+  font-size: 1.5rem;
+  margin: 0 0.5rem;
+}
+
+/* Specific adjustments for previous/next arrows (if needed) */
+/* The general margin above should cover this, but here is how you'd target them: */
+.page-item:first-child a.page-link span[aria-hidden="true"] {
+  margin-left: 0;
+}
+.page-item:last-child a.page-link span[aria-hidden="true"] {
+  margin-right: 0;
+}
