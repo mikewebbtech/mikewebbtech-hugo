@@ -1,24 +1,23 @@
 <nav class="nav">
   <ul>
-    {{ $currentPage := . }}
-    {{ range .Site.Menus.main }}
-      {{ $icon := printf "<i class=\"fa-solid %s\"></i>" .Pre }}
-      {{ $text := print $icon " " .Name | safeHTML }}
-
-      {{ $isActive := false }}
-      {{ if eq .URL $currentPage.RelPermalink }}
-        {{ $isActive = true }}
-      {{ else if and (eq .URL "/") (eq $currentPage.RelPermalink "/") }}
-        {{ $isActive = true }}
-      {{ else if ne .URL "/" }}
-        {{ $isActive = $currentPage.IsMenuCurrent "main" . }}
-        {{ if not $isActive }}
-          {{ $isActive = $currentPage.HasMenuCurrent "main" . }}
-        {{ end }}
-      {{ end }}
-      <li{{ if $isActive }} class="active" {{ end }}>
-        <a href="{{ .URL }}" {{ if $isActive }} aria-current="page" {{ end }}>{{ $text }}</a>
+    {{- $currentPage := . -}}
+    {{- range .Site.Menus.main -}}
+      {{- $icon := printf "<i class=\"fa-solid %s\"></i>" .Pre -}}
+      {{- $text := print $icon " " .Name | safeHTML -}}
+      {{- $isActive := false -}}
+      {{- if eq .URL $currentPage.RelPermalink -}}
+        {{- $isActive = true -}}
+      {{- else if and (eq .URL "/") (eq $currentPage.RelPermalink "/") -}}
+        {{- $isActive = true -}}
+      {{- else if ne .URL "/" -}}
+        {{- $isActive = $currentPage.IsMenuCurrent "main" . -}}
+        {{- if not $isActive -}}
+          {{- $isActive = $currentPage.HasMenuCurrent "main" . -}}
+        {{- end -}}
+      {{- end -}}
+      <li{{- if $isActive }} class="active" {{ end -}}>
+        <a href="{{ .URL }}" {{- if $isActive }} aria-current="page" {{ end -}}>{{ $text }}</a>
       </li>
-    {{ end }}
+    {{- end -}}
   </ul>
 </nav>
