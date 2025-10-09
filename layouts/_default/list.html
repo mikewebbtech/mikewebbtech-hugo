@@ -38,12 +38,11 @@
         </div>
         <div class="article-meta">
           <div>
-            <i class="fa-solid fa-calendar-days"></i>
-            {{- .PublishDate.Format "Jan 2, 2006" -}}
+            <i class="fa-solid fa-calendar-days"></i> {{ .PublishDate.Format "Jan 2, 2006" }}
           </div>
           <div>
             <i class="fa-solid fa-clock"></i>
-            {{- .ReadingTime -}} min read
+            {{ .ReadingTime }} min read
           </div>
           {{- with .Params.categories }}
           <div>
