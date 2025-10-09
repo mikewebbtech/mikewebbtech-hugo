@@ -2,7 +2,7 @@
 <br>
 <h3 align="center">Static Site Built using HUGO </h3>
 <a href="https://gohugo.io">
-  <img alt="HUGO LOGO" title="Hugo website" src="https://gohugo.io/images/hugo-logo-wide.svg">
+  <img alt="HUGO LOGO" title="Hugo website" src="https://gohugo.io/images/hugo-logo-wide.svg" width="200">
 </a>
 <br>
 ## Table of Contents
@@ -10,7 +10,7 @@
 - [hugo](#hugo)
 - [progress](#progress)
 <p align="center">
-<img alt "theme look" src="./site_look.png" width="300">
+<img alt "theme look" src="./site_look.png" width="450">
 </p>
 <br>
 
