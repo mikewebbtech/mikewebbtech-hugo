@@ -1,21 +1,19 @@
 <h1 align="center""> My Hugo Site Theme </h1>
-<h2 align="center">Static Site Built using HUGO </h2>
+<h3 align="center">Static Site Built using HUGO </h3>
 <p align="center">
 <a href="https://gohugo.io">
   <img alt="HUGO LOGO" title="Hugo website" src="https://gohugo.io/images/hugo-logo-wide.svg" width="200">
 </a>
 </p>
-<br>
 <h4>Table of Contents</h4>
+
 - [hugo](#hugo)
 - [progress](#progress)
+
 <p align="center">
 <img alt "theme look" src="./site_look.png" >
 </p>
-<br>
-
 ---
-
 ## Hugo
 
 > [!quote]
