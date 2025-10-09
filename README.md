@@ -17,8 +17,7 @@
 
 ## Hugo
 
-> **QUOTE**
-> "The world’s fastest framework for building websites"
+> "The world’s fastest framework for building websites" - _Hugo Devs_
 
 Hugo is a static site generator framework written in go and sites are created using html templates with embedded go template language snippets. The content for the site is generated from text files such as markdown, json, asciiDoc etc.
 
