@@ -5,12 +5,12 @@
   <img alt="HUGO LOGO" title="Hugo website" src="https://gohugo.io/images/hugo-logo-wide.svg" width="200">
 </a>
 <br>
-## Table of Contents
+<h4>Table of Contents</h4>
 
 - [hugo](#hugo)
 - [progress](#progress)
 <p align="center">
-<img alt "theme look" src="./site_look.png" width="450">
+<img alt "theme look" src="./site_look.png" >
 </p>
 <br>
 
@@ -36,18 +36,17 @@ Progress is slow, there is a lot about using the hugo framework that is not intu
 
 ### To do list:
 
-[x] Design site layout and CSS
-[x] Slice up site html template into hugo partials
-[x] Create home page markdown (content/\_index.md)
-[x] Create about page markdown (contnent/about/\_index.md)
-[x] First Hugo template layouts/pages/single.html for home and about page
-[x] Nav bar template with place holders for _home_, _about_, _articles_, _categories_, _series_ and _tags_
-[x] Huge layout/\_default/list.html for list pages (articles, categories, series and tags)
-[x] Articles feature ingesting content/articles/*.md article files
-[x] Extract content from old wordpress database and format into markdown with front matter
-[x] Implement *categories* list page using terms template
-[x] *Category* feature using terms template and content/categories/category-name/\_index.md leaf bundle
-[x] Create named *categories*, style, add categories list array to articles front matter
-[x] Implement *tags* and *tag-name\* list page using terms list template and style
-[x] Add metadata to list page items (in layout/\_default/list.html template)
-[x] Add metadata to article page head (created in layout/page/single.html template)
+- [x] Design site layout and CSS
+- [x] Slice up site html template into hugo partials
+- [x] Create home page markdown (content/\_index.md)
+- [x] Create about page markdown (contnent/about/\_index.md)
+- [x] First Hugo template layouts/pages/single.html for home and about page
+- [x] Nav bar template with place holders for _home_, _about_, _articles_, _categories_, _series_ and _tags_
+- [x] Huge layout/\_default/list.html for list pages (articles, categories, series and tags)
+- [x] Articles feature ingesting content/articles/\*.md article files
+- [x] Implement _categories_ list page using terms template
+- [x] _Category_ feature using terms template and content/categories/category-name/\_index.md leaf bundle
+- [x] Create named _categories_, style, add categories list array to articles front matter
+- [x] Implement _tags_ and \*tag-name\* list page using terms list template and style
+- [x] Add metadata to list page items (in layout/\_default/list.html template)
+- [x] Add metadata to article page head (created in layout/page/single.html template)
