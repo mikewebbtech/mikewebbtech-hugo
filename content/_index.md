@@ -2,12 +2,12 @@
 date = '2025-01-30T03:36:57-08:00'
 postIMG = 'homepage.png'
 draft = false
-title = 'Architecting Infrastructure'
+title = 'Persistant State'
 [params]
-  subtitle = 'Building Digital Landscapes'
+  subtitle = 'Check To See If The Light Still On'
 +++
 
-#### Learning one project at a time. Follow my journey through the technologies that matter me .
+### This is me learning one project at a time.
 
 > 👋 Hi, Welcome.</br>
 > I am in process of migrating data out of an old WordPress database for the webby.land blog and moving over to a new static site using the HUGO framework. This shift should give me greater site security, better hosting flexibility, and less management overhead.
