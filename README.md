@@ -34,7 +34,7 @@ Static site generators offer faster performance, enhanced security, and greater 
 
 Progress is slow, there is a lot about using the hugo framework that is not intuitive, but I am working my way through the [documentation](https://gohugo.io/documentation/) and implementing functionality as learn or driven by want.
 
-### To do list:
+### Todo list:
 
 - [x] Design site layout and CSS
 - [x] Slice up site html template into hugo partials
@@ -57,7 +57,7 @@ Progress is slow, there is a lot about using the hugo framework that is not intu
 - [x] Automate blank article creation with front matter (not Hugo built in method)
 - [x] Automate git repo and submodule update and push process
 - [x] Host site on GitHub for development using actions (update: really half done. revist)
-- [] Host site on GiHub using actions in hugo code base repo (a hugo action?)
+- [ ] Host site on GiHub using actions in hugo code base repo (a hugo action?)
 - [x] ~~Implement breadcrumbs feature across site.~~ (note: no longer using)
-- [] Use shortcodes to open external links in new tab or window (html \_blank)
-- [] implement embedding images using markdown notation and shortcodes.
+- [ ] Use shortcodes to open external links in new tab or window (html \_blank)
+- [ ] implement embedding images using markdown notation and shortcodes.
