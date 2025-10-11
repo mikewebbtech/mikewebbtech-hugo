@@ -7,8 +7,8 @@
 </p>
 <h4>Table of Contents</h4>
 
-- [hugo](#hugo)
-- [progress](#progress)
+- [What is Hugo](#hugo)
+- [Features and Progress](#progress)
 
 <p align="center">
 <img alt "theme look" src="./site_look.png" >
@@ -24,7 +24,8 @@ Hugo is a static site generator framework written in go and sites are created us
 
 The [hugo documentation](https://gohugo.io/documentation) is extensive and well structured and there is an active community to lean on for help. There are lots of blog articles and theme examples to draw inspiration and get started with creating a site. If an existing theme meets your needs, hugo is even easier and faster to get started with.
 
-**What is a SSG and Why?**
+:point_right: **What is a SSG and Why?**
+
 Static site generators offer faster performance, enhanced security, and greater scalability by pre-building web pages as static files rather than generating them on demand using a database backend. This approach simplifies hosting and maintenance, allows for better content version control, and provides a lighter backend with fewer dependencies. As a result, static sites are more reliable, more secure, and often offer better SEO due to their speed.
 
 ---
@@ -49,3 +50,14 @@ Progress is slow, there is a lot about using the hugo framework that is not intu
 - [x] Implement _tags_ and \*tag-name\* list page using terms list template and style
 - [x] Add metadata to list page items (in layout/\_default/list.html template)
 - [x] Add metadata to article page head (created in layout/page/single.html template)
+- [x] Separate article files out to own git repo and embed back as submodule
+- [x] Implement "**Series**" list feature and style using categories term template as guide.
+- [x] Add pagination to **Series** articles.
+- [x] Create list of member articles to series article pages.
+- [x] Automate blank article creation with front matter (not Hugo built in method)
+- [x] Automate git repo and submodule update and push process
+- [x] Host site on GitHub for development using actions (update: really half done. revist)
+- [] Host site on GiHub using actions in hugo code base repo (a hugo action?)
+- [x] ~~Implement breadcrumbs feature across site.~~ (note: no longer using)
+- [] Use shortcodes to open external links in new tab or window (html \_blank)
+- [] implement embedding images using markdown notation and shortcodes.
