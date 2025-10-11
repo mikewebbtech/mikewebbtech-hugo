@@ -202,10 +202,10 @@ $admonition-colors: map-merge(
     // Target the DIRECT child header
     > .admonition-header {
       // Set the header text color
-      color: $color;
+      color: $admonition-dark-code-text;
       // Explicitly set SVG fill color too
       svg {
-        fill: $color;
+        fill: $admonition-dark-code-text;
       }
     }
 
@@ -250,10 +250,10 @@ $admonition-colors: map-merge(
       > .admonition-header {
         // Header text color ($color) from light mode rule usually works.
         // Uncomment below to explicitly override for dark mode if needed (e.g., for contrast).
-        // color: mix($color, $admonition-dark-text, 80%);
-        // svg {
-        //   fill: mix($color, $admonition-dark-text, 80%);
-        // }
+        color: mix($color, $admonition-dark-text, 20%);
+        svg {
+          fill: mix($color, $admonition-dark-text, 20%);
+        }
       }
 
       // Target the DIRECT child content
