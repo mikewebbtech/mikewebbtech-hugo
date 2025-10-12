@@ -59,7 +59,7 @@ linkedin = "https://www.linkedin.com/in/michael-webb-1a36b8a5/"
 
 [pagination]
 disableAliases = false
-pagerSize = 7
+pagerSize = 10
 
 [markup]
 [markup.goldmark]
