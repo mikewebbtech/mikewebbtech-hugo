@@ -1,0 +1,12 @@
+{{- $u := urls.Parse .Destination -}}
+<a href="{{ .Destination | safeURL }}"
+  {{- with .Title }} title="{{ . }}" {{ end -}}
+  {{- if $u.IsAbs }} rel="external nofollow noreferrer" target="_blank" {{ end -}} >
+  {{- with .Text }} 
+    {{ . }}
+    <span style="vertical-align: super; display: inline-block; font-size: 0.7rem; font-weight: 200;" >
+      <i class="fa-solid fa-arrow-up-right-from-square"></i>
+    </span>
+  {{ end -}}
+</a>
+
