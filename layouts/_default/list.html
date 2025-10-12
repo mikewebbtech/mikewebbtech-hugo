@@ -59,7 +59,7 @@
             <i class="fa-solid fa-tags"></i>
             {{- range . -}}
               {{- with $.Site.GetPage (printf "/%s/%s" "tags" . ) }}
-                <a class="tag" href="{{ .RelPermalink }}">{{ .Title }},</a>
+                <a class="tag" href="{{ .RelPermalink }}">{{ .Title }}</a>
               {{ end -}}
             {{- end -}}
           </div>
@@ -68,7 +68,6 @@
           {{- with $article.Params.series }}
             <div>
               <i class="fa-solid fa-layer-group"></i>
-              Series:
               {{- range $seriesName := . -}}
                 {{- with $.Site.GetPage (printf "/series/%s" $seriesName) }}
                   <a class="tag" href="{{ .RelPermalink }}">{{ .Title }}</a>
@@ -82,7 +81,7 @@
                       {{- $articleNumber = sub $total $index -}}
                     {{ end -}}
                   {{- end -}}
-                    (Article {{ $articleNumber }} of {{ $total }})
+                    (#{{ $articleNumber }} of {{ $total }})
                 {{ end -}}
               {{- end -}}
           </div>
