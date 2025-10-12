@@ -1,0 +1,125 @@
+{{- define "main" -}}
+<article class="list-page">
+  {{- with .Resources.Get "image-header.png" }}
+    <div class="home-image">
+      {{- with .Process "resize 900x200 CatmullRom webp photo q100" }}
+        <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="" />
+      {{- end }}
+    </div>
+  {{- end }}
+
+  {{- if .Resources.Get "image-header.png" }}
+    <h3 class="subtitle">{{ .Params.Subtitle }}</h3>
+  {{- end }}
+
+  {{ .Content }}
+
+  <!-- Match categories terms DOM/classes -->
+  <ul class="article-list">
+    {{ $pages := .Pages }}
+    {{- if and (eq .Kind "term") (eq .Data.Plural "series") }}
+      {{ $pages = sort $pages "Date" }}
+    {{- end }}
+    {{- $paginator := .Paginate (where $pages "Type" "!=" "page") -}}
+    {{- range $paginator.Pages }}
+      <li class="article-list-item">
+        <a href="{{ .RelPermalink }}">
+          <div class="article-img">
+            {{/* Image priority
+                1) .Params.postIMG as page resource -> processed 90px
+                2) .Params.postIMG as plain path (unprocessed fallback)
+                3) First category's bundle image.png -> processed 90px
+            */}}
+            {{- $shown := false -}}
+
+            {{- with .Params.postIMG }}
+              {{- with $.Resources.GetMatch . }}
+                {{- with .Process "resize 150x150 CatmullRom webp photo q100" }}
+                  <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="" />
+                  {{- $shown = true -}}
+                {{- end }}
+              {{- end }}
+              {{- if not $shown }}
+                <img src="{{ . | relURL }}" alt="" />
+                {{- $shown = true -}}
+              {{- end }}
+            {{- end }}
+
+            {{- if not $shown }}
+              {{- $firstCat := index (or .Params.categories (slice)) 0 -}}
+              {{- with $firstCat }}
+                {{- with $.Site.GetPage (printf "/%s/%s" "categories" .) }}
+                  {{- with .Resources.Get "image.png" }}
+                    {{- with .Process "resize 150x150 CatmullRom webp photo q100" }}
+                      <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="" />
+                      {{- $shown = true -}}
+                    {{- end }}
+                  {{- end }}
+                {{- end }}
+              {{- end }}
+            {{- end }}
+          </div>
+
+          <div class="article-content-right">
+            <div class="article-title">{{ .Title }}</div>
+          <div class="article-meta">
+              <div><i class="fa-solid fa-calendar-days"></i> {{ .PublishDate.Format "Jan 2, 2006" }}
+              <i class="fa-solid fa-clock"></i> {{ .ReadingTime }} min read</div>
+        </a>
+              {{- with .Params.categories }}
+                <div>
+                  <i class="fa-solid fa-list"></i>
+                  {{- range . -}}
+                    {{- with $.Site.GetPage (printf "/%s/%s" "categories" . ) }}
+                      <a class="tag" href="{{ .RelPermalink }}">{{ .Title }}</a>
+                    {{- end -}}
+                  {{- end -}}
+                </div>
+              {{- end }}
+
+              {{- with .Params.tags }}
+                <div>
+                  <i class="fa-solid fa-tags"></i>
+                  {{- range . -}}
+                    {{- with $.Site.GetPage (printf "/%s/%s" "tags" . ) }}
+                      <a class="tag" href="{{ .RelPermalink }}">{{ .Title }}</a>
+                    {{- end -}}
+                  {{- end -}}
+                </div>
+              {{- end }}
+            {{- $article := . -}}
+            {{- with $article.Params.series }}
+              <div>  
+              <i class="fa-solid fa-layer-group"></i>
+              {{- range $seriesName := . -}}
+                {{- with $.Site.GetPage (printf "/series/%s" $seriesName) }}
+                  <a class="tag" href="{{ .RelPermalink }}">{{ .Title }}
+                {{ end -}}
+                {{- $currentSeries := index $.Site.Taxonomies.series ($seriesName | urlize) -}}
+                {{- if $currentSeries }}
+                  {{- $total := len $currentSeries.Pages -}}
+                  {{- $articleNumber := 0 -}}
+                  {{- range $index, $page := $currentSeries.Pages -}}
+                    {{- if eq $page.RelPermalink $article.RelPermalink }}
+                      {{- $articleNumber = sub $total $index -}}
+                    {{ end -}}
+                  {{- end -}}
+                  (#{{ $articleNumber }})</a>
+                {{ end -}}
+              {{- end -}}
+          </div>
+          {{ end -}}
+        <a href="{{ .RelPermalink }}">
+            <div class="article-description">
+            <p>{{ .Summary }}</p>
+            </div>
+          </div>
+        </a>
+      </li>
+    {{- end }}
+  </ul>
+
+  {{- partial "pagination.html" . -}}
+</article>
+{{- end -}}
+
