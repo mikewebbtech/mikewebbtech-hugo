@@ -23,7 +23,7 @@
       <a class="cat-list-item-link" href="{{ .Page.RelPermalink }}">
         <div class="cat-list-img">
           {{- with .Page.Resources.Get "image.png" }} 
-            {{- with .Process "resize 90x CatmullRom webp photo q100" }}
+            {{- with .Process "resize 150x CatmullRom webp photo q100" }}
               <img
                 src="{{ .RelPermalink }}"
                 width="{{ .Width }}"
