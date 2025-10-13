@@ -42,6 +42,28 @@ h3 {
   color: #d7dce1;
 }
 
+.center {
+  text-align: center;
+  font-family: inherit;
+}
+
+.right {
+  text-align: right;
+  font-family: inherit;
+}
+
+.left {
+  text-align: left;
+  font-family: inherit;
+}
+.p-border {
+  border: 2px solid #d7dce1; /* style the border */
+  border-radius: 3px; /* optional: rounded corners */
+  padding: 0.75rem 1rem; /* space inside the border */
+  display: flow-root; /* self-clear floats inside */
+  /* or: overflow: auto;  (older clearfix alternative) */
+}
+
 ul {
   list-style-type: none;
 }
@@ -947,4 +969,77 @@ th {
 /* Insert the new text "First" using the ::after pseudo-element */
 .page-item a[aria-label="Last"]::after {
   content: "Last";
+}
+
+/* Style and align images using hugo default render-image function */
+img.left {
+  float: left;
+  margin: 0 10px 10px 0;
+}
+img.right {
+  float: right;
+  margin: 0 0 10px 10px;
+}
+
+img.center {
+  display: block; /* make <img> respect margins */
+  margin: 0 auto; /* centers horizontally */
+  max-width: 100%; /* responsive */
+  height: auto;
+}
+
+/* Style and align Figure images based on custom shortcode  */
+/* layout/shortcode/figure.html                             */
+
+.figure {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.figure-img {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+
+.figure-caption {
+  align-self: stretch; /* take full cross-axis width in a column flex */
+  text-align: center; /* center the caption text */
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* Alignment (no wrapping) */
+.figure-left {
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.figure-center {
+  justify-content: center;
+  align-items: center;
+}
+.figure-right {
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+/* Optional text wrapping (float) */
+.figure-wrap {
+  max-width: min(100%, 40ch);
+} /* tweak as you like */
+.figure-wrap.figure-left {
+  float: left;
+  margin: 0 1rem 1rem 0;
+}
+.figure-wrap.figure-right {
+  float: right;
+  margin: 0 0 1rem 1rem;
+}
+
+/* Clear floats after paragraphs so later content doesn't snake around */
+p::after,
+.content p::after {
+  content: "";
+  display: block;
+  clear: both;
 }

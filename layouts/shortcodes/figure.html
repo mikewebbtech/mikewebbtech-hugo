@@ -1,0 +1,65 @@
+{{/* 
+ Markdown usage examples
+{{< figure src="hugo-logo-wide.svg" alt="Hugo" width="200" align="center" >}}
+{{< figure src="avatar.png" alt="Me" width="160" align="left" wrap="true" >}}
+{{< figure src="diagram.svg" alt="Flow" width="320" align="right" imgClass="rounded-lg shadow" >}}
+*/}}
+{{- $src      := or (.Get "src") (.Get 0) -}}
+{{- $alt      := .Get "alt" -}}
+{{- $title    := .Get "title" -}}
+{{- $caption  := .Get "caption" -}}
+{{- $link     := .Get "link" -}}
+{{- $target   := .Get "target" -}}
+{{- $rel      := .Get "rel" -}}
+{{- $class    := .Get "class" -}}
+{{- $imgClass := or (.Get "imgClass") (.Get "imgclass") -}}
+{{- $width    := .Get "width" -}}
+{{- $height   := .Get "height" -}}
+{{- $loading  := .Get "loading" -}}
+{{- $decoding := .Get "decoding" -}}
+{{- $sizes    := .Get "sizes" -}}
+{{- $srcset   := .Get "srcset" -}}
+{{- $align    := lower (.Get "align") -}}   {{/* left | center | right */}}
+{{- $wrap     := eq (lower (default "" (.Get "wrap"))) "true" -}}
+
+{{/* Prefer Page Resource path if found */}}
+{{- with .Page.Resources.GetMatch $src -}}
+  {{- $src = .RelPermalink -}}
+{{- end -}}
+
+{{/*  Get align value and set to CSS element. Throw error if valid value 
+      of left, center or right not entered 
+*/}}
+{{- $alignClass := "" -}}
+{{- with $align -}}
+  {{- if or (eq . "left") (eq . "center") (eq . "right") -}}
+    {{- $alignClass = printf "figure-%s" . -}}
+  {{- else -}}
+    {{- errorf "figure shortcode: invalid align %q (allowed: left|center|right). Omit align for no class." . -}}
+  {{- end -}}
+{{- end -}}
+{{- $wrapClass := cond $wrap "figure-wrap" "" -}}
+
+{{/*  If CSS class is set, don't include figure class element
+      If, CSS class is empty, set the figure style element */}}
+{{- if not $class }}
+  {{ $class = "figure" }}      {{/* default only if no $class */}}
+{{- end -}}
+
+<figure class="{{- if $alignClass }}{{ $alignClass }}{{ end -}} 
+               {{- if $wrapClass }} {{$wrapClass}}{{ end -}} 
+               {{- with $class }} {{ . }}{{ end -}}">
+  {{- if $link -}}<a href="{{ $link }}"{{ with $target }} target="{{ . }}"{{ end }}{{ with $rel }} rel="{{ . }}"{{ end }}>{{- end -}}
+  <img src="{{ $src }}"
+       {{- if $alt }} alt="{{ $alt }}"{{ else }} alt=""{{ end -}}
+       class="{{ with $imgClass }}{{ . }} {{ end }}figure-img"
+       {{- with $width }} width="{{ . }}"{{ end -}}
+       {{- with $height }} height="{{ . }}"{{ end -}}
+       {{- with $loading }} loading="{{ . }}"{{ end -}}
+       {{- with $decoding }} decoding="{{ . }}"{{ end -}}
+       {{- with $sizes }} sizes="{{ . }}"{{ end -}}
+       {{- with $srcset }} srcset="{{ . }}"{{ end -}} />
+  {{- if $link -}}</a>{{- end -}}
+  {{- with $title }}<figcaption class="figure-caption">{{ . | safeHTML }}</figcaption>{{ end -}}
+  {{- if and (not $title) $caption }}<figcaption class="figure-caption">{{ $caption | safeHTML }}</figcaption>{{ end -}}
+</figure>
