@@ -22,6 +22,21 @@ body {
   overscroll-behavior: none;
 }
 
+.center {
+  text-align: center;
+  font-family: inherit;
+}
+
+.right {
+  text-align: right;
+  font-family: inherit;
+}
+
+.left {
+  text-align: left;
+  font-family: inherit;
+}
+
 h1 {
   font-size: 1.5em;
   font-family: Oswald;
@@ -42,20 +57,6 @@ h3 {
   color: #d7dce1;
 }
 
-.center {
-  text-align: center;
-  font-family: inherit;
-}
-
-.right {
-  text-align: right;
-  font-family: inherit;
-}
-
-.left {
-  text-align: left;
-  font-family: inherit;
-}
 .p-border {
   border: 2px solid #d7dce1; /* style the border */
   border-radius: 3px; /* optional: rounded corners */
@@ -974,18 +975,22 @@ th {
 /* Style and align images using hugo default render-image function */
 img.left {
   float: left;
-  margin: 0 10px 10px 0;
+  margin: 0 5px 5px 0;
 }
 img.right {
   float: right;
-  margin: 0 0 10px 10px;
+  margin: 0 0 5px 5px;
 }
 
-img.center {
+.center {
   display: block; /* make <img> respect margins */
   margin: 0 auto; /* centers horizontally */
   max-width: 100%; /* responsive */
   height: auto;
+}
+
+.padded > img {
+  padding: 0 20px 0 20px;
 }
 
 /* Style and align Figure images based on custom shortcode  */
@@ -1029,11 +1034,11 @@ img.center {
 } /* tweak as you like */
 .figure-wrap.figure-left {
   float: left;
-  margin: 0 1rem 1rem 0;
+  margin: 0 5px 5px 0;
 }
 .figure-wrap.figure-right {
   float: right;
-  margin: 0 0 1rem 1rem;
+  margin: 0 0 5px 5px;
 }
 
 /* Clear floats after paragraphs so later content doesn't snake around */

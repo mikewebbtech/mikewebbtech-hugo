@@ -1,9 +1,9 @@
-{{/* 
+{{/* ---------------------------------------------------------------------- 
  Markdown usage examples
 {{< figure src="hugo-logo-wide.svg" alt="Hugo" width="200" align="center" >}}
 {{< figure src="avatar.png" alt="Me" width="160" align="left" wrap="true" >}}
 {{< figure src="diagram.svg" alt="Flow" width="320" align="right" imgClass="rounded-lg shadow" >}}
-*/}}
+  ------------------------------------------------------------------------ */}}
 {{- $src      := or (.Get "src") (.Get 0) -}}
 {{- $alt      := .Get "alt" -}}
 {{- $title    := .Get "title" -}}
@@ -18,6 +18,7 @@
 {{- $loading  := .Get "loading" -}}
 {{- $decoding := .Get "decoding" -}}
 {{- $sizes    := .Get "sizes" -}}
+{{- $imgStyle := or (.Get "imgstyle") (.Get "imgStyle") -}}
 {{- $srcset   := .Get "srcset" -}}
 {{- $align    := lower (.Get "align") -}}   {{/* left | center | right */}}
 {{- $wrap     := eq (lower (default "" (.Get "wrap"))) "true" -}}
@@ -40,8 +41,11 @@
 {{- end -}}
 {{- $wrapClass := cond $wrap "figure-wrap" "" -}}
 
-{{/*  If CSS class is set, don't include figure class element
-      If, CSS class is empty, set the figure style element */}}
+{{/* ------------------------------------------------------------ 
+  If CSS class is set, don't include figure class element
+  If, CSS class is empty, set the figure style element
+  ------------------------------------------------------------ */}}
+
 {{- if not $class }}
   {{ $class = "figure" }}      {{/* default only if no $class */}}
 {{- end -}}
@@ -58,8 +62,9 @@
        {{- with $loading }} loading="{{ . }}"{{ end -}}
        {{- with $decoding }} decoding="{{ . }}"{{ end -}}
        {{- with $sizes }} sizes="{{ . }}"{{ end -}}
+       {{ with $imgStyle }} style="{{ . | safeCSS }}"{{ end }}
        {{- with $srcset }} srcset="{{ . }}"{{ end -}} />
   {{- if $link -}}</a>{{- end -}}
   {{- with $title }}<figcaption class="figure-caption">{{ . | safeHTML }}</figcaption>{{ end -}}
-  {{- if and (not $title) $caption }}<figcaption class="figure-caption">{{ $caption | safeHTML }}</figcaption>{{ end -}}
+  {{- if and (not $title) $caption }}<figcaption class="figure-caption">{{ $caption | markdownify }}</figcaption>{{ end -}}
 </figure>
