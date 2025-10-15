@@ -1,5 +1,5 @@
 +++
-title = 'Series'
+title = 'Series List Page'
 [params]
     subtitle = 'Knowledge Stacks '
 +++

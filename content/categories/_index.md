@@ -1,5 +1,5 @@
 +++
-title = 'Categories'
+title = 'Categories List Page'
 [params]
   subtitle = 'Content Containers'
 +++
