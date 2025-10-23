@@ -8,7 +8,7 @@
     </a>
   {{- else -}}
     <a href="{{ .Destination | safeURL }}"
-    {{- if $u.IsAbs }} rel="external nofollow noreferrer" target="_blank" {{ end -}} >
+    {{- if $u.IsAbs }} rel="external nofollow noreferrer" target="_blank" aria-label="{{- with .Text }} {{ . }} {{- end -}} (opens in a new tab)" {{ end -}} >
     {{- with .Text }} 
       {{ . }}
       {{- if $u.IsAbs }} 
