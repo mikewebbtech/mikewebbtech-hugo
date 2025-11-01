@@ -979,7 +979,7 @@ img.left {
 }
 img.right {
   float: right;
-  margin: 0 0 5px 5px;
+  margin: 15px 0 10px 10px;
 }
 
 .center {
