@@ -1048,3 +1048,10 @@ p::after,
   display: block;
   clear: both;
 }
+.inline-link-icon {
+  vertical-align: super;
+  display: inline-block;
+  font-size: 0.5rem;
+  font-weight: 150;
+  margin-right: 0.5em; /* gap between icon and following text */
+}
