@@ -4,6 +4,7 @@
 <a href="https://gohugo.io">
   <img alt="HUGO LOGO" title="Hugo website" src="https://gohugo.io/images/hugo-logo-wide.svg" width="200">
 </a>
+<img alt="GitHub Actions Workflow Status" src="https://img.shields.io/github/actions/workflow/status/mikewebbtech/mikewebbtech-hugo/site-deploy.yml?label=Site%20CI%2FCD%20Build">
 </p>
 <h4>Table of Contents</h4>
 
@@ -56,8 +57,9 @@ Progress is slow, there is a lot about using the hugo framework that is not intu
 - [x] Create list of member articles to series article pages.
 - [x] Automate blank article creation with front matter (not Hugo built in method)
 - [x] Automate git repo and submodule update and push process
-- [x] Host site on GitHub for development using actions (update: really half done. revist)
-- [ ] Host site on GiHub using actions in hugo code base repo (a hugo action?)
+- [x] Host site on GitHub for development using actions (update: really half done. revisit)
+- [x] Host site on GiHub using actions in hugo code base repo (a hugo action?)
 - [x] ~~Implement breadcrumbs feature across site.~~ (note: no longer using)
-- [ ] Use shortcodes to open external links in new tab or window (html \_blank)
-- [ ] implement embedding images using markdown notation and shortcodes.
+- [x] Use shortcodes to open external links in new tab or window (html \_blank)
+- [x] implement embedding images using markdown notation and shortcodes.
+- [ ] Trigger GitHub CICD action when submodule external repo is updated.
