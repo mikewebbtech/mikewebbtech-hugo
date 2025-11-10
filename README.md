@@ -4,6 +4,8 @@
 <a href="https://gohugo.io">
   <img alt="HUGO LOGO" title="Hugo website" src="https://gohugo.io/images/hugo-logo-wide.svg" width="200">
 </a>
+<br>
+<br>
 <img alt="GitHub Actions Workflow Status" src="https://img.shields.io/github/actions/workflow/status/mikewebbtech/mikewebbtech-hugo/site-deploy.yml?label=Site%20CI%2FCD%20Build">
 </p>
 <h4>Table of Contents</h4>
