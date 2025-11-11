@@ -25,11 +25,11 @@
 
 Hugo is a static site generator framework written in go and sites are created using html templates with embedded go template language snippets. The content for the site is generated from text files such as markdown, json, asciiDoc etc.
 
-The [hugo documentation](https://gohugo.io/documentation) is extensive and well structured and there is an active community to lean on for help. There are lots of blog articles and theme examples to draw inspiration and get started with creating a site. If an existing theme meets your needs, hugo is even easier and faster to get started with.
+The [hugo documentation](https://gohugo.io/documentation) is extensive and well structured and there is an active community to lean on for help. There are lots of blog articles and theme examples to draw inspiration and get started with creating a site. If an existing theme meets your needs, Hugo is even easier and faster to get started with.
 
 :point_right: **What is a SSG and Why?**
 
-Static site generators offer faster performance, enhanced security, and greater scalability by pre-building web pages as static files rather than generating them on demand using a database backend. This approach simplifies hosting and maintenance, allows for better content version control, and provides a lighter backend with fewer dependencies. As a result, static sites are more reliable, more secure, and often offer better SEO due to their speed.
+Static site generators offer faster performance, enhanced security, and greater scalability by pre-building web pages as static files rather than generating them on demand using a database back end. This approach simplifies hosting and maintenance, allows for better content version control, and provides a lighter back end with fewer dependencies. As a result, static sites are more reliable, more secure, and often offer better SEO due to their speed.
 
 ---
 
@@ -60,8 +60,16 @@ Progress is slow, there is a lot about using the hugo framework that is not intu
 - [x] Automate blank article creation with front matter (not Hugo built in method)
 - [x] Automate git repo and submodule update and push process
 - [x] Host site on GitHub for development using actions (update: really half done. revisit)
-- [x] Host site on GiHub using actions in hugo code base repo (a hugo action?)
+- [x] Host site on GiHub using _Actions_ and _Pages_ for my Hugo siterepo (a hugo action?)
+- [x] Configure _Pages_ custom domain to use mikewebb.tech domain (Namecheap changes?)
+- [x] Implement SSL and enforce for GitHub _Pages_
 - [x] ~~Implement breadcrumbs feature across site.~~ (note: no longer using)
 - [x] Use shortcodes to open external links in new tab or window (html \_blank)
 - [x] implement embedding images using markdown notation and shortcodes.
 - [ ] Trigger GitHub CICD action when submodule external repo is updated.
+- [ ] Move away from Font Awesome. Look at svg or mdi as solution?
+- [ ] Use webp instead of png or jpeg for all images
+  - [x] explore using Hugo convert function in template for sites.
+  - [ ] change format for article images at creation. Explore way to use Hugo function on render
+- [ ] Site statistics (visitor and page views, geolocations etc)
+- [ ] Visitor feedback and interaction (security first by design)
