@@ -14,7 +14,6 @@ title = 'Persistant State'
 > {.note}
 
 > ## My interests are
->
 > {.one}
 
 {{< link-icon href="categories/cloud" >}}Cloud Computing{{< /link-icon >}}: From understanding the fundamentals to deploying and managing applications in the cloud, I'm documenting my journey of mastering this transformative technology.
@@ -34,7 +33,6 @@ title = 'Persistant State'
 {{< link-icon href="categories/home-lab" >}}Home Labbing{{< /link-icon >}}: My personal playground for experimentation and running services for the home! Follow the evolution of my home lab as I build, break, and learn from hardware and software ~~stuff ups~~ setups
 
 > ## Latest Articles:
->
 > {.two}
 
 {{< recent_articles_cards >}}
