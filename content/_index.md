@@ -4,16 +4,18 @@ postIMG = 'homepage.png'
 draft = false
 title = 'Persistant State'
 [params]
-  subtitle = 'Check To See If The Light Still On'
+  subtitle = 'Are The Light Still Blinking'
 +++
 
-### This is me learning one project at a time.
+### Working on learning one project at a time.
 
 > 👋 Hi, Welcome.</br>
-> I am in process of migrating data out of an old WordPress blog database and moving over to a new static site using the HUGO framework. This shift should give me greater site security, better hosting flexibility, and less management overhead.
+> All the articles before 2023 were migrated out of an old WordPress MySQL database. Some of the formatting might seem off. Those articles are still a work in progress, here be dragons 🐉.
 > {.note}
 
-### Landscapes I am navigating
+> ## My interests are
+>
+> {.one}
 
 {{< link-icon href="categories/cloud" >}}Cloud Computing{{< /link-icon >}}: From understanding the fundamentals to deploying and managing applications in the cloud, I'm documenting my journey of mastering this transformative technology.
 
@@ -25,11 +27,15 @@ title = 'Persistant State'
 
 {{< link-icon href="categories/hugo" >}}HUGO{{< /link-icon >}}: Embracing the power of static site generators to build and deploy an efficient and engaging web experience for the creator and the consumer. Follow along as I experiment with the framework to build this site.
 
-{{< link-icon href="categories/iot" >}}IoT{{< /link-icon >}} and {{< link-icon href="categories/automation" >}}Automation{{< /link-icon >}}: Bringing the digital and physical worlds together within the home, exploring the potential of interconnected devices and creating smart, automated environments.
+{{< link-icon href="categories/automation" >}}Automation{{< /link-icon >}}: Standardising and creating efficiencies in processes, removing human error in repetitive tasks and use technology and code to look after the basics and free up time for the bigger stuff.
+
+{{< link-icon href="categories/iot" >}}IoT{{< /link-icon >}}: Bringing the digital and physical worlds together within the home, exploring the potential of interconnected devices and creating smart, automated environments.
 
 {{< link-icon href="categories/home-lab" >}}Home Labbing{{< /link-icon >}}: My personal playground for experimentation and running services for the home! Follow the evolution of my home lab as I build, break, and learn from hardware and software ~~stuff ups~~ setups
 
-### Latest Articles:
+> ## Latest Articles:
+>
+> {.two}
 
 {{< recent_articles_cards >}}
 
