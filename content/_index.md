@@ -2,9 +2,9 @@
 date = '2025-01-30T03:36:57-08:00'
 postIMG = 'homepage.png'
 draft = false
-title = 'Persistant State'
+title = 'Persistent State'
 [params]
-  subtitle = 'Are The Light Still Blinking'
+  subtitle = 'Keeping The Light Blinking'
 +++
 
 ### Working on learning one project at a time.
