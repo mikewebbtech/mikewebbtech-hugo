@@ -104,7 +104,7 @@ ul {
 }
 
 .logo img {
-  margin-top: 13em;
+  margin-top: 15em;
   width: 100%;
   height: auto;
 }
@@ -113,6 +113,7 @@ ul {
   text-align: center;
   margin-top: 0.1rem;
   color: #d8dee9;
+  margin-bottom: 0.1rem;
   font-size: 1.3rem;
 }
 
@@ -125,7 +126,7 @@ ul {
   padding: 0 0.3rem;
 }
 .nav {
-  margin-top: 8em;
+  margin-top: 9em;
   width: 100%;
   font-size: 1.2rem;
   line-height: 1rem;
