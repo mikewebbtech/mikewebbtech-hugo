@@ -19,7 +19,15 @@
 
   {{ .Content }}
   <ul class="article-list">
-    {{ $pages := .Pages }}
+    {{- $pages := .Pages -}}
+
+    {{- if eq .RelPermalink "/articles/" -}}
+      {{- $pages = .RegularPagesRecursive -}}
+    {{- else if hasPrefix .RelPermalink "/articles/" -}}
+      {{- $pages = .RegularPages -}}
+    {{- end -}}
+
+
     {{- if and (eq .Kind "term") (eq .Data.Plural "series") }}
     {{ $pages = sort $pages "Date" }}
     {{ end -}}

@@ -1,6 +1,12 @@
 <nav class="nav">
   <ul>
     {{- $currentPage := . -}}
+
+    {{- $articles := site.GetPage "section" "articles" -}}
+    {{- $inArticles := hasPrefix $currentPage.RelPermalink "/articles/" -}}
+    {{/* - $inArticles := gt (len (findRE `^/articles/\d{4}/$` $currentPage.RelPermalink)) 0 - */}}
+
+
     {{- range .Site.Menus.main -}}
       {{- $icon := printf "<i class=\"fa-solid %s\"></i>" .Pre -}}
       {{- $text := print $icon " " .Name | safeHTML -}}
@@ -15,8 +21,32 @@
           {{- $isActive = $currentPage.HasMenuCurrent "main" . -}}
         {{- end -}}
       {{- end -}}
+
+
+      {{/* Ensure Articles stays active for /articles/YYYY/ etc */}}
+      {{- if and (eq .URL "/articles/") $inArticles -}}
+        {{- $isActive = true -}}
+      {{- end -}}
+
       <li{{- if $isActive }} class="active" {{ end -}}>
         <a href="{{ .URL }}" {{- if $isActive }} aria-current="page" {{ end -}}>{{ $text }}</a>
+
+
+        {{/* Year submenu under Articles */}}
+        {{- if and (eq .URL "/articles/") $inArticles $articles -}}
+          <ul class="nav-submenu nav-submenu--years">
+            {{- range $y := $articles.Sections.ByTitle.Reverse -}}
+              {{- $count := len $y.RegularPagesRecursive -}}
+              <li class="nav-subitem{{ if eq $currentPage.RelPermalink $y.RelPermalink }} active{{ end }}">
+                <a class="nav-sublink" href="{{ $y.RelPermalink }}">
+                  {{ $y.Title }} <span class="nav-count">({{ $count }})</span>
+                </a>
+              </li>
+            {{- end -}}
+          </ul>
+        {{- end -}}
+
+
       </li>
     {{- end -}}
   </ul>

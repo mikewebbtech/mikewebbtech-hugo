@@ -185,6 +185,19 @@ ul {
   margin: 0.4rem;
 }
 
+.nav-sublink {
+  display: flex;
+  text-decoration: none;
+  margin-left: 2em;
+  opacity: 0.9;
+  font-size: 0.8em;
+}
+
+.nav-subitem.active > .nav-sublink,
+.nav > ul > li.active > a {
+  opacity: 1;
+}
+
 .header {
   grid-area: header;
   position: relative;
