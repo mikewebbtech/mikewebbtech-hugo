@@ -9,7 +9,33 @@
 {{ if .Page.Store.Get "hasMermaid" }}
   <script type="module">
     import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-    mermaid.initialize({ startOnLoad: true, theme: 'forest' });
+    mermaid.initialize({ startOnLoad: true, 
+      theme: 'base',
+      themeVariables: {
+        /* Main Background and Text */
+        darkMode: false,
+        background: '#b4befe',      // Mocha Base
+        primaryColor: '#89b4fa',    // Mocha Blue (Headers/Nodes)
+        primaryTextColor: '#11111b', // Mocha Crust (Contrast for text inside nodes)
+        primaryBorderColor: '#89b4fa',
+        
+        /* Secondary Elements */
+        secondaryColor: '#fab387',  // Mocha Peach
+        tertiaryColor: '#b4befe',   // Mocha Lavender
+        
+        /* Lines and Arrows */
+        lineColor: '#cdd6f4',       // Mocha Text
+        arrowheadColor: '#f5e0dc',  // Mocha Rosewater
+        
+        /* Text on the background (Labels) */
+        //mainBkg: '#1e1e2e',
+        nodeBorder: '#89b4fa',
+        //clusterBkg: '#313244',      // Mocha Surface0 (For grouped areas)
+        clusterBorder: '#45475a',   // Mocha Surface1
+        titleColor: '#f5e0dc',
+        //edgeLabelBackground: '#1e1e2e'
+      }
+    });
   </script>
 {{ end }}
   </body>
