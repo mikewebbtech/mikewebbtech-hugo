@@ -2,15 +2,15 @@
 date = '2025-01-30T03:36:57-08:00'
 postIMG = 'homepage.png'
 draft = false
-title = 'Persistent State'
+title = 'The Persistent State'
 [params]
-  subtitle = 'Keeping The Light Blinking'
+  subtitle = 'Keeping The Lights Blinking'
 +++
 
 ### Working on learning one project at a time.
 
 > 👋 Hi, Welcome.</br>
-> All the articles before 2023 were migrated out of an old WordPress MySQL database. Some of the formatting might seem off. Those articles are still a work in progress, here be dragons 🐉.
+> All of the articles before 2023 were migrated out of an WordPress MySQL database recovered from and old docker volume. Some of the formatting might seem off. Those articles are still a work in progress, here be dragons 🐉.
 > {.note}
 
 > ## My interests are
