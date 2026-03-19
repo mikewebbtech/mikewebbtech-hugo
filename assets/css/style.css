@@ -1069,3 +1069,29 @@ p::after,
   font-weight: 150;
   margin-right: 0.5em; /* gap between icon and following text */
 }
+
+/* Container for the source link, aligning elements */
+.post-source-link {
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #d8dee9; /* Nord Snow Storm */
+  margin-top: 1.5rem; /* Added some breathing room from the content above */
+}
+
+/* Targeting the specific red accent color for the icon */
+.post-source-link i {
+  color: #bf616a; /* Theme Red */
+  font-size: 1.1rem;
+}
+
+/* Subtle styling for the link itself with hover effects */
+.post-source-link a {
+  color: #81a1c1; /* Nord Frost Blue */
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.post-source-link a:hover {
+  color: #88c0d0; /* Lighter Nord Blue */
+  text-decoration: underline;
+} /* Added missing closing brace */

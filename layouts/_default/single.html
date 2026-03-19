@@ -54,16 +54,14 @@
   <div class="post-series-bottom">{{ partial "series-pagination.html" . }}</div>
   {{- end -}}
 
-  {{- if .File -}}
+{{- if .File -}}
     {{ $repoPath := replace .File.Path "articles/" "" }}
-    <div>
-      <p>
+    <div class="post-source-link">
         <i class="fa-brands fa-github"></i> 
         <a href="{{ .Site.Params.blog_repo }}/{{ $repoPath }}?plain=1" target="_blank" rel="noopener">
-          View source on GitHub
+            View source on GitHub
         </a>
-      </p>
     </div>
-  {{- end -}}
+{{- end -}}
 </article>
 {{ end }}
