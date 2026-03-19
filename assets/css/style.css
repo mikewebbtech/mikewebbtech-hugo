@@ -1,5 +1,47 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css");
 
+:root {
+  /* --- Nord Palette --- */
+  --nord-0: #2e3440; /* Polar Night (Deepest) */
+  --nord-1: #353b43; /* Polar Night (Sidebar/Highlight) */
+  --nord-2: #3b4252; /* Polar Night (Main Background) */
+  --nord-3: #434c5e; /* Polar Night (Dividers/Borders) */
+  --nord-4: #4c566a; /* Polar Night (Cards/Hovers) */
+  --nord-5: #d8dee9; /* Snow Storm (Muted Text) */
+  --nord-6: #e5e9f0; /* Snow Storm (Main Text) */
+  --nord-8: #88c0d0; /* Frost (Cyan) */
+  --nord-9: #81a1c1; /* Frost (Blue) */
+  --nord-10: #5e81ac; /* Frost (Dark Blue) */
+  --nord-11: #bf616a; /* Aurora (Red - Header) */
+  --nord-13: #ebcb8b; /* Aurora (Yellow - Links) */
+  --nord-14: #a3be8c; /* Aurora (Green) */
+  --nord-15: #b48ead; /* Aurora (Purple) */
+  --nord-0-alpha65: rgba(46, 52, 64, 0.65); /* Polar Night (Overlay) */
+
+  /* --- UI Functional Mapping --- */
+  --color-body-bg: black;
+  --color-main-bg: var(--nord-2);
+  --color-sidebar-bg: var(--nord-1);
+  --color-header-bg: var(--nord-11);
+
+  --color-text-body: #161616; /* Preserved specific body text color */
+  --color-text-main: var(--nord-6);
+  --color-text-muted: var(--nord-5);
+  --color-text-dark: var(--nord-2);
+
+  --color-link: var(--nord-13);
+  --color-link-hover: var(--nord-8);
+  --color-border: var(--nord-3);
+
+  --color-card-bg: var(--nord-4);
+  --color-overlay-bg: var(--nord-0-alpha65);
+
+  --color-accent-blue: var(--nord-9);
+  --color-accent-dark-blue: var(--nord-10);
+  --color-accent-green: var(--nord-14);
+  --color-accent-purple: var(--nord-15);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -14,8 +56,8 @@ body {
     NotoColorEmoji, "Segoe UI Symbol", "Android Emoji", EmojiSymbols;
   font-size: 1em;
   line-height: 1.2;
-  color: #161616;
-  background-color: black;
+  color: var(--color-text-body);
+  background-color: var(--color-body-bg);
   height: 100vh;
   max-width: 1124px;
   margin: auto;
@@ -54,11 +96,11 @@ h4 {
 h3 {
   font-family: Oswald;
   font-weight: normal;
-  color: #d7dce1;
+  color: var(--color-text-main);
 }
 
 .p-border {
-  border: 2px solid #d7dce1; /* style the border */
+  border: 2px solid var(--color-border); /* style the border */
   border-radius: 3px; /* optional: rounded corners */
   padding: 0.75rem 1rem; /* space inside the border */
   display: flow-root; /* self-clear floats inside */
@@ -87,8 +129,8 @@ ul {
   top: 0;
   width: 14rem;
   height: 100vh;
-  background-color: #353b43;
-  color: #fff;
+  background-color: var(--color-sidebar-bg);
+  color: var(--color-text-main);
   z-index: 1000;
 }
 
@@ -99,7 +141,7 @@ ul {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #bf616a;
+  background-color: var(--color-header-bg);
   margin-bottom: 5rem;
 }
 
@@ -112,7 +154,7 @@ ul {
 .byline {
   text-align: center;
   margin-top: 0.1rem;
-  color: #d8dee9;
+  color: var(--color-text-muted);
   margin-bottom: 0.1rem;
   font-size: 1.3rem;
 }
@@ -122,7 +164,7 @@ ul {
 }
 
 .byline a {
-  color: #d8dee9;
+  color: var(--color-text-muted);
   padding: 0 0.3rem;
 }
 .nav {
@@ -151,7 +193,7 @@ ul {
 .nav a {
   display: block;
   text-decoration: none;
-  color: #d8dee9;
+  color: var(--color-text-muted);
   padding: 0.6rem 1em;
   text-transform: uppercase;
 }
@@ -162,12 +204,12 @@ ul {
 
 .nav li:hover {
   /*transform: translateX(0);*/
-  background-color: #4c566a;
+  background-color: var(--color-card-bg);
 }
 
 .nav ul li.active {
   transform: translateX(0);
-  background-color: #4c566a;
+  background-color: var(--color-card-bg);
 }
 
 .nav-bottom {
@@ -203,7 +245,7 @@ ul {
   position: relative;
   padding: 0 1.5rem 0 3rem;
   height: 4rem;
-  background-color: #bf616a;
+  background-color: var(--color-header-bg);
   text-align: center;
   text-transform: uppercase;
 }
@@ -211,8 +253,8 @@ ul {
 .main {
   grid-area: main;
   padding: 1rem 1rem 0 3rem;
-  background-color: #3b4252;
-  color: #d7dce1;
+  background-color: var(--color-main-bg);
+  color: var(--color-text-main);
   overflow-wrap: break-word;
   font-weight: 250;
   word-break: keep-all;
@@ -220,8 +262,8 @@ ul {
 
 .post-header {
   padding: 0.1rem 0.5rem 0.5rem;
-  background-color: #353b43;
-  color: #bec9d7;
+  background-color: var(--color-sidebar-bg);
+  color: var(--color-text-muted);
   display: grid;
   grid-template-rows: auto auto;
 }
@@ -255,7 +297,7 @@ ul {
   padding-bottom: 0.5rem;
 }
 .post-content a {
-  color: peru;
+  color: var(--color-link);
   font-weight: bolder;
 }
 
@@ -283,8 +325,8 @@ ul {
 .tags-list-item:nth-child(6n + 1),
 .tags-list-item:nth-child(6n + 2),
 .tags-list-item:nth-child(6n + 3) {
-  background-color: #bec9d7; /* Color for the "odd" rows */
-  color: #3b4252;
+  background-color: var(--color-text-muted); /* Color for the "odd" rows */
+  color: var(--color-text-dark);
 }
 
 /* Target the items in the second row of each alternating pair (Row 2, Row 4, Row 6, etc.) */
@@ -292,8 +334,10 @@ ul {
 .tags-list-item:nth-child(6n + 4),
 .tags-list-item:nth-child(6n + 5),
 .tags-list-item:nth-child(6n + 6) {
-  background-color: #4c556a; /* Color for the "even" rows */
-  color: #e0e0e0; /* Added a contrasting color for dark background */
+  background-color: var(--color-card-bg); /* Color for the "even" rows */
+  color: var(
+    --color-text-main
+  ); /* Added a contrasting color for dark background */
 }
 
 a {
@@ -319,7 +363,7 @@ a {
 .article-list-item {
   display: flex;
   margin-top: 1.25rem;
-  border: #353b35 solid 1px;
+  border: var(--color-sidebar-bg) solid 1px;
 }
 
 .article-image {
@@ -333,8 +377,8 @@ a {
 }
 
 .article-content-right {
-  background-color: #4c556a;
-  color: #bec9d7;
+  background-color: var(--color-card-bg);
+  color: var(--color-text-muted);
   padding: 8px;
   flex-grow: 1;
 }
@@ -343,7 +387,7 @@ a {
   display: block;
   padding: 0.2rem 0 0.3rem 0.1rem;
   font-size: 1.2em;
-  color: #bec9d7;
+  color: var(--color-text-muted);
   background-image: linear-gradient(currentColor, currentColor);
   background-position: 0% 100%;
   background-repeat: no-repeat;
@@ -353,7 +397,7 @@ a {
 
 .article-title:hover {
   background-size: 100% 1px;
-  color: peru;
+  color: var(--color-link);
 }
 
 .article-title a {
@@ -375,21 +419,21 @@ a {
 }
 
 .article-meta > div > a.tag:hover {
-  background-color: #d7dce1 !important;
-  color: #4c566a;
+  background-color: var(--color-text-main) !important;
+  color: var(--color-card-bg);
   font-weight: normal;
   border-radius: 0.2rem;
 }
 
 .article-description {
   display: inline-block !important;
-  color: #d8dee9;
+  color: var(--color-text-muted);
   margin-top: 0px;
   font-size: 1rem;
 }
 
 .article-description > h3 {
-  color: #d7dce1 !important;
+  color: var(--color-text-main) !important;
 }
 
 .post,
@@ -426,7 +470,7 @@ a {
 }
 
 .home a {
-  color: peru;
+  color: var(--color-link);
   font-weight: bolder;
 }
 
@@ -436,7 +480,7 @@ a {
 
 .home .highlight pre {
   padding: 0 1rem 1rem 1rem;
-  background-color: #bec9d7 !important;
+  background-color: var(--color-text-muted) !important;
 }
 
 .subtitle {
@@ -446,8 +490,8 @@ a {
   padding: 0.3rem 0;
   left: 50%;
   transform: translateX(-50%);
-  background-color: rgba(0, 0, 0, 0.65);
-  color: #d8dee9;
+  background-color: var(--color-overlay-bg);
+  color: var(--color-text-muted);
   text-align: center;
   margin: 0;
   z-index: 1;
@@ -458,37 +502,37 @@ blockquote {
 }
 
 .article-description > h3 {
-  color: #3b4252;
+  color: var(--color-text-dark);
   margin: 0;
 }
 
 blockquote > .one {
-  border-bottom: #616abf solid 2px;
+  border-bottom: var(--color-accent-dark-blue) solid 2px;
 }
 
 blockquote > .two {
-  border-bottom: #bf6199 solid 2px;
+  border-bottom: var(--color-accent-purple) solid 2px;
 }
 
 blockquote > .three {
-  border-bottom: #bfb661 solid 2px;
+  border-bottom: var(--color-link) solid 2px;
 }
 
 blockquote > .four {
-  border-bottom: #61bf87 solid 2px;
+  border-bottom: var(--color-accent-green) solid 2px;
 }
 
 blockquote > .five {
-  border-bottom: #bf616a solid 2px;
+  border-bottom: var(--color-header-bg) solid 2px;
 }
 
 em {
   font-size: 1rem;
-  color: white;
+  color: var(--color-text-main);
 }
 
 .five div {
-  background-color: white !important;
+  background-color: var(--color-text-main) !important;
 }
 
 .cert {
@@ -588,12 +632,12 @@ em {
 }
 
 .cat-list-item:nth-child(odd) {
-  background-color: #bec9d7;
-  color: #3b4252;
+  background-color: var(--color-text-muted);
+  color: var(--color-text-dark);
 }
 
 .cat-list-item:nth-child(even) {
-  background-color: #4c556a;
+  background-color: var(--color-card-bg);
 }
 
 .cat-list-item i {
@@ -629,16 +673,16 @@ em {
   padding: 0.6rem 1rem;
   border-radius: 0.2rem;
   text-decoration: none;
-  color: #d7dce1;
+  color: var(--color-text-main);
   width: 50%;
-  background-color: #4c556a;
+  background-color: var(--color-card-bg);
   transition: background-color 0.3s ease;
 }
 
 .button:hover {
-  background-color: #bec9d7;
+  background-color: var(--color-text-muted);
   /* Lighter background on hover */
-  color: #3b4252;
+  color: var(--color-text-dark);
   /* Darker text on hover */
 }
 
@@ -670,30 +714,30 @@ em {
 blockquote > .danger,
 blockquote > .note,
 blockquote > .warning {
-  background: #4c566a;
+  background: var(--color-card-bg);
   border-left-style: solid;
   border-left-width: 1.4rem;
   border-radius: 0.2rem;
-  /*  margin-left: 1rem; */
+  /* margin-left: 1rem; */
   font-size: 1.2rem;
   padding: 0.5rem 1rem 0.5rem 1rem;
 }
 
 .warning {
-  border-left-color: #bfb661;
+  border-left-color: var(--color-link);
 }
 
 .note {
-  border-left-color: #616abf;
+  border-left-color: var(--color-accent-dark-blue);
 }
 
 .danger {
-  border-left-color: #bf616a;
+  border-left-color: var(--color-header-bg);
 }
 
 .series-list {
   list-style: none;
-  background-color: #4c556a;
+  background-color: var(--color-card-bg);
   padding: 0.5rem;
   margin: 0;
 }
@@ -709,7 +753,7 @@ summary::before {
 .series-list summary {
   display: block;
   cursor: pointer;
-  color: #d7dce1;
+  color: var(--color-text-main);
 }
 
 .series-list[open] ol {
@@ -748,7 +792,7 @@ main.main,
 .highlight pre {
   padding: 1rem !important;
   overflow-x: auto !important;
-  background-color: #353b43 !important;
+  background-color: var(--color-sidebar-bg) !important;
   overflow-x: auto !important;
   display: block !important;
   width: max-content !important;
@@ -765,13 +809,13 @@ table {
 
 th,
 td {
-  border: 1px solid #d7dce1;
+  border: 1px solid var(--color-border);
   padding: 8px;
   text-align: left;
 }
 
 th {
-  background-color: #353b43;
+  background-color: var(--color-sidebar-bg);
   font-weight: bold;
   text-align: center;
 }
@@ -787,13 +831,13 @@ th {
 .post-card-link {
   text-decoration: none;
   font-weight: normal !important;
-  color: #d8dee9 !important;
+  color: var(--color-text-muted) !important;
 }
 
 .post-card {
-  background-color: #4c566a;
+  background-color: var(--color-card-bg);
   padding: 10px;
-  border: 1px solid #4c566a;
+  border: 1px solid var(--color-card-bg);
   border-radius: 2px;
   height: 100%; /* Ensures all cards are the same height */
   display: flex;
@@ -801,13 +845,13 @@ th {
 }
 
 .post-card:hover {
-  color: #d8dee9 !important;
-  border: 1px solid peru;
+  color: var(--color-text-muted) !important;
+  border: 1px solid var(--color-link);
 }
 
 .post-title {
   /* Or use a more specific selector for your title container */
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid var(--color-border);
 }
 
 .post-title H3 {
@@ -816,7 +860,7 @@ th {
 
 .post-card p {
   flex-grow: 1; /* Pushes the date to the bottom */
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid var(--color-border);
   padding-bottom: 15px; /* Adds a little space below the line */
   margin-bottom: 5px; /* Adds space between the line and the content */
 }
@@ -871,8 +915,7 @@ th {
   text-decoration: none;
 }
 
-/* 
- * Apply Styling to Hugo default pagination template text
+/* * Apply Styling to Hugo default pagination template text
  */
 .pagination-default {
   list-style: none; /* Ensure no bullets */
@@ -901,8 +944,8 @@ th {
   text-decoration: none;
 
   /* Color theme */
-  color: #d7dce1; /* Light color for normal state */
-  background-color: #4c556a; /* Dark background */
+  color: var(--color-text-main); /* Light color for normal state */
+  background-color: var(--color-card-bg); /* Dark background */
   transition: background-color 0.3s ease;
 
   /* Resetting default styles */
@@ -912,14 +955,14 @@ th {
 
 /* HOVER: Replaces .button:hover */
 .page-item a.page-link:hover:not([aria-disabled="true"]) {
-  background-color: #bec9d7; /* Lighter background on hover */
-  color: #3b4252; /* Darker text on hover */
+  background-color: var(--color-text-muted); /* Lighter background on hover */
+  color: var(--color-text-dark); /* Darker text on hover */
 }
 
 /* ACTIVE PAGE: Style for the current page number */
 .page-item.active a.page-link {
-  background-color: #bec9d7;
-  color: #3b4252;
+  background-color: var(--color-text-muted);
+  color: var(--color-text-dark);
 }
 
 /* DISABLED BUTTONS: Style for 'First'/'Previous' when on page 1 */
@@ -927,8 +970,8 @@ th {
   /* Re-apply the initial background/color but with opacity */
   opacity: 0.3;
   cursor: default;
-  background-color: #4c556a;
-  color: #d7dce1;
+  background-color: var(--color-card-bg);
+  color: var(--color-text-main);
 }
 
 /* ICONS/TEXT: Handle the internal span elements */
@@ -1074,24 +1117,24 @@ p::after,
 .post-source-link {
   gap: 0.5rem;
   font-size: 0.9rem;
-  color: #d8dee9; /* Nord Snow Storm */
+  color: var(--color-text-muted); /* Nord Snow Storm */
   margin-top: 1.5rem; /* Added some breathing room from the content above */
 }
 
 /* Targeting the specific red accent color for the icon */
 .post-source-link i {
-  color: #bf616a; /* Theme Red */
+  color: var(--color-header-bg); /* Theme Red */
   font-size: 1.1rem;
 }
 
 /* Subtle styling for the link itself with hover effects */
 .post-source-link a {
-  color: #81a1c1; /* Nord Frost Blue */
+  color: var(--color-accent-blue); /* Nord Frost Blue */
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .post-source-link a:hover {
-  color: #88c0d0; /* Lighter Nord Blue */
+  color: var(--color-link-hover); /* Lighter Nord Blue */
   text-decoration: underline;
 } /* Added missing closing brace */
