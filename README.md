@@ -76,3 +76,4 @@ Progress is slow, there is a lot about using the hugo framework that is not intu
 - [ ] Visitor feedback and interaction (security first by design)
 - [ ] Implement an Archive section. Display by Year, Month.
 - [x] link for articles to markdown source on GitHub
+- [x] Add support for Mermaid.js diagrams
