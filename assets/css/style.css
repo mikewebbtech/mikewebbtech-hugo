@@ -18,6 +18,39 @@
   --nord-15: #b48ead; /* Aurora (Purple) */
   --nord-0-alpha65: rgba(46, 52, 64, 0.65); /* Polar Night (Overlay) */
 
+  /* --- Dracula Palette --- */
+  --dra-bg: #282a36; /* Background (Main Content) */
+  --dra-sidebar: #21222c; /* Black (Sidebar/Deep Background) */
+  --dra-selection: #44475a; /* Selection (Cards/Hovers) */
+  --dra-comment: #6272a4; /* Bright Black (Muted Text) */
+  --dra-fg: #f8f8f2; /* Foreground (Main Text) */
+  --dra-white: #ffffff; /* Bright White */
+  --dra-red: #ff5555; /* Red (Header) */
+  --dra-orange: #ffb86c; /* Focused Match (Accent) */
+  --dra-yellow: #f1fa8c; /* Yellow (Links) */
+  --dra-green: #50fa7b; /* Green */
+  --dra-purple: #bd93f9; /* Blue/Purple (Frost equivalent) */
+  --dra-pink: #ff79c6; /* Magenta */
+  --dra-cyan: #8be9fd; /* Cyan */
+  --dra-bg-alpha65: rgba(40, 42, 54, 0.65); /* Overlay */
+
+  /* --- Everforest Palette (Dark Hard) --- */
+  --ef-bg0: #272e33; /* Background (Deepest) */
+  --ef-bg1: #2e383c; /* Background (Sidebar/Highlight) */
+  --ef-bg2: #3b444b; /* Background (Main Content) */
+  --ef-bg3: #414b50; /* Background (Dividers/Borders) */
+  --ef-bg4: #495156; /* Background (Cards/Hovers) */
+  --ef-fg: #d3c6aa; /* Snow Storm equivalent (Main Text) */
+  --ef-fg-dim: #859289; /* Muted Text */
+  --ef-red: #e67e80; /* Aurora Red equivalent */
+  --ef-orange: #e69875; /* Aurora Orange */
+  --ef-yellow: #dbbc7f; /* Aurora Yellow (Links) */
+  --ef-green: #a7c080; /* Aurora Green */
+  --ef-blue: #7fbbb3; /* Frost Blue equivalent */
+  --ef-aqua: #83c092; /* Frost Cyan equivalent */
+  --ef-purple: #d699b6; /* Aurora Purple */
+  --ef-bg-alpha65: rgba(39, 46, 51, 0.65); /* Overlay */
+
   /* --- UI Functional Mapping --- */
   --color-body-bg: black;
   --color-main-bg: var(--nord-2);

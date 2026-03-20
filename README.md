@@ -66,11 +66,13 @@ Progress is slow, there is a lot about using the hugo framework that is not intu
 - [x] ~~Implement breadcrumbs feature across site.~~ (note: no longer using)
 - [x] Use shortcodes to open external links in new tab or window (html \_blank)
 - [x] implement embedding images using markdown notation and shortcodes.
-- [ ] Trigger GitHub CICD action when submodule external repo is updated.
+- [x] Trigger GitHub CICD action when submodule external repo is updated.
 - [ ] Move away from Font Awesome. Look at svg or mdi as solution?
-- [ ] Use webp instead of png or jpeg for all images
+- [x] serve webp instead of png or jpeg for all images
   - [x] explore using Hugo convert function in template for sites.
-  - [ ] change format for article images at creation. Explore way to use Hugo function on render
+  - [x] change format for article images at creation. Explore way to use Hugo function on render
+- [x] Refactor CSS to use :root for colors
 - [ ] Site statistics (visitor and page views, geolocations etc)
 - [ ] Visitor feedback and interaction (security first by design)
 - [ ] Implement an Archive section. Display by Year, Month.
+- [x] link for articles to markdown source on GitHub
