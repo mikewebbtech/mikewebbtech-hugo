@@ -14,6 +14,7 @@ title = 'The Persistent State'
 > {.note}
 
 > ## My interests are
+>
 > {.one}
 
 {{< link-icon href="categories/cloud" >}}Cloud Computing{{< /link-icon >}}: From understanding the fundamentals to deploying and managing applications in the cloud, I'm documenting my journey of mastering this transformative technology.
@@ -28,11 +29,12 @@ title = 'The Persistent State'
 
 {{< link-icon href="categories/automation" >}}Automation{{< /link-icon >}}: Standardising and creating efficiencies in processes, removing human error in repetitive tasks and use technology and code to look after the basics and free up time for the bigger stuff.
 
-{{< link-icon href="categories/iot" >}}IoT{{< /link-icon >}}: Bringing the digital and physical worlds together within the home, exploring the potential of interconnected devices and creating smart, automated environments.
+{{< link-icon href="categories/toolage" >}}Toolage{{< /link-icon >}}: Configuring and shaping my digital and physical environments. The tools, systems, and hardware to reduce friction and keep things running reliably.
 
 {{< link-icon href="categories/home-lab" >}}Home Labbing{{< /link-icon >}}: My personal playground for experimentation and running services for the home! Follow the evolution of my home lab as I build, break, and learn from hardware and software ~~stuff ups~~ setups
 
 > ## Latest Articles:
+>
 > {.two}
 
 {{< recent_articles_cards >}}
