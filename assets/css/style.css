@@ -451,6 +451,13 @@ a {
   margin: 10px 0 0 0;
 }
 
+.article-meta > div > a.tag {
+  background-color: var(--color-text-muted) !important;
+  color: var(--color-card-bg);
+  font-weight: normal;
+  border-radius: 0.2rem;
+}
+
 .article-meta > div > a.tag:hover {
   background-color: var(--color-text-main) !important;
   color: var(--color-card-bg);
