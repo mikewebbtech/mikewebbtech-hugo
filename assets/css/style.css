@@ -259,7 +259,6 @@ ul {
   text-decoration: inherit;
   margin: 0.4rem;
 }
-
 .nav-sublink {
   display: flex;
   text-decoration: none;
@@ -456,6 +455,7 @@ a {
   color: var(--color-card-bg);
   font-weight: normal;
   border-radius: 0.2rem;
+  padding: 0 .15rem 0 .15rem;
 }
 
 .article-meta > div > a.tag:hover {
