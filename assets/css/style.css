@@ -457,7 +457,7 @@ a {
   color: var(--color-card-bg);
   font-weight: normal;
   border-radius: 0.2rem;
-  padding: 0 0.15rem 0 0.15rem;
+  padding: 0 .15rem 0 .15rem;
 }
 
 .article-meta > div > a.tag:hover {
@@ -817,13 +817,13 @@ summary::before {
 main.main,
 .post,
 .post-content {
-  overflow-x: auto;
+  overflow-x: auto !important;
   box-sizing: border-box;
 }
 
 /* Ensure the scrollable wrapper */
 .highlight {
-  overflow-x: auto;
+  overflow-x: auto !important;
   display: block !important;
   width: 100% !important;
   box-sizing: border-box;
