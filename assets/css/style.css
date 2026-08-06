@@ -835,7 +835,6 @@ main.main,
   padding: 1rem !important;
   overflow-x: auto !important;
   background-color: var(--color-sidebar-bg) !important;
-  overflow-x: auto !important;
   display: block !important;
   width: max-content !important;
   min-width: 100% !important;
