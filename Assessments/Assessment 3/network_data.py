@@ -12,9 +12,23 @@ Student ID: 20172813
 Date: 2026-11-28
 Version: 1.0
 """
+import os
+import subprocess
+
+# Function to clear the console screen, makes it easier to read the output of the programme.
+def clear_screen():
+    """
+    Clear the terminal screen using subprocess.
+    (pylint picked up on a deprecated method in the os module, 
+    so I used subprocess instead)
+    """
+    if os.name == "nt":
+        subprocess.run(["cmd", "/c", "cls"], check=False)
+    else:
+        subprocess.run(["clear"], check=False)
 
 # list of network devices
-network_devices = {
+network_devices = [
     "Router",
     "Access Point",
     "Floor 1 Switch",
@@ -27,10 +41,10 @@ network_devices = {
     "Mail Server",
     "File Server",
     "Active Directory Server"
-}
+]
 
 # List of IP addresses
-network_ip_addresses = {
+network_ip_addresses = [
     "192.168.1.1",
     "192.168.1.2",
     "192.168.1.3",
@@ -41,35 +55,32 @@ network_ip_addresses = {
     "172.16.0.4",
     "172.16.0.5",
     "172.16.0.6",
-    "10.0.0.1"
+    "10.0.0.1",
     "10.40.2.16"
-    }
-
-# Dictionary of network devices and their  IP addresses from the network_devices
-#  and network_ip_addresses lists.
-# The keys are the device names, and the values are the corresponding IP addresses.
-network_devices_ip = [
-    {"Router": "192.168.1.1"},
-    {"Access Point": "192.168.1.2"},
-    {"Floor 1 Switch": "192.168.1.3"},
-    {"Floor 2 Switch": "192.168.1.4"},
-    {"Firewall": "192.168.2.1"},
-    {"Jump Box": "192.168.2.2"},
-    {"Web Server": "192.168.2.3"},
-    {"Database Server": "172.16.0.4"},
-    {"Development Server": "172.16.0.5"},
-    {"Mail Server": "172.16.0.6"},
-    {"File Server": "10.0.0.1"},
-    {"Active Directory Server": "10.40.2.16"}
 ]
 
 # Dictionary of network services and their corresponding port numbers
-network_services_ports = [
-    {"HTTPS": 443},
-    {"FTP": 21},
-    {"SSH": 22},
-    {"SMTP": 25},
-    {"DNS": 53},
-    {"RDP": 3389},
-    {"LDAP": 389}
-]
+network_services_ports = {
+    "HTTPS": 443,
+    "FTP": 21,
+    "SSH": 22,
+    "SMTP": 25,
+    "DNS": 53,
+    "RDP": 3389,
+    "LDAP": 389
+}
+
+def device_ip():
+    """
+    Create a dictionary of network devices and their IP addresses.
+    The keys are the device names, and the values are the corresponding IP addresses.
+    """
+    return dict(zip(network_devices, network_ip_addresses))
+
+# Create a usable object of the network devices and IP addresses dictionary
+network_devices_dict  = device_ip()
+
+# Display the network devices and their IP addresses
+print("Network Devices and their IP Addresses:")
+for device, ip in network_devices_dict.items():
+    print(f"{device}: {ip}")
