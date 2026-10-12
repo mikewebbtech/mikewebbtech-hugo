@@ -19,7 +19,6 @@ Use the following scenario:
 """
 import os
 
-
 # Date format chosen for readability vs ISO8601 formate (YYYY-MM-DD).
 # Since sorting will be done on keys, this is fine.
 actor_birthday = {
