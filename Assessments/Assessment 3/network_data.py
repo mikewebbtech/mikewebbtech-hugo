@@ -112,24 +112,47 @@ def add_network_device():
     then add them to the network device list and dictionary.
     """
     clear_screen()
-    new_device = input("Enter the name of the new network device: ")
-    new_ip = input("Enter the IP address of the new network device: ")
+    new_device = input("Enter the name of the new network device: ").strip()
+    new_ip = input("Enter the IP address of the new network device: ").strip()
 
-    # Add to the network device list
-    network_devices.append(new_device)
-    # Add to the network IP address list
-    network_ip_addresses.append(new_ip)
+    if new_device and new_ip:
+        # Check if the device already exists
+        if new_device in network_devices_dict:
+            print(f"Device '{new_device}' already exists with IP address {network_devices_dict[new_device]}.")
+            return
 
-    # Update the dictionary with the new_device key and new_ip value
-    network_devices_dict[new_device] = new_ip
+        # Add to the network device list
+        network_devices.append(new_device)
+        # Add to the network IP address list
+        network_ip_addresses.append(new_ip)
 
-    print(f"Added {new_device} with IP address {new_ip} to the network devices lists.")
+        # Update the dictionary with the new_device key and new_ip value
+        network_devices_dict[new_device] = new_ip
+
+        print(f"Added {new_device} with IP address {new_ip} to the network devices lists.")
+    else:
+        print("Invalid device name or IP address.")
+        
 #-------------------------------------------------------------------------------------------------
 
 # 6. Create a function which ask the user to enter the name of an existing network device to delete.
 # Remove the device and its corresponding IP address from the list and dictionary.
 # Required test: Delete:  Printer01 – 192.168.1.20
 #-------------------------------------------------------------------------------------------------
+def delete_network_device():
+    """Ask user for existing device name and remove it from lists and dictionary."""
+    clear_screen()
+    print("--- Delete Network Device ---")
+    device_to_delete = input("Enter the name of the network device to delete: ").strip()
+
+    # Search case-insensitively for a matching key
+    if device_to_delete in network_devices_dict:
+        # Remove from all data structures
+        network_devices.remove(device_to_delete)
+        del network_devices_dict[device_to_delete]
+        print(f"Device '{device_to_delete}' has been deleted.")
+    else:
+        print(f"Device '{device_to_delete}' not found.")
 
 # 7. Create a function which allows the user to choose what data to sort:
 #   Network devices: Sort alphabetically by device name.
