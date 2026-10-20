@@ -173,28 +173,32 @@ def delete_network_device():
 # Display the sorted results.
 def sort_menu():
     """Allow user to select which data structure to sort and display."""
-    clear_screen()
-    print("--- Sort Options ---")
-    print("1. Sort Network Devices (Alphabetically by Name)")
-    print("2. Sort Network Services (Alphabetically by Service Name)")
-    choice = input("\nEnter choice (1 or 2): ").strip()
-
-    if choice == '1':
+    while True:
         clear_screen()
-        print("--- Sorted Network Devices ---")
-        sorted_devices = dict(sorted(network_devices_dict.items()))
-        for device, ip in sorted_devices.items():
-            print(f"{device} : {ip}")
-    elif choice == '2':
-        clear_screen()
-        print("--- Sorted Network Services ---")
-        sorted_services = dict(sorted(network_services_ports.items()))
-        for service, port in sorted_services.items():
-            print(f"{service} : Port {port}")
-    else:
-        print("Invalid choice.")
-
-    input("\nPress Enter to return to the main menu")
+        print("--- Sort Options ---")
+        print("1. Sort Network Devices (Alphabetically by Name)")
+        print("2. Sort Network Services (Alphabetically by Service Name)")
+        print("3. Return to Main Menu")
+        choice = input("\nEnter choice (1 or 2): ").strip()
+        if choice == '1':
+            clear_screen()
+            print("--- Sorted Network Devices ---")
+            sorted_devices = dict(sorted(network_devices_dict.items()))
+            for device, ip in sorted_devices.items():
+                print(f"{device} : {ip}")
+        elif choice == '2':
+            clear_screen()
+            print("--- Sorted Network Services ---")
+            sorted_services = dict(sorted(network_services_ports.items()))
+            for service, port in sorted_services.items():
+                print(f"{service} : Port {port}")
+        elif choice == '3':
+            print("Returning to Main Menu")
+            break
+        else:
+            print("Invalid choice. Please enter 1 or 2.")
+            input("\nPress Enter to try again.")
+            continue
 #-------------------------------------------------------------------------------------------------
 
 # 8. Create a function which allows the user to choose what data to search:
@@ -242,18 +246,24 @@ def search_network_service():
 
 def search_menu():
     """Allow user to select which data structure to search."""
-    clear_screen()
-    print("--- Search Options ---")
-    print("1. Search Network Devices")
-    print("2. Search Network Services")
-    choice = input("\nEnter choice (1 or 2): ").strip()
-    if choice == '1':
-        search_network_device()
-    elif choice == '2':
-        search_network_service()
-    else:
-        print("Invalid selection.")
-    input("\nPress Enter to return to the main menu")
+    while True:
+        clear_screen()
+        print("--- Search Options ---")
+        print("1. Search Network Devices")
+        print("2. Search Network Services")
+        print("3. Return to Main Menu")
+        choice = input("\nEnter choice (1, 2, or 3): ").strip()
+        if choice == '1':
+            search_network_device()
+            input("\nPress Enter to return to the search menu")
+        elif choice == '2':
+            search_network_service()
+            input("\nPress Enter to return to the search menu")
+        elif choice == '3':
+            break
+        else:
+            print("Invalid selection. Please enter 1, 2, or 3.")
+            input("\nPress Enter to try again.")
 
 #-------------------------------------------------------------------------------------------------
 
