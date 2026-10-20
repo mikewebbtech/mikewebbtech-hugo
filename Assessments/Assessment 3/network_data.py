@@ -230,3 +230,5 @@ def main_menu():
     print("6. Display Network Services and Port Numbers")
     print("\n7. Exit Programme")
     print("****************\n")
+
+search_dict()
