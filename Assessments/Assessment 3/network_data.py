@@ -189,6 +189,23 @@ def search_network_service():
         print("No matching network services found.")
     input("\nPress Enter to return to the main menu")
 
+def search_menu():
+    """Allow user to select which data structure to search."""
+    clear_screen()
+    print("--- Search Options ---")
+    print("1. Search Network Devices")
+    print("2. Search Network Services")
+    choice = input("\nEnter choice (1 or 2): ").strip()
+
+    if choice == '1':
+        search_network_device()
+    elif choice == '2':
+        search_network_service()
+    else:
+        print("Invalid selection.")
+
+    input("\nPress Enter to return to the main menu")
+
 def search_dict():
     """Search for a key in the selected dictionary."""
     print("Select dictionary to search:")
@@ -222,13 +239,36 @@ def search_dict():
 def main_menu():
     """Display the main menu."""
     print("\n****  Menu  ****\n")
-    print("1. Access Network Devices and IP Addresses")
-    print("2. Search Network Devices or Services")
-    print("3. Delete a Network Device")
-    print("4. Sort Network Devices or Services")
-    print("5. Display Network Devices and IP Addresses")
-    print("6. Display Network Services and Port Numbers")
+    print("1. Add Network Devices and IP Addresses")
+    print("2. Delete a Network Device")
+    print("3. Sort Network Devices or Services")
+    print("4. Search Network Devices or Services")
+    print("5. Display ALL Network Devices and IP Addresses")
+    print("6. Display ALL Network Services and Port Numbers")
     print("\n7. Exit Programme")
     print("****************\n")
 
-search_dict()
+# Menu Selection
+while True:
+    clear_screen()
+    main_menu()
+    choice = input("Enter your choice (1-7): ").strip()
+    if choice == '1':
+        add_network_device()
+    elif choice == '2':
+        delete_network_device()
+    elif choice == '3':
+        sort_menu()
+    elif choice == '4':
+        search_menu()
+    elif choice == '5':
+        display_network_devices()
+    elif choice == '6':
+        display_network_services()
+    elif choice == '7':
+        clear_screen()
+        print("Exiting program. Goodbye!")
+        break
+    else:
+        print("Invalid choice. Please enter a number between 1 and 7.")
+        input("Press Enter to continue.")
