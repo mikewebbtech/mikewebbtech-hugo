@@ -28,16 +28,27 @@ def clear_screen():
     else:
         subprocess.run(["clear"], check=False)
 
+# Functions to display network devices and services
 def display_network_devices():
-    """
-    Iterate through the network devices dictionary and print each device
-    and its corresponding IP address.
+     """
+        Iterate through the network devices dictionary and print each device
+        and its corresponding IP address.
     """
     clear_screen()
-    print("Network Devices and their IP Addresses:")
+    print("--- Network Devices and IP Addresses ---")
     for device, ip in network_devices_dict.items():
         print(f"{device} - {ip}")
-#-------------------------------------------------------------------------------------------------
+    input("\nPress Enter to return to the main menu")
+
+def display_network_services():
+    """Print each service and its corresponding port number."""
+    clear_screen()
+    print("--- Network Services and Port Numbers ---")
+    for service, port in network_services_ports.items():
+        print(f"{service} - {port}")
+    input("\nPress Enter to return to the main menu")
+#------------------------------------------------------------------------
+# -------------------------
 
 # 1.	Create a list that stores at least 12 network device names.
 network_devices = [
@@ -100,24 +111,6 @@ network_services_ports = {
     "RDP": 3389,
     "LDAP": 389
 }
-#-------------------------------------------------------------------------------------------------
-# Functions to display network devices and services
-
-def display_network_devices():
-    """Print each device and its corresponding IP address."""
-    clear_screen()
-    print("--- Network Devices and IP Addresses ---")
-    for device, ip in network_devices_dict.items():
-        print(f"{device} - {ip}")
-    input("\nPress Enter to return to the main menu")
-
-def display_network_services():
-    """Print each service and its corresponding port number."""
-    clear_screen()
-    print("--- Network Services and Port Numbers ---")
-    for service, port in network_services_ports.items():
-        print(f"{service} - {port}")
-    input("\nPress Enter to return to the main menu")
 
 #--------------------------------------------------------------------------------------------------
 # 5. Create a function which ask the user to enter a new device name and IP address,
@@ -156,7 +149,6 @@ def add_network_device():
 # 6. Create a function which ask the user to enter the name of an existing network device to delete.
 # Remove the device and its corresponding IP address from the list and dictionary.
 # Required test: Delete:  Printer01 – 192.168.1.20
-#-------------------------------------------------------------------------------------------------
 def delete_network_device():
     """Ask user for existing device name and remove it from lists and dictionary."""
     clear_screen()
@@ -171,6 +163,8 @@ def delete_network_device():
         print(f"Device '{device_to_delete}' has been deleted.")
     else:
         print(f"Device '{device_to_delete}' not found.")
+
+#-------------------------------------------------------------------------------------------------
 
 # 7. Create a function which allows the user to choose what data to sort:
 #   Network devices: Sort alphabetically by device name.
