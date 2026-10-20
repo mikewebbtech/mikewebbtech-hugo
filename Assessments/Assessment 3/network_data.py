@@ -167,7 +167,6 @@ def search_network_device():
     print("--- Search Network Device ---")
     search_term = input("Enter the name of the network device to search for: ").strip()
     found = False
-
     for device, ip in network_devices_dict.items():
         if search_term.lower() == device.lower():
             print(f"\nExact match found:\n{device} – {ip}")
@@ -176,10 +175,8 @@ def search_network_device():
         elif search_term.lower() in device.lower():
             print(f"\nPartial match found:\n{device} – {ip}")
             found = True
-
     if not found:
         print(f"\nDevice '{search_term}' not found in the network records.")
-
     input("\nPress Enter to return to the main menu")
 
 def search_network_service():
@@ -190,7 +187,6 @@ def search_network_service():
     print("--- Search Network Service ---")
     search_term = input("Enter the name of the network service to search for: ")
     found = False
-
     for service, port in network_services_ports.items():
         if search_term.lower() in service.lower():
             print(f"\nService found:\n{service} :Port {port}")
@@ -199,7 +195,6 @@ def search_network_service():
         elif search_term.lower() in service.lower():
             print(f"\nPartial match found:\n{service} : Port {port}")
             found = True
-
     if not found:
         print(f"\nService '{search_term}' not found in network service records.")
     input("\nPress Enter to return to the main menu")
@@ -211,14 +206,12 @@ def search_menu():
     print("1. Search Network Devices")
     print("2. Search Network Services")
     choice = input("\nEnter choice (1 or 2): ").strip()
-
     if choice == '1':
         search_network_device()
     elif choice == '2':
         search_network_service()
     else:
         print("Invalid selection.")
-
     input("\nPress Enter to return to the main menu")
 
 def search_dict():
