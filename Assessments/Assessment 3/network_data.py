@@ -135,25 +135,30 @@ def add_network_device():
 #   Network devices: Sort alphabetically by device name.
 #   Network services: Sort alphabetically by service name.
 # Display the sorted results.
-def sort_network_devices():
-    """
-    Sort the network devices dictionary by device name and display the sorted list.
-    """
+def sort_menu():
+    """Allow user to select which data structure to sort and display."""
     clear_screen()
-    sorted_devices = dict(sorted(network_devices_dict.items()))
-    print("Sorted Network Devices and their IP Addresses:")
-    for device, ip in sorted_devices.items():
-        print(f"{device}: {ip}")
+    print("--- Sort Options ---")
+    print("1. Sort Network Devices (Alphabetically by Name)")
+    print("2. Sort Network Services (Alphabetically by Service Name)")
+    choice = input("\nEnter choice (1 or 2): ").strip()
 
-def sort_network_services():
-    """
-    Sort the network services dictionary by service name and display the sorted list.
-    """
-    clear_screen()
-    sorted_services = dict(sorted(network_services_ports.items()))
-    print("Sorted Network Services and their Port Numbers:")
-    for service, port in sorted_services.items():
-        print(f"{service}: {port}")
+    if choice == '1':
+        clear_screen()
+        print("--- Sorted Network Devices ---")
+        sorted_devices = dict(sorted(network_devices_dict.items()))
+        for device, ip in sorted_devices.items():
+            print(f"{device} – {ip}")
+    elif choice == '2':
+        clear_screen()
+        print("--- Sorted Network Services ---")
+        sorted_services = dict(sorted(network_services_ports.items()))
+        for service, port in sorted_services.items():
+            print(f"{service} – Port {port}")
+    else:
+        print("Invalid choice.")
+
+    input("\nPress Enter to return to the main menu")
 #-------------------------------------------------------------------------------------------------
 
 # 8. Create a function which allows the user to choose what data to search:
