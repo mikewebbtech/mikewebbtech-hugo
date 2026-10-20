@@ -101,7 +101,25 @@ network_services_ports = {
     "LDAP": 389
 }
 #-------------------------------------------------------------------------------------------------
+# Functions to display network devices and services
 
+def display_network_devices():
+    """Print each device and its corresponding IP address."""
+    clear_screen()
+    print("--- Network Devices and IP Addresses ---")
+    for device, ip in network_devices_dict.items():
+        print(f"{device} - {ip}")
+    input("\nPress Enter to return to the main menu")
+
+def display_network_services():
+    """Print each service and its corresponding port number."""
+    clear_screen()
+    print("--- Network Services and Port Numbers ---")
+    for service, port in network_services_ports.items():
+        print(f"{service} - {port}")
+    input("\nPress Enter to return to the main menu")
+
+#--------------------------------------------------------------------------------------------------
 # 5. Create a function which ask the user to enter a new device name and IP address,
 # then add them to the network device list and dictionary.
 # Required test: Provide screenshot for below test:
@@ -118,7 +136,7 @@ def add_network_device():
     if new_device and new_ip:
         # Check if the device already exists
         if new_device in network_devices_dict:
-            print(f"Device '{new_device}' already exists with IP address {network_devices_dict[new_device]}.")
+            print(f"Device '{new_device}' already exists {network_devices_dict[new_device]}.")
             return
 
         # Add to the network device list
@@ -132,7 +150,7 @@ def add_network_device():
         print(f"Added {new_device} with IP address {new_ip} to the network devices lists.")
     else:
         print("Invalid device name or IP address.")
-        
+
 #-------------------------------------------------------------------------------------------------
 
 # 6. Create a function which ask the user to enter the name of an existing network device to delete.
