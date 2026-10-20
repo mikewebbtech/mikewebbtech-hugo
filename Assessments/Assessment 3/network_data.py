@@ -128,7 +128,7 @@ def add_network_device():
 #-------------------------------------------------------------------------------------------------
 # Functions to display network devices and services
 def display_network_devices():
-     """
+    """
     Iterate through the network devices dictionary and print each device
     and its corresponding IP address.
     """
