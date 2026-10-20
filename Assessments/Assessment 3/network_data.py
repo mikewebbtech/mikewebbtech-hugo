@@ -122,6 +122,7 @@ def add_network_device():
         network_devices_dict[new_device] = new_ip
 
         print(f"Added {new_device} with IP address {new_ip} to the network devices lists.")
+        print("Return to main menu")
     else:
         print("Invalid device name or IP address.")
 
@@ -217,7 +218,7 @@ def search_network_device():
             found = True
     if not found:
         print(f"\nDevice '{search_term}' not found in the network records.")
-    input("\nPress Enter to return to the main menu")
+  #  input("\nPress Enter to return to the main menu")
 
 def search_network_service():
     """
@@ -237,7 +238,7 @@ def search_network_service():
             found = True
     if not found:
         print(f"\nService '{search_term}' not found in network service records.")
-    input("\nPress Enter to return to the main menu")
+    #input("\nPress Enter to return to the main menu")
 
 def search_menu():
     """Allow user to select which data structure to search."""
@@ -254,34 +255,6 @@ def search_menu():
         print("Invalid selection.")
     input("\nPress Enter to return to the main menu")
 
-def search_dict():
-    """Search for a key in the selected dictionary."""
-    print("Select dictionary to search:")
-    print("1. Network Devices")
-    print("2. Network Services")
-    choice = input("Enter your choice (1 or 2): ")
-    if choice == '1':
-        search_network_device()
-    elif choice == '2':
-        search_network_service()
-    clear_screen()
-    selected_dict, selected_name = network_devices_dict
-    if selected_dict is not None:
-        print("--------------------------------------------------")
-        print(f"Searching {selected_name}")
-        print("--------------------------------------------------")
-        search_term = input("Enter key/name to search for: ")
-        found = False
-        for key, value in selected_dict.items():
-            if search_term.lower() in key.lower():
-                print(f"Found -> {key}: {value}")
-                found = True
-        if not found:
-            print("No matching items found.")
-        print("--------------------------------------------------")
-        input("\nPress Enter to return to the main menu")
-    else:
-        print("Returning to Main Menu")
 #-------------------------------------------------------------------------------------------------
 
 def main_menu():
