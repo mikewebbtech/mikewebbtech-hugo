@@ -164,14 +164,22 @@ def search_network_device():
     Search for a network device by name and display its IP address.
     """
     clear_screen()
-    search_term = input("Enter the name of the network device to search for: ")
+    print("--- Search Network Device ---")
+    search_term = input("Enter the name of the network device to search for: ").strip()
     found = False
+
     for device, ip in network_devices_dict.items():
-        if search_term.lower() in device.lower():
-            print(f"Found -> {device}: {ip}")
+        if search_term.lower() == device.lower():
+            print(f"\nExact match found:\n{device} – {ip}")
             found = True
+            break
+        elif search_term.lower() in device.lower():
+            print(f"\nPartial match found:\n{device} – {ip}")
+            found = True
+
     if not found:
-        print("No matching network devices found.")
+        print(f"\nDevice '{search_term}' not found in the network records.")
+
     input("\nPress Enter to return to the main menu")
 
 def search_network_service():
@@ -179,14 +187,21 @@ def search_network_service():
     Search for a network service by name and display its port number.
     """
     clear_screen()
+    print("--- Search Network Service ---")
     search_term = input("Enter the name of the network service to search for: ")
     found = False
+
     for service, port in network_services_ports.items():
         if search_term.lower() in service.lower():
-            print(f"Found -> {service}: {port}")
+            print(f"\nService found:\n{service} :Port {port}")
             found = True
+            break
+        elif search_term.lower() in service.lower():
+            print(f"\nPartial match found:\n{service} : Port {port}")
+            found = True
+
     if not found:
-        print("No matching network services found.")
+        print(f"\nService '{search_term}' not found in network service records.")
     input("\nPress Enter to return to the main menu")
 
 def search_menu():
