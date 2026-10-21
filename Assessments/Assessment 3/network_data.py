@@ -156,7 +156,7 @@ def delete_network_device():
     device_to_delete = input("Enter the name of the network device to delete: ").strip()
     
     for device in network_devices_dict.keys():
-        if device_to_delete.casefold() == device.casefold():
+        if device_to_delete.lower() == device.lower():
             matched_device = device
             break
 
