@@ -28,7 +28,6 @@ def clear_screen():
     else:
         subprocess.run(["clear"], check=False)
 
-
 # -------------------------
 
 # 1.	Create a list that stores at least 12 network device names.
@@ -155,16 +154,17 @@ def delete_network_device():
     clear_screen()
     print("--- Delete Network Device ---")
     device_to_delete = input("Enter the name of the network device to delete: ").strip()
+    
+    for device in network_devices_dict.keys():
+        if device_to_delete.casefold() == device.casefold():
+            matched_device = device
+            break
 
-    # Search case-insensitively for a matching key
-    if device_to_delete in network_devices_dict:
-        # Remove from all data structures
-        network_devices.remove(device_to_delete)
-        del network_devices_dict[device_to_delete]
-        print(f"Device '{device_to_delete}' has been deleted.")
-    else:
-        print(f"Device '{device_to_delete}' not found.")
-
+    if matched_device:
+        # Remove from dictionary and retrieve its IP
+        ip_address = network_devices_dict[matched_device]
+        print(f"Deleting {matched_device} with IP address {ip_address}.")
+        input("Press Enter to confirm deletion.")
 #-------------------------------------------------------------------------------------------------
 
 # 7. Create a function which allows the user to choose what data to sort:
