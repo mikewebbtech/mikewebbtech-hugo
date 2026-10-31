@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="en">
-  {{- partial "head.html" . -}}
+  {{- block "head" . -}}
+    {{- partial "head.html" (dict "page" . "canonical" .Permalink) -}}
+  {{- end -}}
   <body data-theme="dark">
     <div class="layout">
       {{- partial "sidebar.html" . -}} {{- partial "header.html" . -}}

@@ -1,3 +1,8 @@
+{{- define "head" -}}
+  {{- $paginator := partial "list-paginator.html" . -}}
+  {{- partial "head.html" (dict "page" . "canonical" ($paginator.URL | absURL)) -}}
+{{- end -}}
+
 {{- define "main" -}}
 <!-- /layouts/_default/list.html {{ .Data.Term }} {{ .Kind }} {{ .Section }} {{ .Type }} -->
 <!-- this layout is used to list the articles on the site and the default used by any future list pages-->
@@ -19,19 +24,7 @@
 
   {{ partial "heading-colours.html" .Content }}
   <ul class="article-list">
-    {{- $pages := .Pages -}}
-
-    {{- if eq .RelPermalink "/articles/" -}}
-      {{- $pages = .RegularPagesRecursive -}}
-    {{- else if hasPrefix .RelPermalink "/articles/" -}}
-      {{- $pages = .RegularPages -}}
-    {{- end -}}
-
-
-    {{- if and (eq .Kind "term") (eq .Data.Plural "series") }}
-    {{ $pages = sort $pages "Date" }}
-    {{ end -}}
-    {{- $paginator := .Paginate (where $pages "Type" "!=" "page") -}}
+    {{- $paginator := partial "list-paginator.html" . -}}
     {{- range $paginator.Pages -}}
     <li class="article-list-item">
       {{- with .Params.postIMG }}
