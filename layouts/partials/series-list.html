@@ -7,7 +7,7 @@
       <ol>
         {{- range $series -}} 
           {{- if eq .File.UniqueID $.File.UniqueID -}}
-            <li class="active">
+            <li class="active" aria-current="page">
               <b>{{ .Title }}</b>
             </li>
           {{- else -}}

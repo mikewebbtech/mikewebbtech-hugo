@@ -109,3 +109,14 @@ summary::before {
   font-weight: bolder;
 }
 
+.series-list ol > li.active {
+  list-style-type: none;
+  position: relative;
+}
+
+.series-list ol > li.active::before {
+  content: "👉";
+  position: absolute;
+  right: calc(100% + 0.3em);
+}
+
