@@ -1,5 +1,84 @@
-.DS_Store
-/node_modules/
+
+# ============================================================
+# mikewebbtech-hugo - Git Ignore
+# ============================================================
+
+# Hugo generated website output
 /public/
-/resources/
+/resources/_gen/
+/.hugo_build.lock
+/hugo_stats.json
+AGENTS.md
+
+# Hugo temporary and cache files
 .hugo_build.lock
+.hugo_cache/
+.hugo_cache/**
+
+# Local development and temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*~
+*.orig
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+
+# VS Code - local workspace settings
+.vscode/*
+!.vscode/extensions.json
+
+# Other IDEs
+.idea/
+
+# Environment variables and local secrets
+.env
+.env.*
+!.env.example
+*.local
+
+# Log files
+*.log
+logs/
+
+# Python utilities, if used
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Node.js tools, if used
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ============================================================
+# Important: Do NOT ignore
+#
+# AGENTS.md
+# hugo.toml
+# go.mod / go.sum
+# package.json / package-lock.json
+# layouts/
+# assets/
+# static/
+# archetypes/
+# .github/
+# .gitmodules
+# content/articles/ (Git submodule)
+# ============================================================
