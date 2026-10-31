@@ -1,0 +1,189 @@
+.post-header {
+  padding: 0.1rem 0.5rem 0.5rem;
+  background-color: var(--color-sidebar-bg);
+  color: var(--color-text-muted);
+  display: grid;
+  grid-template-rows: auto auto;
+}
+.post-header h1 {
+  line-height: 0.3rem;
+}
+
+.post-meta {
+  font-size: small;
+  display: flex;
+  gap: 1.1rem;
+}
+
+.post-meta a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.post-meta > div {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.post-content pre {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.post-content ul {
+  list-style-type: circle;
+  margin-left: 0.25rem;
+}
+
+.post-content li {
+  padding-bottom: 0.5rem;
+}
+.post-content a {
+  color: var(--color-link);
+  font-weight: bolder;
+}
+
+.tags h1 {
+  line-height: 0.3rem;
+  word-spacing: 1.2rem;
+}
+
+.tags-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0px;
+  list-style: none;
+  padding: 0;
+}
+
+.tags-list-item {
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+}
+
+/* Target the items in the first row of each alternating pair (Row 1, Row 3, Row 5, etc.) */
+/* This covers items 1, 2, 3, 7, 8, 9, etc. */
+.tags-list-item:nth-child(6n + 1),
+.tags-list-item:nth-child(6n + 2),
+.tags-list-item:nth-child(6n + 3) {
+  background-color: var(--color-text-muted); /* Color for the "odd" rows */
+  color: var(--color-text-dark);
+}
+
+/* Target the items in the second row of each alternating pair (Row 2, Row 4, Row 6, etc.) */
+/* This covers items 4, 5, 6, 10, 11, 12, etc. */
+.tags-list-item:nth-child(6n + 4),
+.tags-list-item:nth-child(6n + 5),
+.tags-list-item:nth-child(6n + 6) {
+  background-color: var(--color-card-bg); /* Color for the "even" rows */
+  color: var(
+    --color-text-main
+  ); /* Added a contrasting color for dark background */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.tags-list-item-title:hover {
+  font-weight: bold;
+}
+
+.tags-list-item i {
+  margin-right: 8px;
+}
+
+/* Styles for the main list page */
+.article-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.article-list-item {
+  display: flex;
+  margin-top: 1.25rem;
+  border: var(--color-sidebar-bg) solid 1px;
+}
+
+.article-image {
+  width: 30%;
+}
+
+.article-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.article-content-right {
+  background-color: var(--color-card-bg);
+  color: var(--color-text-muted);
+  padding: 8px;
+  flex-grow: 1;
+}
+
+.article-title {
+  display: block;
+  padding: 0.2rem 0 0.3rem 0.1rem;
+  font-size: 1.2em;
+  color: var(--color-text-muted);
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 50% 1px;
+  transition: background-size 0.3s;
+}
+
+.article-title:hover {
+  background-size: 100% 1px;
+  color: var(--color-link);
+}
+
+.article-title a {
+  text-decoration: none;
+}
+
+.article-title h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 1.1em;
+}
+
+.article-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  font-size: 0.8em;
+  margin: 10px 0 0 0;
+}
+
+.article-meta > div > a.tag {
+  background-color: var(--color-text-muted) !important;
+  color: var(--color-card-bg);
+  font-weight: normal;
+  border-radius: 0.2rem;
+  padding: 0 0.15rem 0 0.15rem;
+}
+
+.article-meta > div > a.tag:hover {
+  background-color: var(--color-text-main) !important;
+  color: var(--color-card-bg);
+  font-weight: normal;
+  border-radius: 0.2rem;
+}
+
+.article-description {
+  display: inline-block !important;
+  color: var(--color-text-muted);
+  margin-top: 0px;
+  font-size: 1rem;
+}
+
+.article-description > h3 {
+  color: var(--color-text-main) !important;
+}
+

@@ -1,0 +1,223 @@
+.post,
+.cat,
+.tags,
+.list-page,
+.home {
+  text-align: justify;
+  text-justify: inter-word;
+  margin: 0 0.5rem 1.5rem 0;
+  position: relative;
+}
+
+.list-page p {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.article-description p {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.home-image {
+  width: 100%;
+  position: relative;
+}
+
+.home-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  z-index: 2;
+}
+
+.home a {
+  color: var(--color-link);
+  font-weight: bolder;
+}
+
+.home .highlight {
+  padding: 1rem 0rem 1rem 0rem;
+}
+
+.home .highlight pre {
+  padding: 0 1rem 1rem 1rem;
+  background-color: var(--color-text-muted) !important;
+}
+
+.subtitle {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  padding: 0.3rem 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-overlay-bg);
+  color: var(--color-text-muted);
+  text-align: center;
+  margin: 0;
+  z-index: 1;
+}
+
+blockquote {
+  margin: 0;
+}
+
+.article-description > h3 {
+  color: var(--color-text-dark);
+  margin: 0;
+}
+
+blockquote > .one {
+  border-bottom: var(--color-accent-dark-blue) solid 2px;
+}
+
+blockquote > .two {
+  border-bottom: var(--color-accent-purple) solid 2px;
+}
+
+blockquote > .three {
+  border-bottom: var(--color-link) solid 2px;
+}
+
+blockquote > .four {
+  border-bottom: var(--color-accent-green) solid 2px;
+}
+
+blockquote > .five {
+  border-bottom: var(--color-header-bg) solid 2px;
+}
+
+em {
+  font-size: 1rem;
+  color: var(--color-text-main);
+}
+
+.five div {
+  background-color: var(--color-text-main) !important;
+}
+
+.cert {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 10px 0 0;
+}
+
+.cert:last-child {
+  margin-right: 0;
+}
+
+.cert > figcaption > p {
+  font-size: 0.9rem;
+}
+
+.supertext {
+  /* vertical-align: super; */
+  font-size: smaller;
+  margin: 1rem;
+}
+
+.cat h1 {
+  line-height: 0.3rem;
+  word-spacing: 1.2rem;
+}
+
+.cat > p {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.cat-list {
+  padding: 0;
+  margin: 0;
+}
+
+.cat-list-item {
+  margin-top: 2rem;
+  transition: transform 0.4s ease-in-out;
+}
+
+.cat-list-item-link {
+  display: flex;
+  /* Arrange image and info in a row */
+  align-items: flex-start;
+  /* Align the top of the image and info block */
+  text-decoration: none;
+  /* Remove default link styling */
+  color: inherit;
+  /* Inherit text color from parent */
+}
+
+.cat-list-item-title {
+  font-size: 1.5rem;
+  margin-right: 0.8rem;
+}
+
+.cat-list-img {
+  max-width: 250px;
+  /* Ensure the image doesn't exceed 200px width */
+  width: 150px;
+  /* Set a fixed width for the image container */
+  min-width: 150px;
+  height: auto;
+  /* Allow the height to adjust based on the image aspect ratio */
+  flex-shrink: 0;
+  /* Prevent the image container from shrinking */
+  margin-right: 1rem;
+  /* Add some space between the image and the info */
+}
+
+.cat-list-img img {
+  display: block;
+  /* Remove extra space below inline images */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Ensure the image covers the entire container */
+}
+
+.cat-list-item-info {
+  padding: 0.5rem 0.5rem 0.5rem 0;
+  flex-grow: 1;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.cat-list-item-title {
+  font-weight: bold;
+  /* Make the title stand out */
+  display: inline-block;
+  /* Allows it to be on the same line as the count */
+  margin-right: 0.5rem;
+  /* Add some space between the title and count */
+  margin-bottom: 0.2rem;
+  /* Add a small bottom margin for spacing below this line */
+}
+
+.cat-list-item:nth-child(odd) {
+  background-color: var(--color-text-muted);
+  color: var(--color-text-dark);
+}
+
+.cat-list-item:nth-child(even) {
+  background-color: var(--color-card-bg);
+}
+
+.cat-list-item i {
+  margin-right: 8px;
+}
+
+.cat-list-item p {
+  font-size: 1em;
+  line-height: 1.2rem;
+  margin: 0;
+  padding-top: 0.4rem;
+}
+
+.cat-list-item:last-child {
+  margin-bottom: 2rem;
+}
+
+.cat-list-item:hover {
+  transform: scale(1.02);
+}
+

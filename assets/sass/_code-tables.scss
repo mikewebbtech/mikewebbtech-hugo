@@ -1,0 +1,40 @@
+/* Ensure the scrollable wrapper */
+.highlight {
+  overflow-x: auto !important;
+  display: block !important;
+  width: 100% !important;
+  box-sizing: border-box;
+  width: 100% !important;
+}
+
+/* Force pre to allow scroll */
+.highlight pre {
+  padding: 1rem !important;
+  overflow-x: auto !important;
+  background-color: var(--color-sidebar-bg) !important;
+  display: block !important;
+  width: max-content !important;
+  min-width: 100% !important;
+  white-space: pre !important;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse; /* Removes spacing between borders */
+  margin-bottom: 1em; /* Adds space below the table */
+}
+
+th,
+td {
+  border: 1px solid var(--color-table-border);
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: var(--color-sidebar-bg);
+  font-weight: bold;
+  text-align: center;
+}
+

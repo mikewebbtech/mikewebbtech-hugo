@@ -3,7 +3,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   {{ hugo.Generator }}
   <title>{{ .Title }}</title>
-  {{- $style := resources.Get "css/style.css" | minify | fingerprint -}}
+  {{ $opts := dict
+  "transpiler" "dartsass"
+  "enableSourceMap" true
+  }}
+  {{ $style := resources.Get "sass/style.scss" | css.Sass $opts }}
   <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
   <link rel="icon" type="image/x-icon"  href="{{ "img/favicon.ico" | relURL }}" />
   <link rel="apple-touch-icon" sizes="180x180" href="{{ "img/apple-touch-icon.png" | relURL }}" />

@@ -1,0 +1,84 @@
+/* Style and align images using hugo default render-image function */
+img.left {
+  float: left;
+  margin: 0 5px 5px 0;
+}
+img.right {
+  float: right;
+  margin: 15px 0 10px 10px;
+}
+
+.center {
+  display: block; /* make <img> respect margins */
+  margin: 0 auto; /* centers horizontally */
+  max-width: 100%; /* responsive */
+  height: auto;
+}
+
+.padded > img {
+  padding: 0 20px 0 20px;
+}
+
+/* Style and align Figure images based on custom shortcode  */
+/* layout/shortcode/figure.html                             */
+
+.figure {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.figure-img {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+
+.figure-caption {
+  align-self: stretch; /* take full cross-axis width in a column flex */
+  text-align: center; /* center the caption text */
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* Alignment (no wrapping) */
+.figure-left {
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.figure-center {
+  justify-content: center;
+  align-items: center;
+}
+.figure-right {
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+/* Optional text wrapping (float) */
+.figure-wrap {
+  max-width: min(100%, 40ch);
+} /* tweak as you like */
+.figure-wrap.figure-left {
+  float: left;
+  margin: 0 5px 5px 0;
+}
+.figure-wrap.figure-right {
+  float: right;
+  margin: 0 0 5px 5px;
+}
+
+/* Clear floats after paragraphs so later content doesn't snake around */
+p::after,
+.content p::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.inline-link-icon {
+  vertical-align: super;
+  display: inline-block;
+  font-size: 0.5rem;
+  font-weight: 150;
+  margin-right: 0.5em; /* gap between icon and following text */
+}
+

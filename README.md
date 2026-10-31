@@ -12,6 +12,7 @@
 
 - [What is Hugo](#hugo)
 - [Features and Progress](#progress)
+- [Stylesheets](#stylesheets)
 
 <p align="center">
 <img alt "theme look" src="./site_look.png" >
@@ -32,6 +33,42 @@ The [hugo documentation](https://gohugo.io/documentation) is extensive and well 
 Static site generators offer faster performance, enhanced security, and greater scalability by pre-building web pages as static files rather than generating them on demand using a database back end. This approach simplifies hosting and maintenance, allows for better content version control, and provides a lighter back end with fewer dependencies. As a result, static sites are more reliable, more secure, and often offer better SEO due to their speed.
 
 ---
+
+## Stylesheets
+
+Styles are written in Sass using the SCSS syntax in `assets/scss/`. Hugo compiles
+`style.scss` into CSS, then minifies and fingerprints it for the browser.
+
+Local builds require Hugo and the Dart Sass executable (`sass`) on your `PATH`.
+For a Nix environment, include `dart-sass` alongside Hugo; with Homebrew, use
+`brew install sass/sass/sass`. See the [Hugo Sass documentation](https://gohugo.io/functions/css/sass/)
+for installation details. The GitHub Pages workflow already installs Dart Sass.
+
+Run `hugo server` for local preview or `hugo --minify` for a production build.
+There is no separate Sass build command.
+
+Edit the partial that contains the styles you want to change:
+
+| Partial | Styles |
+| --- | --- |
+| `_vendor.scss` | External Font Awesome stylesheet import |
+| `_theme.scss` | Colour palettes and CSS custom properties |
+| `_base.scss` | Base typography, resets and text helpers |
+| `_layout.scss` | Site grid, sidebar, navigation, header and main area |
+| `_articles.scss` | Article content, metadata, tags and article lists |
+| `_pages.scss` | Shared page, home and category styles |
+| `_components.scss` | Buttons, callouts and series navigation |
+| `_code-tables.scss` | Code blocks and tables |
+| `_cards-breadcrumbs.scss` | Recent article cards and breadcrumbs |
+| `_pagination.scss` | Hugo pagination |
+| `_images.scss` | Image and figure alignment |
+| `_source-link.scss` | Article source links |
+
+`style.scss` loads these partials with `@use` in the original cascade order.
+Add new partials there in the order their rules should appear. Keep theme colours
+as CSS custom properties (`var(--color-...)`) so they remain available in the
+browser. The existing selectors and declarations are preserved during this migration.
+Edit the SCSS sources rather than the generated CSS under `public/`.
 
 ## Progress
 
