@@ -32,7 +32,7 @@
         <a href="{{ .URL }}" {{- if $isActive }} aria-current="page" {{ end -}}>{{ $text }}</a>
 
 
-        {{/* Year submenu under Articles */}}
+        {{/* Year submenu under Articles 
         {{- if and (eq .URL "/articles/") $inArticles $articles -}}
           <ul class="nav-submenu nav-submenu--years">
             {{- range $y := $articles.Sections.ByTitle.Reverse -}}
@@ -45,6 +45,7 @@
             {{- end -}}
           </ul>
         {{- end -}}
+        */}}
 
 
       </li>
