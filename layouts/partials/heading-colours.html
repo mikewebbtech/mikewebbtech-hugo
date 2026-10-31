@@ -1,0 +1,8 @@
+{{- /* Number H2 headings across the rendered content, including nested blockquotes. */ -}}
+{{- $content := . -}}
+{{- range $index, $heading := findRE `<h2\b[^>]*>` $content -}}
+  {{- $colour := add (mod $index 5) 1 -}}
+  {{- $replacement := replaceRE `>$` (printf ` data-heading-colour="%d">` $colour) $heading -}}
+  {{- $content = replace $content $heading $replacement 1 -}}
+{{- end -}}
+{{- return ($content | safeHTML) -}}

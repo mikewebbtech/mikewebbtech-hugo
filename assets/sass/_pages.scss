@@ -88,6 +88,26 @@ blockquote > .five {
   border-bottom: var(--color-header-bg) solid 2px;
 }
 
+// Applied by heading-colours.html; the sequence restarts for each content body.
+// These selectors also override the old explicit blockquote colour classes on H2s.
+h2[data-heading-colour] {
+  border-bottom: var(--heading-line-colour) solid 2px;
+}
+
+$heading-line-colours: (
+  1: var(--color-accent-dark-blue),
+  2: var(--color-accent-purple),
+  3: var(--color-link),
+  4: var(--color-accent-green),
+  5: var(--color-header-bg)
+);
+
+@each $index, $colour in $heading-line-colours {
+  h2[data-heading-colour="#{$index}"] {
+    --heading-line-colour: #{$colour};
+  }
+}
+
 em {
   font-size: 1rem;
   color: var(--color-text-main);

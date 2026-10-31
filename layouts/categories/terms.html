@@ -16,7 +16,7 @@
   <h2 class="subtitle">
     <i class="fa-solid fa-list"></i> {{ .Params.Subtitle}}
   </h2>
-  {{ .Content }}
+  {{ partial "heading-colours.html" .Content }}
   <ul class="cat-list">
     {{ range .Data.Terms.Alphabetical }}
     <li class="cat-list-item">
@@ -37,7 +37,7 @@
           <div class="cat-list-item-title">{{ .Page.Title }}</div>
           (articles found: {{ .Count }})
           <!-- if there a category description. show it -->
-          {{- with .Page.Content }} {{ . }} {{ end -}}
+          {{- with .Page.Content }} {{ partial "heading-colours.html" . }} {{ end -}}
         </div>
       </a>
     </li>

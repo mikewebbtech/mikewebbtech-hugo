@@ -6,6 +6,6 @@
   </div>
   {{ end -}}
   <h3 class="subtitle">{{ .Params.Subtitle }}</h3>
-  {{ .Content }}
+  {{ partial "heading-colours.html" .Content }}
 </article>
 {{ end }}

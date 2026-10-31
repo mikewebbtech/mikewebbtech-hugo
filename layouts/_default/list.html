@@ -17,7 +17,7 @@
   {{- if .Params.description }}
   {{ end -}}
 
-  {{ .Content }}
+  {{ partial "heading-colours.html" .Content }}
   <ul class="article-list">
     {{- $pages := .Pages -}}
 

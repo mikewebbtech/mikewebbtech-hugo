@@ -7,7 +7,7 @@
   </div>
   {{ end }}
   <h2 class="subtitle">{{ .Params.Subtitle }}</h2>
-  <div class="post-content">{{ .Content }}</div>
+  <div class="post-content">{{ partial "heading-colours.html" .Content }}</div>
   <div class="post-footer"></div>
 </article>
 {{ end }}

@@ -10,7 +10,7 @@
   <h2 class="subtitle">
     <i class="fa-solid fa-tags"></i> {{ .Params.Subtitle}}
   </h2>
-  {{ .Content }}
+  {{ partial "heading-colours.html" .Content }}
   <ul class="tags-list">
     {{ range .Data.Terms.Alphabetical }}
       <li class="tags-list-item">
