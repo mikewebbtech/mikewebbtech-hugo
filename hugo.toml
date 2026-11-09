@@ -49,6 +49,11 @@ name = "About"
 pre = "fa-circle-info"
 url = "/about/"
 weight = 15
+[[menus.main]]
+name = "Achievements"
+pre = "fa-award"
+url = "/achievements/"
+weight = 60
 
 [taxonomies]
 tag = "tags"
