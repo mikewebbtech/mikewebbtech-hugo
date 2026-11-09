@@ -1,5 +1,5 @@
 +++
-date = '2025-01-30T03:36:57-08:00'
+date = '2024-01-30T03:36:57-08:00'
 postIMG = 'homepage.png'
 draft = false
 title = 'The Persistent State'
@@ -13,9 +13,7 @@ title = 'The Persistent State'
 > All of the articles before 2023 were migrated out of an WordPress MySQL database recovered from and old docker volume. Some of the formatting might seem off. Those articles are still a work in progress, here be dragons 🐉.
 > {.note}
 
-> ## My interests are
->
-> {.one}
+## My interests
 
 {{< link-icon href="categories/cloud" >}}Cloud Computing{{< /link-icon >}}: From understanding the fundamentals to deploying and managing applications in the cloud, I'm documenting my journey of mastering this transformative technology.
 
@@ -23,7 +21,7 @@ title = 'The Persistent State'
 
 {{< link-icon href="categories/security" >}}Cyber Security{{< /link-icon >}}: Navigating the evolving world of digital threats and defences, learning how to secure systems and protect information from principles to practice.
 
-{{< link-icon href="categories/kubernetes" >}}Kubernetes{{< /link-icon >}}: Orchestrating containers and navigating scalable applications. A challenging but incredibly rewarding area I’m excited about and actively exploring
+{{< link-icon href="categories/virtualisation" >}}Virtualisation{{< /link-icon >}}: Orchestrating virtual machines, containers and navigating scalable applications. A challenging but incredibly rewarding area I’m excited about and actively exploring
 
 {{< link-icon href="categories/hugo" >}}HUGO{{< /link-icon >}}: Embracing the power of static site generators to build and deploy an efficient and engaging web experience for the creator and the consumer. Follow along as I experiment with the framework to build this site.
 
@@ -33,9 +31,7 @@ title = 'The Persistent State'
 
 {{< link-icon href="categories/home-lab" >}}Home Labbing{{< /link-icon >}}: My personal playground for experimentation and running services for the home! Follow the evolution of my home lab as I build, break, and learn from hardware and software ~~stuff ups~~ setups
 
-> ## Latest Articles:
->
-> {.two}
+## Latest Articles
 
 {{< recent_articles_cards >}}
 

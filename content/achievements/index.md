@@ -1,5 +1,5 @@
 ---
-date: "2026-10-12T08:28:00+08:00"
+date: "2025-10-12T08:28:00+08:00"
 draft: false
 title: "My Achievements"
 postIMG: "about.png"
@@ -7,6 +7,16 @@ type: page
 params:
   subtitle: "Certificates and Attainments"
 ---
+
+## Academic
+
+**ICT40120 Certificate IV in Information Technology (Networking)** - *National ID ICT40120*
+
+**ICT50220 Diploma of Information Technology (Advanced Networking)** - *National ID ICT50220*
+
+**Introduction to Programming Skill Set** - *State ID MAD09*
+
+**Cyber Threat Intelligence with AI Skill Set** - *State ID EAF101*
 
 ## Cloud
 
