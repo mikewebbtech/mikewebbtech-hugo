@@ -4,7 +4,7 @@ postIMG = 'homepage.png'
 draft = false
 title = 'The Persistent State'
 [params]
-  subtitle = 'Keeping The Lights Blinking'
+  subtitle = 'Keep the Blinking Lights Blinking'
 +++
 
 ### Working on learning one project at a time.

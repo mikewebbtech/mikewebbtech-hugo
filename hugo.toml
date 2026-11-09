@@ -5,6 +5,8 @@ summaryLength = 30
 enableEmoji = true
 enableRobotsTXT = true
 
+[outputs]
+home = ["HTML", "RSS"]
 
 [module]
 [[module.imports]]
