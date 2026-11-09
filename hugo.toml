@@ -6,7 +6,7 @@ enableEmoji = true
 enableRobotsTXT = true
 
 [outputs]
-home = ["HTML", "RSS"]
+home = ["HTML", "RSS", "JSON"]
 
 [module]
 [[module.imports]]
