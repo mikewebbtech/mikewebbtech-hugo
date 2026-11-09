@@ -2,7 +2,7 @@
 date: "2026-10-12T08:28:00+08:00"
 draft: false
 title: "My Achievements"
-postIMG: "about.jpg"
+postIMG: "about.png"
 type: page
 params:
   subtitle: "Certificates and Attainments"
@@ -42,7 +42,7 @@ target="_blank"
 caption=""
 class="cert" >}}
 
-## security
+## Security
 
 {{< figure
 src="fortinet-certified-associate-cybersecurity.png"
