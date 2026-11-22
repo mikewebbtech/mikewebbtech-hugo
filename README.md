@@ -49,20 +49,20 @@ There is no separate Sass build command.
 
 Edit the partial that contains the styles you want to change:
 
-| Partial | Styles |
-| --- | --- |
-| `_vendor.scss` | External Font Awesome stylesheet import |
-| `_theme.scss` | Colour palettes and CSS custom properties |
-| `_base.scss` | Base typography, resets and text helpers |
-| `_layout.scss` | Site grid, sidebar, navigation, header and main area |
-| `_articles.scss` | Article content, metadata, tags and article lists |
-| `_pages.scss` | Shared page, home and category styles |
-| `_components.scss` | Buttons, callouts and series navigation |
-| `_code-tables.scss` | Code blocks and tables |
-| `_cards-breadcrumbs.scss` | Recent article cards and breadcrumbs |
-| `_pagination.scss` | Hugo pagination |
-| `_images.scss` | Image and figure alignment |
-| `_source-link.scss` | Article source links |
+| Partial                   | Styles                                               |
+| ------------------------- | ---------------------------------------------------- |
+| `_vendor.scss`            | External Font Awesome stylesheet import              |
+| `_theme.scss`             | Colour palettes and CSS custom properties            |
+| `_base.scss`              | Base typography, resets and text helpers             |
+| `_layout.scss`            | Site grid, sidebar, navigation, header and main area |
+| `_articles.scss`          | Article content, metadata, tags and article lists    |
+| `_pages.scss`             | Shared page, home and category styles                |
+| `_components.scss`        | Buttons, callouts and series navigation              |
+| `_code-tables.scss`       | Code blocks and tables                               |
+| `_cards-breadcrumbs.scss` | Recent article cards and breadcrumbs                 |
+| `_pagination.scss`        | Hugo pagination                                      |
+| `_images.scss`            | Image and figure alignment                           |
+| `_source-link.scss`       | Article source links                                 |
 
 `style.scss` loads these partials with `@use` in the original cascade order.
 Add new partials there in the order their rules should appear. Keep theme colours
@@ -109,6 +109,9 @@ Progress is slow, there is a lot about using the hugo framework that is not intu
   - [x] explore using Hugo convert function in template for sites.
   - [x] change format for article images at creation. Explore way to use Hugo function on render
 - [x] Refactor CSS to use :root for colors
+- [ ] Resposive design for site layout:
+  - [x] Tablet screens
+  - [ ] Phone screens
 - [ ] Site statistics (visitor and page views, geolocations etc)
 - [ ] Visitor feedback and interaction (security first by design)
 - [ ] Implement an Archive section. Display by Year, Month.
