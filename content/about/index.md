@@ -5,10 +5,10 @@ title: "About Me"
 postIMG: "about.jpg"
 type: page
 params:
-  subtitle: "Behind the Mask"
+  subtitle: "HELLO"
 ---
 
-## What am I about?
+## Who am I?
 
 In short my main goal in life is contentment.
 
@@ -55,5 +55,5 @@ I help organisations **stabilise IT infastructure and services**, **organise inf
 
 If you want dependable IT Infrastructure support and cleaner information practices, **let’s talk**.
 
-- <i class="fa-solid fa-envelope"></i></i> **Email:** support@mikewebb.tech
+- <i class="fa-solid fa-envelope"></i> **Email:** support@mikewebb.tech
 - <i class="fa-brands fa-linkedin"></i> **LinkedIn:** https://www.linkedin.com/in/michael-webb-1a36b8a5

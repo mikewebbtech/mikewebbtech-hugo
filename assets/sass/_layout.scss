@@ -149,7 +149,7 @@
   min-width: 0;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 700px) {
   .layout {
     grid-template-columns: minmax(0, 1fr);
     grid-template-areas:
@@ -170,15 +170,15 @@
     flex-direction: row;
     flex-wrap: wrap;
     min-height: 0;
-    padding: 0.75rem 1rem;
+    padding: 0.7rem 1rem;
   }
 
   .logo img {
-    width: 3.5rem;
+    width: 4.5rem;
   }
 
   .byline {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 
   .nav {
@@ -230,5 +230,14 @@
   .main {
     padding: 1rem clamp(1rem, 3vw, 2rem) 0;
   }
-}
+  .cat-list-img {
+    display: none;
+  }
 
+  .cat-list-item-info {
+    padding: 1rem;
+    flex-grow: 1;
+    text-align: left;
+    font-size: 1rem;
+  }
+}
