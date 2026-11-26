@@ -7,7 +7,10 @@
 // Import user-defined variables.
 // This imported file should define variables directly (e.g., $admonition-light-bg: #mycolor;)
 // or define $admonition-colors-overrides for merging type-specific colors.
-@import "admonitions-user-settings";
+@use "sass:color";
+@use "sass:list";
+@use "sass:map";
+@use "admonitions-user-settings" as *;
 
 // =============================================================================
 // --- Configuration (with !default) ---
@@ -85,7 +88,7 @@ $admonition-colors-base: (
 
 // Merge base colors with user overrides to get the final color map.
 // User's overrides will take precedence.
-$admonition-colors: map-merge(
+$admonition-colors: map.merge(
   $admonition-colors-base,
   $admonition-colors-overrides
 );
@@ -239,7 +242,7 @@ $admonition-colors: map-merge(
 // =============================================================================
 // --- Dark Mode Styling ---
 // =============================================================================
-#{join($admonition-dark-selector, ", ")} {
+#{list.join($admonition-dark-selector, ", ")} {
   @each $type, $color in $admonition-colors {
     .admonition.#{$type} {
       // e.g., html[data-theme="dark"] .admonition.question
@@ -250,9 +253,9 @@ $admonition-colors: map-merge(
       > .admonition-header {
         // Header text color ($color) from light mode rule usually works.
         // Uncomment below to explicitly override for dark mode if needed (e.g., for contrast).
-        color: mix($color, $admonition-dark-text, 20%);
+        color: color.mix($color, $admonition-dark-text, $weight: 20%);
         svg {
-          fill: mix($color, $admonition-dark-text, 20%);
+          fill: color.mix($color, $admonition-dark-text, $weight: 20%);
         }
       }
 

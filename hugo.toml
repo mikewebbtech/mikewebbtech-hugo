@@ -1,5 +1,5 @@
 baseURL = "https://mikewebb.tech/"
-languageCode = "en-us"
+locale = "en-US"
 title = "Mike Webb Tech"
 summaryLength = 30
 enableEmoji = true
@@ -66,6 +66,9 @@ dateFormat = "Jan 2, 2006"
 github = "https://github.com/mikewebbtech"
 linkedin = "https://www.linkedin.com/in/michael-webb-1a36b8a5/"
 blog_repo = "https://github.com/mikewebbtech/mikewebbtech-blog/blob/main"
+
+[params.hugoadmonitions]
+enablesass = true
 
 [pagination]
 disableAliases = false
